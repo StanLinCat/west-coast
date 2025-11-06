@@ -1,5 +1,5 @@
 ---
-title: '首頁'
+title: ''
 date: 2023-10-24
 type: landing
 

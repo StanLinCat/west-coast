@@ -6,15 +6,30 @@ main:
   - name: 首頁
     url: /#top
     weight: 10
-  - name: Features
+  - name: 關於本會
     url: /#features
     weight: 20
-  - name: Solutions
+  - name: 最新消息
     url: /#solutions
     weight: 30
-  - name: Resources
+  - name: 成員
+    url: author/
     weight: 40
-    hasChildren: true
-  - parent: Resources
-    name: Blog
+  - name: 信息
     url: blog/
+    weight: 50
+  - name: 新聞
+    url: news/
+    weight: 60
+  - name: 聯絡我們
+    url: contact/
+    weight: 70
+  - name: 奉獻
+    url: https://donation.breadoflife.taipei/Pay5
+    weight: 80
+  # - name: Resources
+  #   weight: 40
+  #   hasChildren: true
+  # - parent: Resources
+  #   name: Blog
+  #   url: blog/
