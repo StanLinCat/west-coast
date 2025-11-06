@@ -39,19 +39,20 @@ sections:
     design:
       css_class: "bg-gray-50 dark:bg-gray-900 mb-0 pb-0"
       spacing:
-        padding: ["3rem", 0, "1rem", 0]
+        padding: [0, 0, 0, 0]
 
   - block: markdown
     id: section-2
     content:
       text: | 
+        <div style="margin-top: -120px;">
         <div style="text-align: center; margin-bottom: 20px;">
         <p>歡迎來到我們的辦公室！</p>
         </div>
         
         <iframe 
-          width="200%" 
-          height="500" 
+          width="100%" 
+          height="400" 
           frameborder="0" 
           scrolling="no" 
           marginheight="0" 
@@ -59,10 +60,9 @@ sections:
           src="https://www.openstreetmap.org/export/embed.html?bbox=120.1524066925049%2C23.377866364191988%2C120.15594720840456%2C23.37997383745687&amp;layer=mapnik&amp;marker=23.378993609429333%2C120.15450793011709" 
           style="border: 1px solid black; width: 100%; height: 500px; border-radius: 8px;"
         ></iframe>
-
-        <br/><small><a href="https://www.openstreetmap.org/?#map=19/23.3789563/120.1545105">查看更大的地圖</a></small>
     design:
       columns: '1' 
+      css_class: "mt-0 pt-0"
       max_width: '100%'
 
 ---
