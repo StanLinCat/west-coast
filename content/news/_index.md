@@ -35,34 +35,37 @@ sections:
           text: View Open Positions
           url: /opportunities
       map_url: https://maps.google.com/?q=University+of+Excellence
-      show_form: false
+      map_embed: |
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2177.591977488379!2d120.15301101154834!3d23.378861205197236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346c282b72bd6163%3A0x9922804487d2b485!2zNjI15ZiJ576p57ij5biD6KKL6Y6u5paH5piM6KGXMzHomZ8!5e0!3m2!1szh-TW!2stw!4v1762429592263!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      show_form: true
+      form_action: "https://formspree.io/f/xovpgngz"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900 mb-0 pb-0"
       spacing:
-        padding: [0, 0, 0, 0]
-
-  - block: markdown
-    id: section-2
-    content:
-      text: | 
-        <div style="margin-top: -120px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-        <p>歡迎來到我們的辦公室！</p>
-        </div>
+        padding: ["3rem", 0, "1rem", 0]
         
-        <iframe 
-          width="100%" 
-          height="400" 
-          frameborder="0" 
-          scrolling="no" 
-          marginheight="0" 
-          marginwidth="0" 
-          src="https://www.openstreetmap.org/export/embed.html?bbox=120.1524066925049%2C23.377866364191988%2C120.15594720840456%2C23.37997383745687&amp;layer=mapnik&amp;marker=23.378993609429333%2C120.15450793011709" 
-          style="border: 1px solid black; width: 100%; height: 500px; border-radius: 8px;"
-        ></iframe>
-    design:
-      columns: '1' 
-      css_class: "mt-0 pt-0"
-      max_width: '100%'
+  - block: markdown # 使用通用的 Markdown Block 作為容器
+    content:
+      title: "" # 這裡不需要標題
+      text: |
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4"> 
+            
+          <div>
+            {{< rawhtml >}}
+              <iframe src="https://www.google.com/maps/embed/v1/place5" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            {{< /rawhtml >}}
+          </div>
+          
+          <div>
+            {{< form action="https://formspree.io/f/xovpgngz" title="Send us a Message" submit_button="Send" >}}
+            {{< /form >}}
+          </div>
+          
+        </div>
 
+    design:
+      # 使用你在 contact-info 中設定的背景色
+      css_class: "bg-gray-50 dark:bg-gray-900" 
+      spacing:
+        padding: ["1rem", 0, "3rem", 0] # 調整 padding
 ---
