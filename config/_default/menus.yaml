@@ -3,7 +3,7 @@
 #   The `weight` parameter defines the order that the links will appear in.
 
 main:
-  - name: Home
+  - name: 首頁
     url: /#top
     weight: 10
   - name: Features

@@ -11,11 +11,11 @@ appearance:
 # SEO
 marketing:
   seo:
-    site_type: Person
+    site_type: Organization
     local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo landing page theme powered by Hugo Blox website builder.'
-    twitter: 'GetResearchDev'
+    org_name: '社團法人台灣西海岸發展協會'
+    description: '非以營利為目的之公益性社會團體，本著兼顧城鄉資源、知己知彼的精神，結合個人工商社會團體、宗教團體及政府資源，參酌城鄉差異及關懷弱勢群眾的需求，提供生活 (生產、生活、生態、生命) 發展之各種不同層次的實質的聯防互助、互惠的推動社會福利、增進社會公益'
+    twitter: ''
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -31,23 +31,27 @@ header:
   navbar:
     enable: true
     block: 'navbar'
-    align: 'center'
+    align: 'right'
     fixed_to_top: true
     logo:
-      text: ''
+      text: '社團法人台灣西海岸發展協會'
       # Logo filename in `assets/media/` folder
-      filename: 'logo.svg'
-    button:
-      enable: true
-      text: 'Get Started'
-      url: 'https://hugoblox.com/templates/'
+      filename: 'logo.png'
     show_search: true
     show_theme_chooser: true
 
 # Site footer
 footer:
+  block: minimal
   copyright:
-    notice: '© {year} My Company'
+    notice: '© {year} 西海岸發展協會'
+    license:
+      enable: false
+      allow_derivatives: false
+      share_alike: false
+      allow_commercial: false
+  # For multilingual sites, show a language chooser in the footer?
+  show_translations: false
 
 # Localization
 locale:
