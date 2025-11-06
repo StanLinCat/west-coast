@@ -36,36 +36,12 @@ sections:
           url: /opportunities
       map_url: https://maps.google.com/?q=University+of+Excellence
       map_embed: |
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2177.591977488379!2d120.15301101154834!3d23.378861205197236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346c282b72bd6163%3A0x9922804487d2b485!2zNjI15ZiJ576p57ij5biD6KKL6Y6u5paH5piM6KGXMzHomZ8!5e0!3m2!1szh-TW!2stw!4v1762429592263!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2177.591977488379!2d120.15301101154834!3d23.378861205197236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346c282b72bd6163%3A0x9922804487d2b485!2zNjI15ZiJ576p57ij5biD6KKL6Y6u5paH5piM6KGXMzHomZ8!5e0!3m2!1szh-TW!2stw!4v1762429592263!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       show_form: true
       form_action: "https://formspree.io/f/xovpgngz"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900 mb-0 pb-0"
       spacing:
         padding: ["3rem", 0, "1rem", 0]
-        
-  - block: markdown # 使用通用的 Markdown Block 作為容器
-    content:
-      title: "" # 這裡不需要標題
-      text: |
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4"> 
-            
-          <div>
-            {{< rawhtml >}}
-              <iframe src="https://www.google.com/maps/embed/v1/place5" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            {{< /rawhtml >}}
-          </div>
-          
-          <div>
-            {{< form action="https://formspree.io/f/xovpgngz" title="Send us a Message" submit_button="Send" >}}
-            {{< /form >}}
-          </div>
-          
-        </div>
 
-    design:
-      # 使用你在 contact-info 中設定的背景色
-      css_class: "bg-gray-50 dark:bg-gray-900" 
-      spacing:
-        padding: ["1rem", 0, "3rem", 0] # 調整 padding
 ---
