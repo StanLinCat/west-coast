@@ -50,8 +50,8 @@ node_modules/
 # ============================================================================
 
 # Pagefind search index
-pagefind/
-static/pagefind/
+# pagefind/
+# static/pagefind/
 
 # ============================================================================
 # Operating System
