@@ -45,7 +45,7 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "5,000+"
+        - statistic: "1,000+"
           description: |
             服務在地居民  
             從2022年成立至今
@@ -53,7 +53,7 @@ sections:
           description: |
             合作與連結單位  
             地方教會、非營利組織等
-        - statistic: "3"
+        - statistic: "1"
           description: |
             政府等主管機關  
             認證與獎項
