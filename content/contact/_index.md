@@ -34,7 +34,7 @@ sections:
           url: /opportunities
       map_url: https://maps.google.com/?q=University+of+Excellence
       map_embed: |
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1aqeN5ad02wYIOpF6-ghp9RJOJ4zm9Uc&ehbc=2E312F&noprof=1" width="1200" height="480"></iframe>
+        <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1jghkY9N1BpYT_khk6ByX-LtZt3EjlMQ&ehbc=2E312F&noprof=1" width="1200" height="480"></iframe>
       show_form: true
       form_action: "https://formspree.io/f/xovpgngz"
     design:
