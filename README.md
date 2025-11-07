@@ -1,3 +1,13 @@
+# 西海岸發展協會
+demo: https://wcgospel.pages.dev/
+repo: https://github.com/StanLinCat/west-coast
+
+
+
+
+
+
+
 # [Hugo Landing Page Theme](https://github.com/HugoBlox/theme-landing-page)
 
 [![Screenshot](https://raw.githubusercontent.com/HugoBlox/theme-landing-page/main/.github/preview.webp)](https://hugoblox.com/templates/)
