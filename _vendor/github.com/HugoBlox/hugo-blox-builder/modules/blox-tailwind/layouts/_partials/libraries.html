@@ -1,10 +1,17 @@
 {{/* Load Preact for component-based blocks */}}
+{{/* Check if any blocks on this page use Preact (set by init.html) */}}
 {{ if .Page.Store.Get "needs_preact" }}
   {{ $preact_blocks := .Page.Store.Get "preact_blocks" | default slice }}
+  
+  {{/* Preact is now bundled with each template via js.Build and node_modules */}}
+  
+  {{/* Build and load each Preact block's client script */}}
   {{ range $block_type := $preact_blocks }}
     {{ $client_path := printf "js/hbx/blocks/%s/client.jsx" $block_type }}
     {{ $client_jsx := resources.Get $client_path }}
+    
     {{ if $client_jsx }}
+      {{/* Build the client-side JSX using Hugo's official integration */}}
       {{ $jsx_opts := dict 
         "targetPath" (printf "assets/js/preact-built/%s.js" $block_type)
         "JSX" "automatic"
@@ -22,7 +29,7 @@
   {{ end }}
 {{ end }}
 
-{{/* Load Alpine JS extension */}}
+{{/* Load Alpine JS extension? */}}
 {{ if (.Page.Store.Get "has_alpine") }}
   <script>console.log('✓ Alpine.js loading on demand');</script>
   {{ $alpine_js := resources.Get "dist/lib/alpinejs/cdn.min.js" }}
@@ -30,29 +37,40 @@
   <script src="{{ $alpine_js.RelPermalink }}" integrity="{{ $alpine_js.Data.Integrity }}" defer></script>
 {{ end }}
 
-{{/* Pagefind search */}}
+{{/* Show site search? */}}
 {{ $show_search := site.Params.header.navbar.show_search | default false }}
 {{ if $show_search }}
-  <link type="text/css" rel="stylesheet" href="{{ "pagefind/pagefind-ui.css" | relURL }}" />
-  <script src="{{ "pagefind/pagefind-ui.js" | relURL }}"></script>
+{{ $pf_css := resources.Get "dist/pagefind/pagefind-ui.css" }}
+{{ $pf_css = $pf_css | resources.Fingerprint "sha256" }}
+<link type="text/css" rel="stylesheet" href="{{ $pf_css.RelPermalink }}" integrity="{{ $pf_css.Data.Integrity }}" />
+{{ $pf_js := resources.Get "dist/pagefind/pagefind-ui.js" }}
+{{ $pf_js = $pf_js | resources.Fingerprint "sha256" }}
+<script src="{{ $pf_js.RelPermalink }}" integrity="{{ $pf_js.Data.Integrity }}"></script>
 
-  <script id="search-config" type="application/json">
-    {{ dict "baseUrl" (relURL "") | jsonify | safeJS }}
-  </script>
+{{ $search_config := dict "baseUrl" (relURL "") }}
+<script id="search-config" type="application/json">{{ $search_config | jsonify | safeJS }}</script>
 
-  <style>
-    html.dark {
-      --pagefind-ui-primary: #eeeeee;
-      --pagefind-ui-text: #eeeeee;
-      --pagefind-ui-background: #152028;
-      --pagefind-ui-border: #152028;
-      --pagefind-ui-tag: #152028;
-    }
-    .search-close > svg {
-      height: calc(64px * var(--pagefind-ui-scale));
-      width: calc(64px * var(--pagefind-ui-scale));
-    }
-  </style>
+<style>
+  html.dark {
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #152028;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+
+  /* Make search modal close button match size of search input */
+  .search-close > svg {
+    height: calc(64px * var(--pagefind-ui-scale));
+    width: calc(64px * var(--pagefind-ui-scale));
+  }
+</style>
+
+{{ $search_js := resources.Get "js/hb-search.js" | resources.Minify }}
+{{- if hugo.IsProduction -}}
+  {{ $search_js = $search_js | fingerprint "sha256" }}
+{{- end -}}
+<script defer src="{{ $search_js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $search_js.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
 {{ end }}
 
 {{/* Mermaid */}}
@@ -78,6 +96,7 @@
       manual: false,
       onReady() {
         const { autoLoader, builtInPlugins } = window.markmap;
+        // Disable Prism highlighting plugin as it conflicts and attempts to re-render code blocks outside of Markmap.
         autoLoader.transformPlugins = builtInPlugins.filter(plugin => plugin.name !== 'prism');
       },
     },
@@ -88,7 +107,7 @@
 <script defer src="{{ $markmap_js.RelPermalink }}" integrity="{{ $markmap_js.Data.Integrity }}"></script>
 {{ end }}
 
-{{/* KaTeX */}}
+{{/* Katex */}}
 {{ if (.Page.HasShortcode "math") | or .Params.math | or site.Params.features.math.enable }}
   {{ $katex_css := resources.Get "dist/lib/katex/katex.min.css" }}
   {{ $katex_css = $katex_css | resources.Fingerprint "sha256" }}
@@ -109,7 +128,7 @@
 
 {{/* Plotly */}}
 {{ if .Page.HasShortcode "chart" }}
-  {{ $plotly_js := resources.Get "dist/lib/plotly/plotly.min.js" }}
-  {{ $plotly_js = $plotly_js | resources.Fingerprint "sha256" }}
-  <script defer src="{{ $plotly_js.RelPermalink }}" integrity="{{ $plotly_js.Data.Integrity }}"></script>
+{{ $plotly_js := resources.Get "dist/lib/plotly/plotly.min.js" }}
+{{ $plotly_js = $plotly_js | resources.Fingerprint "sha256" }}
+<script defer src="{{ $plotly_js.RelPermalink }}" integrity="{{ $plotly_js.Data.Integrity }}"></script>
 {{ end }}
