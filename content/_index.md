@@ -10,8 +10,8 @@ design:
 sections:
   - block: hero
     content:
-      title: 西海岸發展協會 歡迎您
-      text: 🦪 協會的宗旨 四生：生活 生產 生態 生命  🐟
+      title: 台灣西海岸發展協會🦪 
+      text: Taiwan West Coast Development Association🐟 
       primary_action:
         text: 最新消息
         url: "#solutions"
