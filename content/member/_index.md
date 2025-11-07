@@ -1,10 +1,10 @@
 ---
-title: 聯絡資訊
+title: 成員
 type: landing
 sections:
   - block: team-showcase
     content:
-      title: Meet Our Team
+      title: 網頁施工中.....
       subtitle: World-class researchers advancing science
       text: Our diverse team brings together expertise from multiple disciplines.
       user_groups:
