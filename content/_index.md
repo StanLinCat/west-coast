@@ -10,36 +10,38 @@ design:
 sections:
   - block: hero
     content:
-      title: Build Your Landing Pages with Hugo Blox
-      text: 🧱 EASY. FREE (OPEN SOURCE). NO-CODE  🧱
+      title: 西海岸發展協會 歡迎您
+      text: 🦪 協會的宗旨 四生：生活 生產 生態 生命  🐟
       primary_action:
-        text: Get Started
-        url: https://hugoblox.com/templates/
+        text: 最新消息
+        url: "#solutions"
         icon: rocket-launch
-      secondary_action:
-        text: Read the docs
-        url: https://docs.hugoblox.com
+      # secondary_action:
+      #   text: Read the docs
+      #   url: https://docs.hugoblox.com
       announcement:
-        text: "Announcing the release of version 1."
+        text: "相關報導"
         link:
           text: "Read more"
-          url: "/blog/"
+          url: "news/"
     design:
-    #   spacing:
-    #     padding: [0, 0, 0, 0]
-    #     margin: [0, 0, 0, 0]
+      spacing:
+        padding: [0, 0, 0, 0]
+        margin: [0, 0, 0, 0]
       # For full-screen, add `min-h-screen` below
-      css_class: "dark"
+      css_class: "system"
       background:
-        color: "navy"
+        # color: "navy"
         image:
           # Add your image background to `assets/media/`.
-          filename: bg-triangles.svg
+          filename: home_big_image1.png
           filters:
             brightness: 0.5
-          size: cover
+          size: contain
           position: center
           parallax: false
+        text_color_light: false
+
   - block: stats
     content:
       items:
