@@ -3,11 +3,11 @@
 #   Documentation: https://docs.hugoblox.com/reference/language/
 
 # Default language
-# en:
-#   languageCode: en
+en:
+  languageCode: en
 
-zh:
-  languageCode: zh-hant
+# zh:
+#   languageCode: zh-hant
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
   #contentDir: content/en
 
