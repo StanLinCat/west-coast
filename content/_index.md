@@ -45,54 +45,47 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "1M+"
+        - statistic: "5,000+"
           description: |
-            Websites built  
-            with Hugo Blox
-        - statistic: "10k+"
+            服務在地居民  
+            從2022年成立至今
+        - statistic: "12"
           description: |
-            GitHub stars  
-            since 2016
-        - statistic: "3k+"
+            合作與連結單位  
+            地方教會、非營利組織等
+        - statistic: "3"
           description: |
-            Discord community  
-            for support
+            政府等主管機關  
+            認證與獎項
     design:
       # Section background color (CSS class)
       css_class: "bg-gray-100 dark:bg-gray-900"
       # Reduce spacing
       spacing:
-        padding: ["1rem", 0, "1rem", 0]
-  - block: features
-    id: features
+        padding: ["1rem", 0, "0rem", 0]
+
+  - block: markdown
+    id: about
     content:
-      title: Features
-      text: Build your site with blocks 🧱
-      items:
-        - name: Optimized SEO
-          icon: magnifying-glass
-          description: Automatic sitemaps, RSS feeds, and rich metadata take the pain out of SEO and syndication.
-        - name: Fast
-          icon: bolt
-          description: Super fast page load with Tailwind CSS and super fast site building with Hugo.
-        - name: Easy
-          icon: sparkles
-          description: One-click deployment to GitHub Pages. Have your new website live within 5 minutes!
-        - name: No-Code
-          icon: code-bracket
-          description: Edit and design your site just using rich text (Markdown) and configurable YAML parameters.
-        - name: Highly Rated
-          icon: star
-          description: Rated 5-stars by the community.
-        - name: Swappable Blocks
-          icon: rectangle-group
-          description: Build your pages with blocks - no coding required!
+      title: "關於 西海岸發展協會"
+      text: |
+        ## 非以營利為目的之公益性社會團體
+        本協會的宗旨是結合個人、工商社會團體、宗教團體及政府資源，發揮服務兼謀成長的精神，以促進西海岸在地居民四生（生活 生產 生態 生命）各大層面間的實質豐沛與飽滿，並致力於謀求社會福利、增進社會公益。  
+
+        我們的任務包含協助推動發展台灣西海岸各項產業，使其符合永續發展的精神，同時透過珍惜與維護西海岸的自然資源，發展生態教育與觀摩活動，並提供各種生活體驗活動，辦理各種生活事業，以期提升生活品質，使人帶來豐盛與快樂。我們深信透過協助、關懷與推廣服務諮詢，能使人看見生命的真善美，促進生命熱情的發揚，發揮生命的光芒與未來。🌱
+    design:
+      columns: "1"
+      background:
+        color: "system"
+      spacing:
+        padding: ["3rem", 0, "0rem", 0]
+
   - block: cta-image-paragraph
     id: solutions
     content:
       items:
-        - title: Build your future-proof website
-          text: As easy as 1, 2, 3!
+        - title: 生活 生產 生態 生命
+          text: 
           feature_icon: check
           features:
             - "Future-proof - edit your content in text files"
@@ -118,30 +111,30 @@ sections:
     design:
       # Section background color (CSS class)
       css_class: "bg-gray-100 dark:bg-gray-900"
+      spacing:
+        padding: ["0rem", 0, "0rem", 0]
+
   - block: testimonials
     content:
-      title: ""
-      text: ""
       items:
-        - name: "Hugo Smith"
-          role: "Marketing Executive at X"
+        - name: "林洽松 牧師"
+          role: "西海岸發展協會理事長"
           # Upload image to `assets/media/` and reference the filename here
-          image: "testimonial-1.jpg"
-          text: "Awesome, so easy to use and saved me so much work with the swappable pre-designed sections!"
+          image: "LinQiasong.jpg"
+          text: 四百年來，先祖移民、各族各方，都從西海岸上岸。由於早年許多渡海來台的先人，同步把偶像崇拜帶進西海岸，成為當地的核心根源。雖然在荷蘭時期，曾因宣教士為平埔族帶來短暫復興，陸陸續續也有許多的神父、牧師進入西海岸，但是卻難以帶來大規模突破。如今看見上帝的手開始在西海岸做工，將苗栗、台中、彰化、雲林、嘉義、台南連成一線，相信將要為西海岸、為嘉義的福音帶來大復興！
+        - name: "林碧亮 牧師"
+          role: "某位西海岸的牧師"
+          # Upload image to `assets/media/` and reference the filename here
+          image: "BillBright.jpg"
+          text: 回首2022年，五味雜陳充滿，協會設立時，因著感動哭了幾次，一方面神有恩典，一方面又感到疲累，前行艱難…。然而當我們轉向神，來感恩時，神就開始說話，神蹟是相信神，相信神掌權，正在引領我們前行。
+        - name: "黃國倫 音樂人"
+          role: "台灣詞曲作家、唱片製作人"
+          # Upload image to `assets/media/` and reference the filename here
+          image: "YellowMusic.jpg"
+          text: "當時神感動我，除非你們不要我來，否則我要去西海岸（辦音樂佈道會）。這次巡迴佈道主題就叫『沒有不可能』，就是鼓勵說道不要放棄，靠神，凡事都有可能，我們就一起來做。"
     design:
       spacing:
         # Reduce bottom spacing so the testimonial appears vertically centered between sections
-        padding: ["6rem", 0, 0, 0]
-  - block: cta-card
-    content:
-      title: Build your future-proof website
-      text: As easy as 1, 2, 3!
-      button:
-        text: Get Started
-        url: https://hugoblox.com/templates/
-    design:
-      card:
-        # Card background color (CSS class)
-        css_class: "bg-primary-300"
-        css_style: ""
+        padding: ["1rem", 0, 0, 0]
+
 ---

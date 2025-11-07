@@ -14,22 +14,23 @@ sections:
           - No. 31, Wenchang St, Budai Township
           
       office_hours:
-        - "周一至周五 : 9:00 AM - 4:00 PM"
-        - "禱告會: 禮拜六 6:00 PM (隨狀況調整)"
+        - "周一至周五 : 10:00 AM - 4:00 PM"
+        - "兩個月一次西海岸嘉義禱告祭壇"
+        - "每月一次布袋祭壇(嘉義福音隊支持)"
       email: lab@example.edu
       phone: "+1 (555) 123-4567"
       social:
-        - icon: brands/x
-          url: https://twitter.com/SmithLabResearch
-        - icon: brands/linkedin
-          url: https://linkedin.com/company/smith-lab
-        - icon: brands/github
-          url: https://github.com/smith-lab
+        - icon: brands/facebook
+          url: https://www.facebook.com/ilinkDongshi?locale=zh_TW
+        - icon: brands/instagram
+          url: https://www.facebook.com/profile.php?id=100064601061643&locale=zh_TW
+        - icon: brands/youtube
+          url: https://youtube.com/channel/UCVxPi3yWUR-qmegqNtRfIug?si=RpraXCL4p5G1wvVz
       prospective:
         title: 加入我們
-        text: 有興趣一起服事西海岸嗎? 我們正在尋找專員與同工
+        text: 有興趣一起服事西海岸嗎?
         button:
-          text: View Open Positions
+          text: 查看目前職缺
           url: /opportunities
       map_url: https://maps.google.com/?q=University+of+Excellence
       map_embed: |
