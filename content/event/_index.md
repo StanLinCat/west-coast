@@ -5,7 +5,19 @@ type: landing
 # Your landing page sections - add as many different content blocks as you like
 sections:
   # A section to display blog posts
-  
+  - block: collection
+    content:
+      title: 最新活動
+      subtitle:  subtitle
+      text: text
+      filters:
+        folders:
+          - newest_event
+    design:
+      view: card
+      spacing:
+        padding: ['3rem', 0, '6rem', 0]
+
   - block: collection
     id: section-1
     content:
