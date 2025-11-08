@@ -154,4 +154,80 @@ sections:
           filename: 'career/career1.png'
           size: '32px'
           position: 'repeat'
+  - block: search-hero
+    content:
+      badge:
+        text: "500+ AI answers added this week"
+        show_pulse: true  # Shows pulsing dot indicator
+      
+      title: "Master ==AI Tools==. ==Boost Your Productivity.=="
+      
+      subtitle: "Get instant answers to your AI questions from our comprehensive knowledge base."
+      
+      search_placeholder: "Ask anything about AI tools, prompts, or workflows..."
+      
+      suggestions:
+        - "ChatGPT prompts"
+        - "Midjourney tips"
+        - "AI automation"
+        - "Claude vs GPT-4"
+      
+      stats:
+        - value: "2,500+"
+          label: "Expert Answers"
+        - value: "50K+"
+          label: "Monthly Users"
+        - value: "4.9/5"
+          label: "User Rating"
+    
+    design:
+      background:
+        gradient_mesh:
+          enable: true
+          style: "orbs"       # orbs, waves, dots, grid
+          animation: "pulse"   # pulse, float, rotate, none
+          intensity: "subtle"  # subtle, medium, bold
+          colors:
+            - "primary-500/20"
+            - "primary-600/20"
+      spacing:
+        padding: ["8rem", "0", "6rem", "0"]
+
+
+  - blocks: knowledge-categories
+    type: categories
+    design:
+      spacing:
+        padding: ["6rem", "0", "6rem", "0"]
+    content:
+      title: "探索分類"
+      subtitle: "依主題瀏覽我們的內容"
+      categories:
+        - title: "部落格"
+          category: "blog"
+          icon:
+            name: "book"
+            bg_color: "bg-blue-100"
+            text_color: "text-blue-600"
+        - title: "專案"
+          category: "projects"
+          icon:
+            name: "briefcase"
+        - title: "資源"
+          category: "resources"
+          icon:
+            name: "archive"
+      view_all:
+        text: "檢視全部分類"
+        link: "/categories"
+
+  - block: collection
+    content:
+      filters:
+        folders:
+          - newest_event
+    design:
+      view: card
+      spacing:
+        padding: ['3rem', 0, '6rem', 0]
 ---
