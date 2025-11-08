@@ -47,7 +47,7 @@ sections:
       items:
         - statistic: "1,000+"
           description: |
-            服務在地居民  
+            服務總人數估計  
             從2022年成立至今
         - statistic: "12"
           description: |

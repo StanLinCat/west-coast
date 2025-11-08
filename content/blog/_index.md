@@ -1,5 +1,5 @@
 ---
-title: blog
+title: 活動
 type: landing
 
 # Your landing page sections - add as many different content blocks as you like
