@@ -6,11 +6,11 @@ main:
   - name: 首頁
     url: /#top
     weight: 10
+  - name: 最新消息
+    url: /#newest
+    weight: 20
   - name: 關於
     url: /#about
-    weight: 20
-  - name: 最新消息
-    url: /#solutions
     weight: 30
   - name: 成員
     url: members/

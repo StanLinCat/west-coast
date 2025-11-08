@@ -64,6 +64,18 @@ sections:
       spacing:
         padding: ["1rem", 0, "0rem", 0]
 
+  - block: collection
+    id: newest
+    content:
+      title: 最新消息&活動
+      filters:
+        folders:
+          - newest
+    design:
+      view: card
+      spacing:
+        padding: ['3rem', 0, '6rem', 0]
+
   - block: markdown
     id: about
     content:
