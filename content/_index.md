@@ -14,7 +14,7 @@ sections:
       text: Taiwan West Coast Development Association🐟 
       primary_action:
         text: 最新消息
-        url: "#solutions"
+        url: "#newest"
         icon: rocket-launch
       # secondary_action:
       #   text: Read the docs
