@@ -225,7 +225,7 @@ sections:
     content:
       filters:
         folders:
-          - newest_event
+          - newest
     design:
       view: card
       spacing:

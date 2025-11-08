@@ -12,7 +12,7 @@ sections:
       text: text
       filters:
         folders:
-          - newest_event
+          - newest
     design:
       view: card
       spacing:
