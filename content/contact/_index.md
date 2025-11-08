@@ -17,8 +17,8 @@ sections:
         - "周一至周五 : 10:00 AM - 4:00 PM"
         - "兩個月一次西海岸嘉義禱告祭壇"
         - "每月一次布袋祭壇(嘉義福音隊支持)"
-      email: lab@example.edu
-      phone: "+1 (555) 123-4567"
+      email: bacon4egg@gmail.com
+      phone: "(05) 373-4512"
       social:
         - icon: brands/facebook
           url: https://www.facebook.com/ilinkDongshi?locale=zh_TW
@@ -28,7 +28,7 @@ sections:
           url: https://youtube.com/channel/UCVxPi3yWUR-qmegqNtRfIug?si=RpraXCL4p5G1wvVz
       prospective:
         title: 加入我們
-        text: 有興趣一起服事西海岸嗎?
+        text: 有興趣一起服事西海岸嗎? 我們正在尋找認真且熱心的人
         button:
           text: 查看目前職缺
           url: /opportunities
@@ -41,5 +41,4 @@ sections:
       css_class: "bg-gray-50 dark:bg-gray-900 mb-0 pb-0"
       spacing:
         padding: ["3rem", 0, "1rem", 0]
-
 ---
