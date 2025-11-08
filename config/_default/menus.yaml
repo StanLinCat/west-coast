@@ -15,8 +15,8 @@ main:
   - name: 成員
     url: member/
     weight: 40
-  - name: 信息
-    url: blog/
+  - name: 活動
+    url: event/
     weight: 50
   - name: 新聞
     url: news/
