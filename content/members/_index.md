@@ -151,7 +151,7 @@ sections:
           end: 'primary-700'
           direction: 135
         image:
-          filename: 'textures/noise-pattern.svg'
+          filename: 'career/career1.png'
           size: '32px'
           position: 'repeat'
 ---

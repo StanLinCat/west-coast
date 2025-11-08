@@ -13,7 +13,7 @@ main:
     url: /#solutions
     weight: 30
   - name: 成員
-    url: member/
+    url: members/
     weight: 40
   - name: 活動
     url: event/
