@@ -72,7 +72,7 @@ sections:
         folders:
           - newest
     design:
-      view: card
+      view: card #article-grid要兩篇以上才好看，所以先不要用
       spacing:
         padding: ['3rem', 0, '6rem', 0]
 
