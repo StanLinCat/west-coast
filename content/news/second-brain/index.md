@@ -4,6 +4,7 @@ summary: Create a personal knowledge base and share your knowledge with your pee
 date: 2023-10-26
 authors:
   - admin
+external_link: https://ct.org.tw/html/news/3-3.php?cat=80&article=1397603
 tags:
   - Second Brain
   - Markdown

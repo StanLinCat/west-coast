@@ -3,6 +3,7 @@ title: 👩🏼‍🏫 Teach academic courses
 summary: Embed videos, podcasts, code, LaTeX math, and even test students!
 date: 2023-10-24
 math: true
+external_link: https://ct.org.tw/html/news/3-3.php?cat=80&article=1397603
 authors:
   - admin
 tags:
