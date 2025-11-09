@@ -10,8 +10,8 @@ design:
 sections:
   - block: hero
     content:
-      title: 台灣西海岸發展協會🦪 
-      text: Taiwan West Coast Development Association🐟 
+      title: 台灣西海岸發展協會🦪
+      text: 🐦Taiwan West Coast Development Association🐟 
       primary_action:
         text: 最新消息
         url: "#newest"
