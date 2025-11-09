@@ -1,7 +1,8 @@
 ---
-title: 📈 Communicate your results effectively with the best data visualizations
+title: 11111Communicate your results effectively with the best data visualizations
 summary: Use popular tools such as Plotly, Mermaid, and data frames.
 date: 2023-10-25
+external_link: https://translate.google.com/?sl=en&tl=zh-TW&op=translate
 authors:
   - admin
 tags:
