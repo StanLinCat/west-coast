@@ -8,15 +8,13 @@ sections:
   - block: collection
     content:
       title: 最新活動
-      subtitle:  subtitle
-      text: text
       filters:
         folders:
           - newest
     design:
       view: card
       spacing:
-        padding: ['3rem', 0, '6rem', 0]
+        padding: ['3rem', 0, '1rem', 0]
 
   - block: collection
     id: papers
