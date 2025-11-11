@@ -1,24 +1,28 @@
-{{/* Hugo Blox: Manual List Block - 置中 + 768px 寬度（與 collection 一致） */}}
+{{/* Hugo Blox: Manual List Block - 精確 768px 內容寬度（與 collection 完全一致） */}}
 {{ $page := .wcPage }}
 {{ $block := .wcBlock }}
 
 {{ $items := $block.content.items }}
 
-<!-- 標題區（置中，寬度 max-w-3xl） -->
+<!-- 標題區：外層 max-w-3xl + px-6 → 內容 768px -->
 {{ if $block.content.title }}
-<div class="flex flex-col items-center mx-auto max-w-3xl gap-3 px-6 md:px-0">
-  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white text-center">
-    {{ $block.content.title | emojify | $page.RenderString }}
+<div class="mx-auto max-w-3xl px-6">
+  <div class="mb-6 text-center">
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
+      {{ $block.content.title | emojify | $page.RenderString }}
+    </h2>
   </div>
   {{ with $block.content.text }}
-  <p class="text-center text-gray-600 dark:text-gray-400">{{ . | emojify | $page.RenderString }}</p>
+  <p class="text-center text-gray-600 dark:text-gray-400">
+    {{ . | emojify | $page.RenderString }}
+  </p>
   {{ end }}
 </div>
 {{ end }}
 
-<!-- 列表內容（置中，寬度 max-w-3xl） -->
-<div class="flex justify-center">
-  <div class="w-full max-w-3xl px-6 space-y-8">
+<!-- 列表內容：外層 max-w-3xl + px-6，內層「不加 px-6」→ 內容 768px -->
+<div class="mx-auto max-w-3xl px-6">
+  <div class="space-y-8">
     {{ range $items }}
       {{ $title := .title }}
       {{ $summary := .summary | default "" }}
@@ -50,7 +54,7 @@
 
           <!-- Read More -->
           <a href="{{ $link }}" {{ if $external_link }}target="_blank" rel="noopener"{{ end }}
-             aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-primary-500">
+             class="relative z-10 mt-4 flex items-center text-sm font-medium text-primary-500">
             {{ T "read_more" | default "Read more" }}
             <svg aria-hidden="true" class="ml-1 h-4 w-4 stroke-current" fill="none" viewBox="0 0 16 16">
               <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>

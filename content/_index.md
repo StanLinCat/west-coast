@@ -11,7 +11,7 @@ sections:
   - block: hero
     id: homepage-hero
     content:
-      title: 台灣西海岸發展協會🦪
+      title: 台灣西海岸發展協會🦪 
       text: 🐦Taiwan West Coast Development Association🐟 
       primary_action:
         text: 最新消息
@@ -150,4 +150,30 @@ sections:
         # Reduce bottom spacing so the testimonial appears vertically centered between sections
         padding: ["1rem", 0, 0, 0]
 
+  - block: faq
+    content:
+      title: 常見問題 FAQ
+      # subtitle: 找常見問題
+      # text: 找不到你的疑問嗎? [聯絡我們](/contact)
+      items:
+        - question: 為甚麼成立西海岸發展協會?
+          answer: 主要的成立原因和目標包括：回應西海岸的困境：該地區面臨地層下陷、土地鹽化、海面上升、極端氣候等自然環境問題，以及家庭困境、人口老化外移等社會哀愁。當地信主比例不到 1%，因此被稱為「黑暗沉淪之地」。協會的成立正是為了應用「神國法則的產業」和「關懷弱勢、扶助家庭、成全下一代」等策略，進入神的應許。
+        - question: Is it free to use?
+          answer: Yes! Hugo Blox Builder is open source and free to use under the MIT license.
+        
+        - question: How do I get started?
+          answer: |
+            Getting started is easy:
+            1. Choose a template
+            2. Click "Use Template"
+            3. Customize your content
+            4. Deploy to GitHub Pages or Netlify
+      
+      button:
+        text: 找不到你的疑問嗎? 聯絡我們
+        url: /contact/
+        icon: arrow-right
+    design:
+      spacing:
+        padding: ["2rem", "0", "6rem", "0"]
 ---
