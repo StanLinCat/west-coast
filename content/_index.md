@@ -153,27 +153,27 @@ sections:
   - block: faq
     content:
       title: 常見問題 FAQ
-      # subtitle: 找常見問題
-      # text: 找不到你的疑問嗎? [聯絡我們](/contact)
       items:
         - question: 為甚麼成立西海岸發展協會?
           answer: 主要的成立原因和目標包括：回應西海岸的困境：該地區面臨地層下陷、土地鹽化、海面上升、極端氣候等自然環境問題，以及家庭困境、人口老化外移等社會哀愁。當地信主比例不到 1%，因此被稱為「黑暗沉淪之地」。協會的成立正是為了應用「神國法則的產業」和「關懷弱勢、扶助家庭、成全下一代」等策略，進入神的應許。
-        - question: Is it free to use?
-          answer: Yes! Hugo Blox Builder is open source and free to use under the MIT license.
+        - question: 這是宗教性質的機構嗎？
+          answer: 是的。協會的策略包括形成「五重職事合一團隊」，遵行聖經的原則，領人歸向耶穌基督。他們致力於建立祭壇、吸引神同在、推開黑暗、建立禱告火牆，並促進各教會合一興旺福音。
+        - question: 有哪些活動?
+          answer: 協會定期舉辦聖誕文化節，活動中包含音樂劇、舞蹈、藝人演出、發送聖經，並帶出許多人決志受洗的成果
         
-        - question: How do I get started?
+        - question: 四生是甚麼?
           answer: |
-            Getting started is easy:
-            1. Choose a template
-            2. Click "Use Template"
-            3. Customize your content
-            4. Deploy to GitHub Pages or Netlify
-      
+            1. 生命：這是「四生」發展的核心。其具體意義是「傳報福音」。協會的最終目標是使西海岸的百姓得著豐盛生命。在屬靈層面，這被描述為日光之上：「靠聖靈、賺永生」。
+            2. 生產：指的是結合「神國法則的產業」。紀志煌牧師作為監事，便是在農業方面作見證人，使用神的法則來治理土地，生產健康、優質的農產品。在物質層面，這與追求讓西海岸「賺不停」的願景相關。
+            3. 生活：主要涉及社會關懷和家庭的轉化。策略包括「關懷弱勢、扶助家庭、成全下一代」。
+            4. 生態：主要關注西海岸的自然環境改善。協會的願景是讓西海岸在物質層面能達到「沒淹水、嘸缺水、環境美、水質清、魚保證」的狀態。生態發展是作為傳報福音的「橋樑」之一。
+        - question: 可以來做志工服務並取得時數嗎？
+          answer: 協會的運作需要大量的人力資源和奉獻，可連絡專員進一步詢問。
       button:
         text: 找不到你的疑問嗎? 聯絡我們
         url: /contact/
         icon: arrow-right
     design:
       spacing:
-        padding: ["2rem", "0", "6rem", "0"]
+        padding: ["2rem", "0", "2rem", "0"]
 ---
