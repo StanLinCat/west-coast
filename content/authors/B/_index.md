@@ -13,11 +13,11 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:jane@example.edu'
-  - icon: youtube
-    icon_pack: fa-brands
+  - icon: phone
+    icon_pack: fas
     link: https://twitter.com/janedoe
-  - icon: fa-instagram
-    icon_pack: fa-brands
+  - icon: youtube
+    icon_pack: fab
     link: https://github.com/janedoe
 user_groups:
   - PhD Students
