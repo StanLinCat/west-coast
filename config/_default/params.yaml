@@ -5,8 +5,8 @@
 
 # Appearance
 appearance:
-  mode: light
-  color: indigo
+  mode: system
+  color: blue #indigo
 
 # SEO
 marketing:
