@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: PhD Students
+role: 管理師
 
 user_groups:
   - 主要成員

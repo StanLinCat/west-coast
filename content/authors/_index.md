@@ -15,7 +15,7 @@ sections:
       sort_by: 'Params.last_name'
       sort_ascending: true
       cta:
-        text: Join Our Team
+        text: 加入我們
         url: /opportunities
         icon: user-plus
     design:

@@ -33,10 +33,8 @@ profiles:
     url: 'mailto:alex.johnson@meta.com'
     label: E-mail Me
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - C語言
+  - 控制系統
 
 education:
   - area: 機械工程控制組碩士

@@ -3,7 +3,7 @@
 title: CBK
 
 # Name pronunciation (optional)
-name_pronunciation: Lin Yu Ting
+name_pronunciation: 
 
 # Full name (for SEO)
 first_name: Shiung Wu
@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: PhD Students
+role: 歌手
 
 user_groups:
   - 合作成員
