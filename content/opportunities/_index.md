@@ -7,7 +7,7 @@ sections:
   - block: research-areas
     id: main
     content:
-      title: 【西海岸發展協會】人才招募
+      title: 西海岸發展協會 人才招募
       subtitle: 加入我們，共創地方影響力！🌊
       text: 西海岸發展協會是一個致力於推動地方文化、經濟與環境永續發展的非營利組織。我們正在尋找充滿熱情、具備專業技能的夥伴，共同參與多樣化的專案執行與品牌營運。
       items:

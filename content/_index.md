@@ -50,14 +50,14 @@ sections:
           description: |
             服務總人數估計  
             從2022年成立至今
-        - statistic: "12"
+        - statistic: "7"
           description: |
             合作與連結單位  
             地方教會、非營利組織等
         - statistic: "1"
           description: |
             政府等主管機關  
-            認證與獎項
+            認證與計畫
     design:
       # Section background color (CSS class)
       css_class: "bg-gray-100 dark:bg-gray-900"
