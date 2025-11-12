@@ -6,32 +6,29 @@ title: 林昱廷
 name_pronunciation: Lin Yu Ting
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
-
-# Pronouns (optional)
-pronouns: she/her
+first_name: Yu Ting
+last_name: Lin
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: 🐱
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position/tagline
-role: PhD Students
+role: 網頁軟體與維護專員
 
 user_groups:
-  - Postdoctoral Researchers
+  - 幕後支援
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: GenCoin
-    url: https://www.example.com/
+  - name: 現職奇景韌體工程師
+    url: https://www.stanlincat.com/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
-profiles:
+profiles: 
 
 education:
   - area: PhD Artificial Intelligence
@@ -173,7 +170,7 @@ sections:
       css_class: hbx-bg-gradient
       # Avatar customization
       avatar:
-        size: small # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
+        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
   - block: resume-skills
     content:

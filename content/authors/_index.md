@@ -12,6 +12,7 @@ sections:
         - Principal Investigators
         - Postdoctoral Researchers
         - PhD Students
+        - 幕後支援
       sort_by: 'Params.last_name'
       sort_ascending: true
       cta:
