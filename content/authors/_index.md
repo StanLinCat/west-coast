@@ -5,13 +5,12 @@ type: landing
 sections:
   - block: team-showcase
     content:
-      title: Meet Our Team
-      subtitle: World-class researchers advancing science
-      text: Our diverse team brings together expertise from multiple disciplines.
+      title: 我們的團隊
+      subtitle: 專業 專注 永續 
+      text: 我們多元化的團隊匯集了來自多個領域背景，同心協助西海岸更加美好
       user_groups:
-        - Principal Investigators
-        - Postdoctoral Researchers
-        - PhD Students
+        - 主要成員
+        - 合作成員
         - 幕後支援
       sort_by: 'Params.last_name'
       sort_ascending: true
@@ -30,20 +29,20 @@ sections:
 
   - block: logos
     content:
-      title: Our Partners & Collaborators
+      title: 我們的夥伴及合作單位
       subtitle: Working with leading institutions worldwide
       text: We collaborate with top universities and research centers
       logos:
-        - name: MIT
-          image: partners/mit.png
-          url: https://mit.edu
-          description: Massachusetts Institute of Technology
-        - name: Stanford University
-          image: partners/stanford.svg
-          url: https://stanford.edu
+        - name: 愛鄰
+          image: partners/love.jpg
+          url: https://www.i-link.org.tw/service.htm
+          description: 鄰鄰協會
+        - name: 台北靈糧堂
+          image: partners/bread.jpg
+          url: https://www.breadoflife.taipei/
           description: Leading research university
-        - name: Google Research
-          image: partners/google.png
+        - name: 嘉義聖教會
+          image: partners/holy.jpg
           url: https://research.google
           description: AI and ML research
         - name: Microsoft Research

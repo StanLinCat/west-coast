@@ -1,11 +1,11 @@
 ---
-title: ✅ Manage your projects
-summary: Easily manage your projects - create ideation mind maps, Gantt charts, todo lists, and more!
+title: ✅ 範例文案三 恩典之路
+summary: 敬拜~
 date: 2023-10-23
 authors:
   - admin
 tags:
-  - Hugo Blox
+  - 詩歌
   - Markdown
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
