@@ -1,12 +1,12 @@
 ---
-title: 📈 Communicate your results effectively with the best data visualizations
-summary: Use popular tools such as Plotly, Mermaid, and data frames.
+title: 📈 範例活動文案
+summary: 開心開心
 date: 2023-10-25
 authors:
   - admin
 tags:
-  - Hugo
-  - Hugo Blox
+  - 西海岸發展協會
+  - 高跟鞋教堂
   - Markdown
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'

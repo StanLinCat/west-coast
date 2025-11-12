@@ -1,6 +1,6 @@
 ---
 # Display name
-title: 林昱廷
+title: CBK
 
 # Name pronunciation (optional)
 name_pronunciation: Lin Yu Ting
@@ -8,9 +8,6 @@ name_pronunciation: Lin Yu Ting
 # Full name (for SEO)
 first_name: Shiung Wu
 last_name: Chien
-
-# Pronouns (optional)
-pronouns: she/her
 
 # Status emoji
 status:
@@ -173,7 +170,7 @@ sections:
       css_class: hbx-bg-gradient
       # Avatar customization
       avatar:
-        size: small # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
+        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
   - block: resume-skills
     content:

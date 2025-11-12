@@ -1,14 +1,13 @@
 ---
-title: 👩🏼‍🏫 Teach academic courses
-summary: Embed videos, podcasts, code, LaTeX math, and even test students!
+title: 👩🏼‍🏫 範例文案5
+summary: 神愛世人
 date: 2023-10-24
 math: true
-external_link: https://ct.org.tw/html/news/3-3.php?cat=80&article=1397603
 authors:
   - admin
 tags:
   - Hugo
-  - Hugo Blox Builder
+  - 詩篇
   - Markdown
 image:
   caption: 'Embed rich media such as videos and LaTeX math'

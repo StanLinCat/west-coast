@@ -1,6 +1,6 @@
 ---
-title: 🎉 Easily create your own simple yet highly customizable blog
-summary: Take full control of your personal brand and privacy by migrating away from the big tech platforms!
+title: 🎉 範例活動文案2 聖誕節?
+summary: 待修改
 date: 2023-10-27
 
 # Featured image

@@ -12,22 +12,22 @@ sections:
     content:
       title: 新聞與媒體
       items:
-        - name: Youtube
+        - name: Youtube影片列表
           image: news/YouTube-Logosu.png
           cta:
-            text: youtube列表
+            text: 前往 youtube影片
             url: /news/#youtube
 
-        - name: 新聞報導
+        - name: 新聞報導列表
           image: news/newspaper.jpg
           cta:
-            text: 新聞列表
+            text: 前往 新聞報導
             url: /news/#news
 
-        - name: 其他社群媒體
+        - name: 其他媒體整理
           image: news/FBIG.jpg
           cta:
-            text: 其他媒體列表
+            text: 前往 其他媒體
             url: /news/#others
     design:
       layout: cards
@@ -44,13 +44,8 @@ sections:
           summary: "近十年來，神也集結台北靈糧堂東石福音中心、信望愛基金會嘉義福音隊、所羅門國際公司、嘉義聖教會、新塭長老教會、浸宣朴子恩典中心、學友樂器...等，為著福音舉辦聖誕文化節，並結出「西海岸（福音）發展協會」的果子。"
           date: 2022-07-17
           external_link: https://www.youtube.com/watch?v=FVcoeId_AvM
-
-        - title: "林素每分享的影片 (協會成立相關)"
-          summary: "協會成立（2022.07）"
-          date: 2022-07-01
-          external_link: https://youtu.be/FVcoeId_AvM
         - title: "尋訪荷蘭時代福音古道 串連西海岸400年宣教軌跡-GOOD TV NEWS"
-          summary: "2025.02.14"
+          summary: ""
           date: 2025-02-14
           external_link: https://youtu.be/8pUX45SULOM
         - title: "TVBS新聞｜為嘉義祈福2024會更好 (聖誕點燈)"
@@ -82,7 +77,7 @@ sections:
           date: 2024-01-01
           external_link: https://youtu.be/_8CxsLpiCn0
         - title: "西海岸收割節活動影片"
-          summary: "2025.07.01"
+          summary: ""
           date: 2025-07-01
           external_link: https://youtu.be/Ebyp72T9PHo
         - title: "西海岸收割節：牧師變成農夫，祖田變身「主田」"
@@ -106,7 +101,7 @@ sections:
           date: 2022-12-01
           external_link: https://youtu.be/qGmjVen5QAw
         - title: "福音西海岸啟動座談會 (2022第四屆高跟鞋聖誕文化祭系列三)"
-          summary: "2022.12.17"
+          summary: ""
           date: 2022-12-17
           external_link: https://youtu.be/hUwIGOU5C-Q
         - title: "CTWANT 人間暖流》臥底警退出江湖用生命填補承諾"
@@ -134,17 +129,13 @@ sections:
           date: 2024-03-10
           external_link: https://youtu.be/B2XTaPMtx1E?t=182
         - title: "西海岸聚集及揭牌儀式全程影片"
-          summary: "2022/7/16"
+          summary: ""
           date: 2022-07-16
           external_link: https://youtu.be/q-6XjK59AaY
         - title: "東石靈糧福音中心-主日崇拜【聖靈大反攻-謝宏忠 院長】"
-          summary: "2022/7/17"
+          summary: ""
           date: 2022-07-17
           external_link: https://youtu.be/pvgHbJimtU0
-          
-
-        
-
     design:
       columns: "2"
       background:
@@ -157,12 +148,8 @@ sections:
     content:
       title: "新聞報導"
       items:
-        - title: "基督教今日報 (另一篇報導連結)"
-          summary: "無明確日期"
-          date: 2024-03-10
-          external_link: https://cdn-news.org/News.aspx?EntityID=News&PK=0000000000652e59cfe7837da8dd154a989ccf35e24c872f
-        - title: "西海岸2021聖誕文化節》一家家收割、不斷有人決志！"
-          summary: "報導日期：2021/11/28"
+        - title: "西海岸2021聖誕文化節"
+          summary: "一家家收割、不斷有人決志！"
           date: 2021-11-28
           external_link: https://cdn-news.org/News.aspx?EntityID=News&PK=0000000000652e59cfe7837da8dd154a989ccf35e24c872f
         - title: "福音與傳統文化交鋒前線—台南西海岸"
@@ -237,8 +224,8 @@ sections:
     content:
       title: "其他社群媒體"
       items:
-        - title: "陳凱倫主持 2023 聖誕文化節 (LINE VOOM 貼文)"
-          summary: "2023/12/2"
+        - title: "陳凱倫主持 2023 聖誕文化節"
+          summary: " (LINE VOOM 貼文)"
           date: 2023-12-02
           external_link: https://linevoom.line.me/post/_deZLA8j6OT5WjNeDsqHZD4eJf2lbLl6miD2CcvE/1170151141426185277
         - title: "好消息國度報導-國度瞭望：「第五屆西海岸聖誕文化節」(Facebook)"
@@ -264,230 +251,4 @@ sections:
       spacing:
         padding: ["3rem", 0, "3rem", 0]
 
-
-
-
-
-
-
-  - block: collection
-    id: section-1
-    content:
-      title: 新聞資訊施工中....
-      subtitle: A subtitle
-      text: Add any **markdown** formatted content here - text, images, videos, galleries - and even HTML code!
-      # Display content from the `content/post/` folder
-      filters:
-        folders:
-          - news
-    design:
-      # Choose how many columns the section has. Valid values: '1' or '2'.
-      columns: '1'
-      # Choose your content listing view - here we use the `showcase` view
-      view: date-title-summary 
-      # For the Showcase view, do you want to flip alternate rows? 
-      flip_alt_rows: true
-
-
-
-
-  - block: markdown
-    id: about
-    content:
-      title: "關於 西海岸發展協會"
-      text: |
-        #### 非以營利為目的之公益性社會團體
-        本協會的宗旨是結合個人、工商社會團體、宗教團體及政府資源，發揮服務兼謀成長的精神，以促進西海岸在地居民四生（生活 生產 生態 生命）各大層面間的實質豐沛與飽滿，並致力於謀求社會福利、增進社會公益。  
-
-        我們的任務包含協助推動發展台灣西海岸各項產業，使其符合永續發展的精神，同時透過珍惜與維護西海岸的自然資源，發展生態教育與觀摩活動，並提供各種生活體驗活動，辦理各種生活事業，以期提升生活品質，使人帶來豐盛與快樂。我們深信透過協助、關懷與推廣服務諮詢，能使人看見生命的真善美，促進生命熱情的發揚，發揮生命的光芒與未來。🌱
-    design:
-      columns: "1"
-      background:
-        color: "system"
-      spacing:
-        padding: ["3rem", 0, "3rem", 0]
-  - block: collection
-    id: section-1
-    content:
-      title: 信息資訊施工中....
-      subtitle: A subtitle
-      text: Add any **markdown** formatted content here - text, images, videos, galleries - and even HTML code!
-      # Display content from the `content/post/` folder
-      filters:
-        folders:
-          - news
-    design:
-      # Choose how many columns the section has. Valid values: '1' or '2'.
-      columns: '1'
-      # Choose your content listing view - here we use the `showcase` view
-      view: citation
-      # For the Showcase view, do you want to flip alternate rows?
-      flip_alt_rows: true
-
-  - block: collection
-    id: papers
-    content:
-      title: Featured Publications
-      filters:
-        folders:
-          - news
-        featured_only: false
-    design:
-      view: article-grid
-      columns: '4'
-      
-  - block: research-areas
-    content:
-      title: Research Focus Areas
-      subtitle: Advancing Science Through Innovation
-      text: Our lab conducts cutting-edge research across multiple domains
-      items:
-        - name: Computational Biology
-          description: Developing algorithms for genomic analysis and protein structure prediction
-          emoji: 🧬
-          gradient: from-green-400 to-blue-500
-          status: active
-          topics:
-            - Genomics
-            - Proteomics
-            - Bioinformatics
-            - Systems Biology
-          team_size: 12 researchers
-          publications: 45 papers
-          funding: $2.5M
-          cta:
-            text: Learn More
-            url: /research/computational-biology
-
-        - name: Machine Learning
-          description: Advancing deep learning methods for scientific discovery
-          emoji: 🤖
-          gradient: from-purple-400 to-pink-500
-          status: active
-          topics:
-            - Deep Learning
-            - Neural Networks
-            - Computer Vision
-            - NLP
-          team_size: 8 researchers
-          publications: 32 papers
-          funding: $1.8M
-
-        - name: Materials Science
-          description: Designing novel materials through computational modeling
-          emoji: 🔬
-          gradient: from-orange-400 to-red-500
-          status: emerging
-          topics:
-            - Nanomaterials
-            - Quantum Materials
-            - Polymers
-          team_size: 6 researchers
-          publications: 28 papers
-          funding: $1.2M
-    design:
-      layout: cards
-
-
-
-  
-
-  - block: cta-card
-    content:
-      title: 'Ready to Get Started?'
-      text: 'Join thousands of users creating amazing websites'
-      button:
-        text: 'Get Started Free'
-        url: '/signup/'
-        icon: 'hero/rocket-launch'
-    design:
-      card:
-        css_class: 'cta-glassmorphism'
-        text_color: 'auto' # auto|light|dark
-        overlay_opacity: 0.15 # 0.0-1.0 for contrast control
-      background:
-        gradient:
-          start: 'primary-500'
-          end: 'primary-700'
-          direction: 135
-        image:
-          filename: 'career/career1.png'
-          size: '32px'
-          position: 'repeat'
-  - block: search-hero
-    content:
-      badge:
-        text: "500+ AI answers added this week"
-        show_pulse: true  # Shows pulsing dot indicator
-      
-      title: "Master ==AI Tools==. ==Boost Your Productivity.=="
-      
-      subtitle: "Get instant answers to your AI questions from our comprehensive knowledge base."
-      
-      search_placeholder: "Ask anything about AI tools, prompts, or workflows..."
-      
-      suggestions:
-        - "ChatGPT prompts"
-        - "Midjourney tips"
-        - "AI automation"
-        - "Claude vs GPT-4"
-      
-      stats:
-        - value: "2,500+"
-          label: "Expert Answers"
-        - value: "50K+"
-          label: "Monthly Users"
-        - value: "4.9/5"
-          label: "User Rating"
-    
-    design:
-      background:
-        gradient_mesh:
-          enable: true
-          style: "orbs"       # orbs, waves, dots, grid
-          animation: "pulse"   # pulse, float, rotate, none
-          intensity: "subtle"  # subtle, medium, bold
-          colors:
-            - "primary-500/20"
-            - "primary-600/20"
-      spacing:
-        padding: ["8rem", "0", "6rem", "0"]
-
-
-  - blocks: knowledge-categories
-    type: categories
-    design:
-      spacing:
-        padding: ["6rem", "0", "6rem", "0"]
-    content:
-      title: "探索分類"
-      subtitle: "依主題瀏覽我們的內容"
-      categories:
-        - title: "部落格"
-          category: "blog"
-          icon:
-            name: "book"
-            bg_color: "bg-blue-100"
-            text_color: "text-blue-600"
-        - title: "專案"
-          category: "projects"
-          icon:
-            name: "briefcase"
-        - title: "資源"
-          category: "resources"
-          icon:
-            name: "archive"
-      view_all:
-        text: "檢視全部分類"
-        link: "/categories"
-
-  - block: collection
-    content:
-      filters:
-        folders:
-          - newest
-    design:
-      view: card
-      spacing:
-        padding: ['3rem', 0, '6rem', 0]
 ---
