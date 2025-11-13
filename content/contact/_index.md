@@ -10,15 +10,14 @@ sections:
       connect_title: 聯絡資訊
       address:
         lines:
-          - 625 嘉義縣 布袋鎮 文昌街 31號
-          - No. 31, Wenchang St, Budai Township
+          - 625嘉義縣布袋鎮海興街6號
           
       office_hours:
         - "周一至周五 : 10:00 AM - 4:00 PM"
         - "兩個月一次西海岸嘉義禱告祭壇"
         - "每月一次布袋祭壇(嘉義福音隊支持)"
       email: bacon4egg@gmail.com
-      phone: "(05) 373-4512"
+      phone: "0966152104"
       social:
         - icon: brands/facebook
           url: https://www.facebook.com/ilinkDongshi?locale=zh_TW
