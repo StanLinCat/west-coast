@@ -22,11 +22,11 @@ highlight_name: true
 # Role/position/tagline
 role: 監事
 user_groups:
-  - 主要成員
+  - 監事成員
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: 東石靈糧福音中心
+    # url: https://ai.meta.com/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -46,122 +46,33 @@ profiles:
   #   url: https://orcid.org/0000-0002-1825-0097
 
 interests:
-  - 土木、水利、環境工程
+  - 土木
+  - 水利
+  - 環境工程
+  - 保羅書信
 
 education:
-  - area: PhD Computer Science (AI Focus)
-    institution: Stanford University
-    icon: ""
-    date_start: 2015-09-01
-    date_end: 2019-06-30
-    summary: |
-      Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com/thesis.pdf'
-  - area: MS Computer Science
-    institution: Carnegie Mellon University
-    icon: ""
-    date_start: 2013-09-01
-    date_end: 2015-05-31
-    summary: |
-      GPA: 4.0/4.0
-
-      Specialized in machine learning and robotics.
-  - area: BS Computer Science
-    institution: MIT
+  - area: 神學碩士
+    institution: 靈糧教牧神學院
     icon: ""
     date_start: 2009-09-01
-    date_end: 2013-05-31
+    date_end: 2010-06-30
     summary: |
-      GPA: 3.9/4.0
-
-      Minored in Mathematics. President of AI Club.
-
-work:
-  - position: Senior AI Research Scientist
-    company_name: Meta AI
-    company_url: 'https://ai.meta.com/'
-    icon: ''
-    date_start: 2020-01-01
-    date_end: ''
-    summary: |2-
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models. 50+ citations in 3 years.
-  - position: AI Research Intern
-    company_name: OpenAI
-    company_url: 'https://openai.com/'
-    icon: ''
-    date_start: 2019-06-01
-    date_end: 2019-12-31
+      環境水質與土地關係
+  - area: 環境工程博士
+    institution: 中央大學
+    icon: ""
+    date_start: 1995-09-01
+    date_end: 1998-06-30
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      水利規畫最佳化演算法，影用於城市水利系統
+    # button:
+    #   text: 'Read Thesis'
+      # url: 'https://example.com/thesis.pdf'
 
-# Skills
-# Add your own SVG icons to `assets/media/icons/`
-skills:
-  - name: Technical Skills
-    items:
-      - name: Python & PyTorch
-        description: ''
-        percent: 95
-        icon: code-bracket
-      - name: Machine Learning
-        description: ''
-        percent: 100
-        icon: chart-bar
-      - name: Cloud Computing (AWS/GCP)
-        description: ''
-        percent: 85
-        icon: cloud
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Hiking in the Rockies
-        description: ''
-        percent: 80
-        icon: person-simple-walk
-      - name: Building Custom PCs
-        description: ''
-        percent: 90
-        icon: cpu-chip
-      - name: Sci-Fi Reading
-        description: ''
-        percent: 70
-        icon: book-open
-
-languages:
-  - name: English
-    percent: 100
-  - name: Spanish
-    percent: 50
-
-# Awards.
-#   Add/remove as many awards below as you like.
-#   Only `title`, `awarder`, and `date` are required.
-#   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
-awards:
-  - title: Best Paper Award
-    url: https://neurips.cc/
-    date: '2022-12-01'
-    awarder: NeurIPS
-    icon: hero/trophy
-    summary: |
-      Awarded for groundbreaking work on efficient training of large models.
-  - title: AI Innovation Grant
-    url: https://www.nsf.gov/
-    date: '2021-06-15'
-    awarder: National Science Foundation
-    icon: hero/currency-dollar
-    summary: |
-      $500,000 grant for research in ethical AI development.
-  - title: Outstanding PhD Thesis
-    url: https://www.stanford.edu/
-    date: '2019-06-30'
-    awarder: Stanford University
-    icon: hero/academic-cap
-    summary: |
-      Recognized for contributions to scaling laws in deep learning.
+    # button:
+    #   text: 'Read Thesis'
+      # url: 'https://example.com/thesis.pdf'
 
 
 type: landing
@@ -175,11 +86,11 @@ sections:
     content:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: billbright
-      text: ''
+      text: '林碧亮牧師在台灣西海岸發展協會中擔任常務監事的職務。他同時也是台北靈糧堂東石福音中心的牧師。作為協會的常務監事，他的職責包括監督協會業務的執行，審核年度預決算、財務狀況與處理其他監察事項。在個人事奉與委身方面，林牧師於 2010 年領受「轉化」的異象，便受呼召攜全家成為東石的新住民。他效法「一粒麥子」的心志，相信西海岸要充滿盼望，並致力於恢復神/人/土地的盟約。他深信游進裕博士提出的「四生」願景，即日光之下要達成生活與生產的改善，以及日光之上「靠聖靈、賺永生」的目標。'
       # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/resume.pdf
+      # button:
+      #   text: Download CV
+      #   url: uploads/resume.pdf
       headings:
         about: ''
         education: ''
@@ -191,7 +102,5 @@ sections:
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
+        
 ---
-
-
-牧師的工作
