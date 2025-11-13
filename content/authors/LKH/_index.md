@@ -1,6 +1,6 @@
 ---
 # Display name
-title: 柳克瀚
+title: 柳克翰
 
 # Name pronunciation (optional)
 name_pronunciation: 
