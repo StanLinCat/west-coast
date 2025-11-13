@@ -41,15 +41,15 @@ sections:
         - name: 台北靈糧堂
           image: partners/bread.jpg
           url: https://www.breadoflife.taipei/
-          description: Leading research university
+          description: 台北靈糧堂
         - name: 嘉義聖教會
           image: partners/holy.jpg
-          url: https://research.google
-          description: AI and ML research
-        - name: Microsoft Research
-          image: partners/microsoft.svg
-          url: https://www.microsoft.com/research
-          description: Computing research lab
+          url: https://www.facebook.com/chc.ChiaYiHolinessChurch/?locale=zh_TW
+          description: 嘉義聖教會
+        - name: 學友樂器音響
+          image: partners/showyou.png
+          url: https://www.facebook.com/ShowyouSound/
+          description: 優質音樂設備公司
     design:
       display_mode: grid
       css_class: "bg-gray-50 dark:bg-gray-900"
