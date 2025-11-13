@@ -1,6 +1,6 @@
 ---
 # Display name
-title: 柳克翰
+title: 李雪虹
 
 # Name pronunciation (optional)
 name_pronunciation: 
@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 影音專員/維護工程師
+role: 管理師/物理治療師
 
 user_groups:
   - 營運專員
@@ -31,15 +31,15 @@ organizations:
 profiles:
 
 interests:
-  - 海鮮
-  - 蚵
+  - 紫色
+  - 東石美食
 
 type: landing
 sections:
   - block: resume-biography-3
     content:
-      username: "LKH"
-      text: "顏質擔當，影音專業"
+      username: "LeeSnowRed"
+      text: "各種支援"
       # button:
       #   text: "Click Here"
       #   url: "https://example.com"
