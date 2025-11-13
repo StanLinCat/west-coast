@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 林安喬
+title: 周耀銓
 
 # Name pronunciation (optional)
 name_pronunciation: 
 
 # Full name (for SEO)
 first_name: 
-last_name: 
+last_name: 2
 
 # Status emoji
 status:
@@ -17,31 +17,29 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 吉祥物
+role: 理事
 
 user_groups:
-  - 幕後支援
+  - 理事成員
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: 東石靈糧福音中心
+  - name: 嘉義新恩堂/信望愛基金會雲嘉福音隊
     url: 
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: brands/github
-    url: https://github.com/alexjohnsonai
-    
+
 interests:
-  - 米餅
-  - 乖乖
+  # - 西海岸美食
+  # - 音樂
 
 type: landing
 sections:
   - block: resume-biography-3
     content:
-      username: "angellin"
-      text: "吉祥物裝可愛"
+      username: "Chou-Yao-Chuan"
+      text: "周耀銓傳道是中華信望愛基金會嘉義福音隊的一員。他從 2019 年開始參加西海岸地區的輪班祭壇禱告（例如高跟鞋園區 108 班次及 2020 年「愛祢愛祢」20 班次的禱告祭壇），因此對西海岸產生了強烈的負擔。在聖靈的引導下，他委身於西海岸每個月的禱告祭壇守望，並參與了每年的聖誕文化節活動，最終促成了協會的成立。周傳道深信台灣西海岸若能復興轉化突破，台灣就會隨之復興。"
       # button:
       #   text: "Click Here"
       #   url: "https://example.com"

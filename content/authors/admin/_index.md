@@ -32,13 +32,24 @@ profiles:
   - icon: at-symbol
     url: 'mailto:alex.johnson@meta.com'
     label: E-mail Me
+  - icon: brands/x
+    url: https://twitter.com/AlexAIResearch
+  - icon: brands/github
+    url: https://github.com/alexjohnsonai
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/alexjohnsonai/
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=alexjohnson
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0002-1825-0097
+
 interests:
   - C語言
   - 控制系統
 
 education:
-  - area: 機械工程控制組碩士
-    institution: 台科大
+  - area: 控制工程碩士
+    institution: 臺灣科技大學
     date_start: 2016-01-01
     date_end: 2020-12-31
     summary: |
@@ -46,8 +57,8 @@ education:
     button:
       text: 'Read Thesis'
       url: 'https://example.com'
-  - area: BSc Artificial Intelligence
-    institution: Massachusetts Institute of Technology
+  - area: 機械工程學士
+    institution: 臺灣科技大學
     date_start: 2016-01-01
     date_end: 2020-12-31
     summary: |
@@ -151,13 +162,27 @@ awards:
     summary: |
       Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 type: landing
 sections:
   - block: resume-biography-3
     content:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
-      text: ''
+      text: '本職位為社團法人台灣西海岸 (福音) 發展協會的關鍵執行者，負責實施新媒體策略，維護與發展協會的網頁、軟體及數位平台，以全力推動「西海岸成為福音海岸，西海岸成為黃金海岸」的雙重異象。'
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
@@ -225,4 +250,3 @@ sections:
 
 ---
 
-本職位為社團法人台灣西海岸 (福音) 發展協會的關鍵執行者，負責實施新媒體策略，維護與發展協會的網頁、軟體及數位平台，以全力推動「西海岸成為福音海岸，西海岸成為黃金海岸」的雙重異象。專員須確保協會的**「四生」發展策略**——以生命為核心傳報福音，結合生產、生活、生態——能有效透過數位管道傳播，將「天國近了，你們應當悔改」的呼召帶給坐在黑暗裡的百姓。主要職責包括即時更新活動成果，如聖誕文化節和禱告祭壇的資訊，推廣神國法則的產業，並促進眾教會資源連結與培訓，同時協助協會強化禱告火牆，召喚在西海岸有根源的兒女回家共同發展四生。應徵者需運用技術力量，幫助這塊被稱為黑暗沉淪之地的區域 實現日光之下「沒淹水、嘸缺水、環境美、水質清、魚保證、人清盈、賺不停」的願景，將盼望的種子深植在這片土地中

@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 林安喬
+title: 紀志煌
 
 # Name pronunciation (optional)
 name_pronunciation: 
 
 # Full name (for SEO)
 first_name: 
-last_name: 
+last_name: 2
 
 # Status emoji
 status:
@@ -17,31 +17,29 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 吉祥物
+role: 監事
 
 user_groups:
-  - 幕後支援
+  - 監事成員
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: 東石靈糧福音中心
+  - name: 雲林福音使命團
     url: 
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: brands/github
-    url: https://github.com/alexjohnsonai
-    
+
 interests:
-  - 米餅
-  - 乖乖
+  # - 西海岸美食
+  # - 音樂
 
 type: landing
 sections:
   - block: resume-biography-3
     content:
-      username: "angellin"
-      text: "吉祥物裝可愛"
+      username: "Ji-Zhihuang"
+      text: "紀志煌牧師是台灣西海岸發展協會的監事，同時也是浸信宣道會神學院前院長和價值米生產者。他從台大農化系畢業後，在美國信主並讀神學院，最終辭去嘉義農專教職，領受「回家去耕種自己田地」的呼召。紀牧師致力於用神的法則來種田，生產健康優質的農產品，這項工作體現了協會「生產」與「生態」的目標。他委身於漢人來台古道（北港溪畔）的入口處從事農業，擔任神在農業界的見證人"
       # button:
       #   text: "Click Here"
       #   url: "https://example.com"

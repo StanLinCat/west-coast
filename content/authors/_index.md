@@ -9,8 +9,9 @@ sections:
       subtitle: 專業 專注 永續 
       text: 我們多元化的團隊匯集了來自多個領域背景，同心協助西海岸更加美好
       user_groups:
-        - 主要成員
-        - 合作成員
+        - 理事成員
+        - 監事成員
+        - 營運專員
         - 幕後支援
       sort_by: 'Params.last_name'
       sort_ascending: true
@@ -30,8 +31,8 @@ sections:
   - block: logos
     content:
       title: 我們的夥伴及合作單位
-      subtitle: Working with leading institutions worldwide
-      text: We collaborate with top universities and research centers
+      subtitle: 與全台領先機構合作
+      text: 我們與頂尖社會服務單位和非營利組織合作
       logos:
         - name: 愛鄰
           image: partners/love.jpg

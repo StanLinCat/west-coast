@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 林安喬
+title: 徐順祥
 
 # Name pronunciation (optional)
 name_pronunciation: 
 
 # Full name (for SEO)
 first_name: 
-last_name: 
+last_name: 2
 
 # Status emoji
 status:
@@ -17,31 +17,29 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 吉祥物
+role: 理事
 
 user_groups:
-  - 幕後支援
+  - 理事成員
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: 東石靈糧福音中心
+  - name: 過路長老教會
     url: 
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: brands/github
-    url: https://github.com/alexjohnsonai
-    
+
 interests:
-  - 米餅
-  - 乖乖
+  # - 西海岸美食
+  # - 音樂
 
 type: landing
 sections:
   - block: resume-biography-3
     content:
-      username: "angellin"
-      text: "吉祥物裝可愛"
+      username: "Xu-Shunxiang"
+      text: "協會理事"
       # button:
       #   text: "Click Here"
       #   url: "https://example.com"

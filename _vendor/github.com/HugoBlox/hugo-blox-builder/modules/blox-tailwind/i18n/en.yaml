@@ -191,13 +191,13 @@
 # About widget
 
 - id: interests
-  translation: Interests
+  translation: 興趣
 
 - id: education
-  translation: Education
+  translation: 學歷
 
 - id: about_me
-  translation: Professional Summary
+  translation: 職務摘要
 
 - id: user_profile_latest
   translation: Latest
