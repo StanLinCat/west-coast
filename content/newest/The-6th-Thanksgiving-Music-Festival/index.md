@@ -52,7 +52,7 @@ image:
 
 完成以下步驟，即有機會抽中**精美好禮** (包含 iPhone 13 尺寸的手機、AirPods 類耳機、風扇、千元禮券等，請以現場實物為準)：
 
-1.  **追蹤訂閱：** 追蹤/訂閱 **IG / YouTube 頻道**：[**Don't Stop 樂團**]。
+1.  **追蹤訂閱：** 追蹤/訂閱 **IG / YouTube 頻道**：[**Don't Stop 樂團**](https://www.instagram.com/dsband_official?igsh=MXJrbnhtdWVmNnNrZQ==)。
 2.  **現場互動：** 活動現場完成 **闖關遊戲**。
 
 ---
