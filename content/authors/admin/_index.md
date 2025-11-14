@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 網頁軟體與維護專員
+role: 協會網頁與軟體志工
 
 user_groups:
   - 幕後支援
@@ -147,29 +147,74 @@ awards:
     summary: |
       具備撰寫與操作 SQL 查詢以管理資料庫的能力，能部署、維護並優化 MySQL、PostgreSQL 與 DB2 等關聯式資料庫系統。能以 Python 和 Shell 建立簡單的資料處理流程。了解資料庫的基本管理方式，並能運用資料分析工具整理與呈現資料。
 
-  - title: 斐陶斐110年榮譽會員
+  - title: 斐陶斐台科大分會110年榮譽會員
     url: 
     date: '2021-04-01'
     awarder: 中華民國斐陶斐榮譽學會國立台灣科技大學分會
 
-  - title: '萬望福音中心 英文老師志工'
+  - title: '萬望福音中心 英文小老師志工'
     url: https://share.google/4lYAlDi9r9vL6Ymqi
     date: '2020-09-30'
-    awarder: 內地會(OMF)台灣
+    awarder: 台灣內地會(OMF)
     summary: |
-      2020年9月~2021年6月每周六上午，擔任英文老師志工，參與萬望福音中心兒童英文班，協助外師課程預備、講解聖經故事、帶領唱歌和小遊戲、英文單字與文法教學。
+      <p>2020年9月~2021年6月每周六上午，擔任英文老師志工，參與萬望福音中心兒童英文班，協助外師課程預備、講解聖經故事、帶領唱歌和小遊戲、英文單字與文法教學。</p>
+      <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
+        <img src="2020omf1.jpg" style="width:120px !important; height:auto;" />
+        <img src="2020omf2.jpg" style="width:120px !important; height:auto;" />
+        <img src="2020omf3.jpg" style="width:120px !important; height:auto;" />
+        <img src="2020omf4.jpg" style="width:120px !important; height:auto;" />
+      </div>
   
+  - title: '2019技職福音營 生活美宣組'
+    url: 
+    date: '2019-07-20'
+    awarder: 校園福音團契
+    summary: |
+      <p>撒該家籌備，翹課少年的謎團，擔任生活美宣組的一員，協助活動主視覺印刷、營會總務，同時也負責出演舞台劇反派腳色。另外的次要工作包含臨時機動、交通、膳食預備、宿舍清點等等工作。籌備耗時約一年，很辛苦，但與撒該家人們有革命情感，也是此生難忘回憶。</p>
+      <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
+        <img src="2019campus1.jpg" style="width:120px !important; height:auto;" />
+        <img src="2019campus2.jpg" style="width:120px !important; height:auto;" />
+        <img src="2019campus3.jpg" style="width:120px !important; height:auto;" />
+        <img src="2019campus4.jpg" style="width:120px !important; height:auto;" />
+      </div>
+
+  - title: '2016才藝品格營 幕後PPT'
+    url: 
+    date: '2016-07-15'
+    awarder: 台北靈糧堂
+    summary: |
+      <p>節目活動組的一員，由當時GO小組長推薦加入PPT組，團隊負責大活動背景音樂、敬拜PPT歌詞更新、排練確認整體詩歌順序與部分講員PPT撥放。另外協助其他節目組活動，例如遊戲試玩、現場機動支援。台北靈糧堂籌備團隊非常專業，我們事前花了很多時間練習。</p>
+      <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
+        <img src="2016skill1.jpg" style="width:120px !important; height:auto;" />
+        <img src="2016skill2.jpg" style="width:120px !important; height:auto;" />
+        <img src="2016skill3.jpg" style="width:120px !important; height:auto;" />
+        <img src="2016skill4.jpg" style="width:120px !important; height:auto;" />
+      </div>
+
   - title: '三和福音中心兒童營 團康小老師'
     url: 
     date: '2015-07-20'
-    awarder: 內地會(OMF)台灣
+    awarder: 台灣內地會(OMF)
     summary: |
-      <p>2015年7月底左右，三天的英文兒童營，與宣教士等外師合作，主要擔任團康小老師，主責團體遊戲規劃與帶領，協助其他老師各項活動，陪伴孩子唱歌、手做、飲食與學習。</p>
+      <p>2015年7月底左右，三天的英文兒童營，與宣教士等外師合作，主要擔任團康小老師，團體遊戲規劃與帶領，協助其他老師各項活動，簡易中英翻譯，餅乾製作等等。結束繁忙的七月(連續三個營會)，我直接累倒在家兩天。</p>
       <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
         <img src="3box3.jpg" style="width:120px !important; height:auto;" />
         <img src="3box4.jpg" style="width:120px !important; height:auto;" />
         <img src="3box5.jpg" style="width:120px !important; height:auto;" />
-        <img src="3box2.jpg" style="width:120px !important; height:auto;" />
+        <img src="3box1.jpg" style="width:120px !important; height:auto;" />
+      </div>
+
+  - title: '2015才藝品格營 輔導'
+    url: 
+    date: '2015-07-15'
+    awarder: 台北靈糧堂
+    summary: |
+      <p>剛結束嘉義的兒童營，馬上就是帶領東石靈糧福音中心的年輕人參加才品，地點在逢甲大學，帶領小隊大地遊戲、晨更、晚禱、吃便當。</p>
+      <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
+        <img src="2015skill1.jpg" style="width:120px !important; height:auto;" />
+        <img src="2015skill2.jpg" style="width:120px !important; height:auto;" />
+        <img src="2015skill3.jpg" style="width:120px !important; height:auto;" />
+        <img src="2015skill4.jpg" style="width:120px !important; height:auto;" />
       </div>
 
   - title: '嘉義浸信會兒童營 團康小老師'
@@ -177,13 +222,31 @@ awards:
     date: '2015-07-13'
     awarder: 嘉義基督教浸信會
     summary: |
-      <p>2015年7月為期三天兒童營，擔任團康小老師，主責團體遊戲規劃與帶領，協助其他老師各項活動，陪伴孩子唱歌、手做、飲食與學習。</p>
+      <p>2015年7月為期三天兒童營，擔任團康小老師，團體遊戲規劃與帶領，協助其他老師各項活動，陪伴孩子唱歌、手做、飲食與學習。</p>
       <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
-        <img src="c1.jpg" style="width:150px !important; height:auto;" />
-        <img src="c2.jpg" style="width:150px !important; height:auto;" />
+        <img src="c1.jpg" style="width:120px !important; height:auto;" />
+        <img src="c2.jpg" style="width:120px !important; height:auto;" />
       </div>
 
+  - title: '東石靈糧福音中心 各種志工'
+    url: https://www.facebook.com/ilinkDongshi/photos_albums?locale=zh_TW
+    date: '2013-08-01'
+    awarder: 東石靈糧福音中心
+    summary: |
+      因為父親工作因素，我2013年從台北搬家到嘉義東石並轉學。之後就是各式各樣的支援和協助，幫小朋友課輔班、帶活動、講故事、做小點心、洗碗、洗很多碗、搬物資、處理問題兒童、協助探訪、接待、文書作業、攝影、房屋修繕、水電、清潔、災後救助等等。大多是兒童事工，上帝也間接讓我發現我在服事兒童有恩賜。
 
+  - title: '2013才藝品格營 副輔導'
+    url: 
+    date: '2013-07-13'
+    awarder: 台北靈糧堂
+    summary: |
+      <p>青年牧區年度盛會才品，大航海時代，地點在台北城市大學，帶領小隊大地遊戲、晨更、晚禱、吃便當。</p>
+      <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
+        <img src="2013skill1.jpg" style="width:120px !important; height:auto;" />
+        <img src="2013skill2.jpg" style="width:120px !important; height:auto;" />
+        <img src="2013skill3.jpg" style="width:120px !important; height:auto;" />
+        <img src="2013skill4.jpg" style="width:120px !important; height:auto;" />
+      </div>
 
 
 
@@ -194,7 +257,7 @@ sections:
     content:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
-      text: '林昱廷弟兄在協會中擔任網頁設計的要職。他的專業能力確保了西海岸「福音海岸、黃金海岸」的轉化使命，能透過數位平台廣為傳遞。他致力於打造一個高效能的網路門戶，使協會推動「四生」（生命、生產、生活、生態）發展策略的資訊能清晰地觸及大眾。同時也立志推廣西海岸在地文化「五生」，即生蠔、生菜、生魚片、生煎包、生啤酒。'
+      text: '林昱廷弟兄在協會中擔任網頁設計的要職。他的專業能力確保了西海岸「福音海岸、黃金海岸」的轉化使命，能透過數位平台廣為傳遞。他致力於打造一個高效能的網路門戶，使協會推動「四生」（生命、生產、生活、生態）發展策略的資訊能清晰地觸及大眾。同時也思考如何推廣西海岸在地文化「五生」，即生蠔、生菜、生魚片、生煎包、生啤酒。'
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
