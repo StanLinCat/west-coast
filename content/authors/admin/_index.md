@@ -40,8 +40,6 @@ profiles:
     url: https://www.linkedin.com/in/yutinglin86/
   - icon: brands/youtube
     url: https://www.youtube.com/@%E6%9E%97%E6%98%B1%E5%BB%B7-g9t
-  - icon: brands/instagram
-    url: https://www.instagram.com/stan.lin.cat/
 
 interests:
   - C語言應用
