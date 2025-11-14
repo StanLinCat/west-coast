@@ -73,6 +73,7 @@ sections:
         folders:
           - newest
     design:
+      css_class: hbx-bg-gradient
       view: card #article-grid要兩篇以上才好看，所以先不要用
       spacing:
         padding: ['3rem', 0, '6rem', 0]
@@ -87,6 +88,7 @@ sections:
 
         我們的任務包含協助推動發展台灣西海岸各項產業，使其符合永續發展的精神，同時透過珍惜與維護西海岸的自然資源，發展生態教育與觀摩活動，並提供各種生活體驗活動，辦理各種生活事業，以期提升生活品質，使人帶來豐盛與快樂。我們深信透過協助、關懷與推廣服務諮詢，能使人看見生命的真善美，促進生命熱情的發揚，發揮生命的光芒與未來。🌱
     design:
+      css_class: hbx-bg-gradient
       columns: "1"
       background:
         color: "system"
@@ -136,7 +138,7 @@ sections:
           image: "LinQiasong.jpg"
           text: 四百年來，先祖移民、各族各方，都從西海岸上岸。由於早年許多渡海來台的先人，同步把偶像崇拜帶進西海岸，成為當地的核心根源。雖然在荷蘭時期，曾因宣教士為平埔族帶來短暫復興，陸陸續續也有許多的神父、牧師進入西海岸，但是卻難以帶來大規模突破。如今看見上帝的手開始在西海岸做工，將苗栗、台中、彰化、雲林、嘉義、台南連成一線，相信將要為西海岸、為嘉義的福音帶來大復興！
         - name: "林碧亮 牧師"
-          role: "某位西海岸的牧師"
+          role: "東石靈糧福音中心牧師"
           # Upload image to `assets/media/` and reference the filename here
           image: "BillBright.jpg"
           text: 回首2022年，五味雜陳充滿，協會設立時，因著感動哭了幾次，一方面神有恩典，一方面又感到疲累，前行艱難…。然而當我們轉向神，來感恩時，神就開始說話，神蹟是相信神，相信神掌權，正在引領我們前行。
