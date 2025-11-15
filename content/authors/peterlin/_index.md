@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 林安喬
+title: 林昱宏
 
 # Name pronunciation (optional)
 name_pronunciation: 
 
 # Full name (for SEO)
 first_name: 
-last_name: G
+last_name: A
 
 # Status emoji
 status:
@@ -17,13 +17,13 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 療癒專員
+role: 活動顧問
 
 user_groups:
   - 幕後支援
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: 東石靈糧福音中心
+  - name: 台北靈糧堂
     url: 
 
 # Social network links
@@ -33,15 +33,16 @@ profiles:
   #   url: https://github.com/alexjohnsonai
     
 interests:
-  - 米餅
-  - 乖乖
+  - 吉他
+  - 經濟學
+  - 實踐神學
 
 type: landing
 sections:
   - block: resume-biography-3
     content:
-      username: "angellin"
-      text: "該「療癒專員」作為協會的象徵性角色之一，體現了在西海岸「突破、啟動」福音工作的異象。其核心功能是帶來新生命，呼應了李月華牧師在聚會中所見的圖象：「很多的嬰兒車，很多嬰孩誕生」。此專員的職責與協會「關懷弱勢、扶助家庭、成全下一代」的策略一致。同時，此角色也彰顯了透過文化活動，使人「感受戲劇療癒及恢復能力」的目標，致力於醫治與轉化西海岸，注入活潑多元的生命力。"
+      username: "peterlin"
+      text: "該活動顧問的核心職責是運用其豐富的活動規劃與流程安排經驗，擔任協會重大活動策劃(例如聖誕文化節)的專業指導，以確保活動有效執行，並使參與者能夠「感受戲劇療癒及恢復能力」。他同時是協會「成全下一代」 策略的關鍵推手，透過指導與教學，與年輕人進行深度互動，為西海岸發展協會注入活潑多元的生命力。"
       # button:
       #   text: "Click Here"
       #   url: "https://example.com"
