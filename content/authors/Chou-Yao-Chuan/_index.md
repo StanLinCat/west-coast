@@ -7,7 +7,7 @@ name_pronunciation:
 
 # Full name (for SEO)
 first_name: 
-last_name: B
+last_name: E
 
 # Status emoji
 status:

@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 理事
+role: 常務理事
 
 user_groups:
   - 理事成員

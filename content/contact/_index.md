@@ -10,12 +10,9 @@ sections:
       connect_title: 聯絡資訊
       address:
         lines:
-          - ⛪主辦公室
+          - ⛪主要辦公室
           - 625嘉義縣布袋鎮海興街6號(承意咖啡)
           - No. 6, Haixing St, Budai Township, Chiayi County, 625
-          - 🏠其他空間
-          - 625嘉義縣布袋鎮文昌街31號
-          - No. 31, Wenchang St, Budai Township, Chiayi County, 625
           
       office_hours:
         - "周一至周五 : 10:00 AM - 4:00 PM"
