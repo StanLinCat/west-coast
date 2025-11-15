@@ -47,7 +47,7 @@ profiles:
 
 interests:
   - 西海岸美食
-  - 四福音研究
+  - 生態保育
 
 # education:
 #   - area: 環境工程博士
