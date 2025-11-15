@@ -7,7 +7,7 @@ name_pronunciation:
 
 # Full name (for SEO)
 first_name: 
-last_name: 2
+last_name: C
 
 # Status emoji
 status:
@@ -44,6 +44,8 @@ sections:
       #   text: "Click Here"
       #   url: "https://example.com"
     design:
+      spacing:
+        padding: ["0rem", 0, "1rem", 0]
       # Apply a gradient background
       css_class: hbx-bg-gradient
       # Avatar customization

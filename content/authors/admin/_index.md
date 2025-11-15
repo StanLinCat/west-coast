@@ -265,6 +265,8 @@ sections:
         education: '教育背景'
         interests: '興趣'
     design:
+      spacing:
+        padding: ["0rem", 0, "1rem", 0]
       # Apply a gradient background
       css_class: hbx-bg-gradient
       # Avatar customization
