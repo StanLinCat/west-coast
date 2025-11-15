@@ -31,8 +31,8 @@ organizations:
 profiles:
 
 interests:
-  - 神學
-  - 解經
+  - 神學、解經
+  - 友善耕種
 
 type: landing
 sections:

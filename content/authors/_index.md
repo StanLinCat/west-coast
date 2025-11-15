@@ -15,10 +15,10 @@ sections:
         - 幕後支援
       sort_by: 'Params.last_name'
       sort_ascending: true
-      cta:
-        text: 加入我們
-        url: /opportunities
-        icon: user-plus
+      # cta:
+      #   text: 加入我們
+      #   url: /opportunities
+      #   icon: user-plus
     design:
       show_role: true
       show_organizations: false

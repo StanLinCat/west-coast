@@ -29,15 +29,15 @@ sections:
           url: https://youtube.com/channel/UCVxPi3yWUR-qmegqNtRfIug?si=RpraXCL4p5G1wvVz
       prospective:
         title: 加入我們
-        text: 有興趣一起服事西海岸嗎? 我們正在尋找認真且熱心的人
+        text: 有興趣一起服事西海岸嗎? 
         button:
-          text: 查看目前職缺
-          url: /opportunities
+          text: 回家
+          url: https://youtu.be/RGsr_ZHAMaY?si=B78n8gTQG4-NvvV7
       map_url: https://maps.app.goo.gl/h74pSk2bmBA1CHGs8
       map_embed: |
         <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1jghkY9N1BpYT_khk6ByX-LtZt3EjlMQ&ehbc=2E312F&noprof=1" width="1200" height="480"></iframe>
-      show_form: true
-      form_action: "https://formspree.io/f/xovpgngz"
+      # show_form: true
+      # form_action: "https://formspree.io/f/xovpgngz"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900 mb-0 pb-0"
       spacing:
