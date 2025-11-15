@@ -31,8 +31,8 @@ organizations:
 profiles:
 
 interests:
-  # - 西海岸美食
-  # - 音樂
+   - 探訪
+   - 牧養
 
 type: landing
 sections:

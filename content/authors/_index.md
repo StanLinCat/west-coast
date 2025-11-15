@@ -26,6 +26,8 @@ sections:
       show_social: true
       # Section background color (CSS class)
       css_class: "bg-gray-50 dark:bg-gray-900"
+      spacing:
+        padding: ["3rem", 0, "1rem", 0]
 
 
   - block: logos
@@ -37,7 +39,7 @@ sections:
         - name: 愛鄰
           image: partners/love.jpg
           url: https://www.i-link.org.tw/service.htm
-          description: 鄰鄰協會
+          description: 愛鄰協會
         - name: 台北靈糧堂
           image: partners/bread.jpg
           url: https://www.breadoflife.taipei/
@@ -49,7 +51,7 @@ sections:
         - name: 學友樂器音響
           image: partners/showyou.png
           url: https://www.facebook.com/ShowyouSound/
-          description: 優質音樂設備公司
+          description: 學友樂器音響公司
     design:
       display_mode: grid
       css_class: "bg-gray-50 dark:bg-gray-900"

@@ -31,8 +31,8 @@ organizations:
 profiles:
 
 interests:
-  # - 西海岸美食
-  # - 音樂
+  - 海鮮研究
+  - 親子教育
 
 type: landing
 sections:
