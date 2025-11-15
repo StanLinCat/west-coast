@@ -7,7 +7,7 @@ name_pronunciation: ''
 
 # Full name (for SEO)
 first_name: 
-last_name: 0
+last_name: A
 
 # Status emoji
 status:
@@ -93,6 +93,8 @@ sections:
         education: ''
         interests: ''
     design:
+      spacing:
+        padding: ["0rem", 0, "1rem", 0]
       # Apply a gradient background
       css_class: hbx-bg-gradient
       # Avatar customization
