@@ -7,7 +7,7 @@ name_pronunciation: ''
 
 # Full name (for SEO)
 first_name: 碧亮
-last_name: A
+last_name: C
 
 # Status emoji
 status:
@@ -20,9 +20,9 @@ superuser: false
 highlight_name: true
 
 # Role/position/tagline
-role: 監事
+role: 常務理事
 user_groups:
-  - 監事成員
+  - 理事成員
 # Organizations/Affiliations to display in Biography blox
 organizations:
   - name: 東石靈糧福音中心

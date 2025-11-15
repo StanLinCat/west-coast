@@ -7,7 +7,7 @@ name_pronunciation:
 
 # Full name (for SEO)
 first_name: 
-last_name: C
+last_name: A
 
 # Status emoji
 status:
@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 監事
+role: 常務監事
 
 user_groups:
   - 監事成員
