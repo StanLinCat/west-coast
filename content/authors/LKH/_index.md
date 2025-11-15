@@ -31,9 +31,9 @@ organizations:
 profiles:
 
 interests:
-  - 海鮮
-  - 生蠔
-  - 蚵
+  - 無人機
+  - 攝影與影片製作
+  - 短宣
 
 type: landing
 sections:

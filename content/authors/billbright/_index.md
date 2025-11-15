@@ -31,9 +31,9 @@ organizations:
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: at-symbol
-    url: 'mailto:alex.johnson@meta.com'
-    label: E-mail Me
+  # - icon: at-symbol
+  #   url: 'mailto:alex.johnson@meta.com'
+  #   label: E-mail Me
   # - icon: brands/x
   #   url: https://twitter.com/AlexAIResearch
   # - icon: brands/github
@@ -46,20 +46,20 @@ profiles:
   #   url: https://orcid.org/0000-0002-1825-0097
 
 interests:
-  - 土木
-  - 水利
-  - 環境工程
-  - 保羅書信
+  - 土木、水利、環境工程
+  - 福音
+  - 大自然
+
 
 education:
-  - area: 神學碩士
+  - area: 道學碩士
     institution: 靈糧教牧神學院
     icon: ""
     date_start: 2009-09-01
     date_end: 2010-06-30
     summary: |
       環境水質與土地關係
-  - area: 環境工程博士
+  - area: 土木工程博士
     institution: 中央大學
     icon: ""
     date_start: 1995-09-01

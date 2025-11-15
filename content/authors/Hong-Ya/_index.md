@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 資深管理師
+role: 行政財務管理師
 
 user_groups:
   - 營運專員
@@ -31,7 +31,7 @@ organizations:
 profiles:
 
 interests:
-  - 西海岸美食
+  - 舞蹈
   - 音樂
 
 type: landing
@@ -39,7 +39,7 @@ sections:
   - block: resume-biography-3
     content:
       username: "Hong-Ya"
-      text: "核心職責包括協助建立協會的文化與系統，負責資源連結及提供各項培訓。管理師需確保協會能有效執行「關懷弱勢、扶助家庭、成全下一代」的重點策略。同時，此職位也將協助協調各教會與機構的合一連結，共同推動如聖誕文化節、祈禱會等大型福音活動，以致力於醫治與轉化西海岸。"
+      text: "核心職責包括協助建立協會的文化與系統，負責資源連結及提供各項培訓。管理師需確保協會能有效執行「關懷弱勢、扶助家庭、成全下一代」的重點策略。同時，此職位也將協助協調各教會與機構的合一連結，共同推動如聖誕文化節、祈禱會等大型福音活動，以致力於帶出活力與轉化西海岸。"
       # button:
       #   text: "Click Here"
       #   url: "https://example.com"
