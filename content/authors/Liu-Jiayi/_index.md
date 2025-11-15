@@ -32,7 +32,8 @@ profiles:
 
 interests:
   - 敬拜
-  - 創世紀
+  - 美感教育
+  - 行銷管理
 
 type: landing
 sections:

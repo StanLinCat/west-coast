@@ -31,8 +31,8 @@ organizations:
 profiles:
 
 interests:
-  # - 西海岸美食
-  # - 音樂
+  - 西海岸美食
+  - 料理
 
 type: landing
 sections:

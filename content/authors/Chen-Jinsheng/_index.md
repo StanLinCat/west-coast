@@ -31,8 +31,8 @@ organizations:
 profiles:
 
 interests:
-  # - 西海岸美食
-  # - 音樂
+  - 爵士鼓、吉他和貝斯
+  - 音訊設備
 
 type: landing
 sections:

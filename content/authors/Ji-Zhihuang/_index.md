@@ -31,8 +31,8 @@ organizations:
 profiles:
 
 interests:
-  # - 西海岸美食
-  # - 音樂
+  - 神學
+  - 解經
 
 type: landing
 sections:

@@ -31,8 +31,7 @@ organizations:
 profiles:
 
 interests:
-  # - 西海岸美食
-  # - 音樂
+  - 福音事工
 
 type: landing
 sections:
