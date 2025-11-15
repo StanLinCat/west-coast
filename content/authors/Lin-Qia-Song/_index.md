@@ -31,9 +31,9 @@ organizations:
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: at-symbol
-    url: 'mailto:alex.johnson@meta.com'
-    label: E-mail Me
+  # - icon: at-symbol
+  #   url: 'mailto:alex.johnson@meta.com'
+  #   label: E-mail Me
   # - icon: brands/x
   #   url: https://twitter.com/AlexAIResearch
   # - icon: brands/github
@@ -46,8 +46,8 @@ profiles:
   #   url: https://orcid.org/0000-0002-1825-0097
 
 interests:
-  - 舊約
-  - 四福音
+  - 西海岸美食
+  - 四福音研究
 
 # education:
 #   - area: 環境工程博士

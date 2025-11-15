@@ -31,7 +31,7 @@ organizations:
 profiles:
 
 interests:
-  - 福音事工
+  - 傳福音
 
 type: landing
 sections:
