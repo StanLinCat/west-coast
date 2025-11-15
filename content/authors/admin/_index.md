@@ -157,10 +157,10 @@ awards:
     summary: |
       <p>2020年9月~2021年6月每周六上午，擔任英文老師志工，參與萬望福音中心兒童英文班，協助外師課程預備、講解聖經故事、帶領唱歌和小遊戲、英文單字與文法教學。</p>
       <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
-        <img src="2020omf1.jpg" style="width:120px !important; height:auto;" />
-        <img src="2020omf2.jpg" style="width:120px !important; height:auto;" />
-        <img src="2020omf3.jpg" style="width:120px !important; height:auto;" />
-        <img src="2020omf4.jpg" style="width:120px !important; height:auto;" />
+        <img src="hope1.jpg" style="width:120px !important; height:auto;" />
+        <img src="hope2.jpg" style="width:120px !important; height:auto;" />
+        <img src="hope3.jpg" style="width:120px !important; height:auto;" />
+        <img src="hope4.jpg" style="width:120px !important; height:auto;" />
       </div>
   
   - title: '2019技職福音營 生活美宣組'
@@ -231,7 +231,7 @@ awards:
     date: '2013-08-01'
     awarder: 東石靈糧福音中心
     summary: |
-      因為父親工作因素，我2013年從台北搬家到嘉義東石並轉學。之後就是各式各樣的支援和協助，幫小朋友課輔班、帶活動、講故事、做小點心、洗碗、洗很多碗、搬物資、處理問題兒童、協助探訪、接待、文書作業、攝影、房屋修繕、水電、清潔、災後救助等等。大多是兒童事工，上帝也間接讓我發現我在服事兒童有恩賜。
+      2013年從台北搬家到嘉義東石並轉學，加入東石靈糧福音中心。之後就是各式各樣的支援和協助，幫小朋友課輔班、帶活動、講故事、做小點心、洗碗、洗很多碗、搬物資、處理問題兒童、協助探訪、接待、文書作業、攝影、房屋修繕、水電、清潔、災後救助等等。大多是兒童事工，上帝也間接讓我發現我在服事兒童有恩賜。
 
   - title: '2013才藝品格營 副輔導'
     url: 
