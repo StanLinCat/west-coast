@@ -109,11 +109,11 @@ skills:
 
       - name: 控制理論
         description: '適應性控制、卡爾曼濾波'
-        percent: 70
+        percent: 60
 
       - name: 靜態網頁
         description: ''
-        percent: 30
+        percent: 40
 
   - name: 其他技能
     color: '#eeac02'
@@ -125,11 +125,11 @@ skills:
 
       - name: 兒童互動
         description: '基礎英文教學、主日學、團康'
-        percent: 100
+        percent: 95
 
       - name: 料理
         description: '簡易家常菜、副食品製作'
-        percent: 80
+        percent: 70
 
 
 
@@ -168,7 +168,7 @@ awards:
     date: '2019-07-20'
     awarder: 校園福音團契
     summary: |
-      <p>撒該家籌備，翹課少年的謎團，擔任生活美宣組的一員，協助活動主視覺印刷、營會總務，同時也負責出演舞台劇反派腳色。另外的次要工作包含臨時機動、交通、膳食預備、宿舍清點等等工作。籌備耗時約一年，很辛苦，但與撒該家人們有革命情感，也是此生難忘回憶。</p>
+      <p>撒該家籌備，規模破百人的三天福音性質營會，主題為翹課少年的謎團。我擔任生活美宣組的一員，協助活動主視覺印刷、營會總務，同時也負責出演舞台劇反派腳色。另外的次要工作包含臨時機動、交通、膳食預備、宿舍清點等等工作。籌備耗時約一年，很辛苦，但與撒該家人們有革命情感，也是此生難忘回憶。</p>
       <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
         <img src="2019campus1.jpg" style="width:120px !important; height:auto;" />
         <img src="2019campus2.jpg" style="width:120px !important; height:auto;" />
@@ -176,12 +176,12 @@ awards:
         <img src="2019campus4.jpg" style="width:120px !important; height:auto;" />
       </div>
 
-  - title: '2016才藝品格營 幕後PPT'
+  - title: '2016才藝品格營節目活動組 幕後PPT'
     url: 
     date: '2016-07-15'
     awarder: 台北靈糧堂
     summary: |
-      <p>節目活動組的一員，由當時GO小組長推薦加入PPT組，團隊負責大活動背景音樂、敬拜PPT歌詞更新、排練確認整體詩歌順序與部分講員PPT撥放。另外協助其他節目組活動，例如遊戲試玩、現場機動支援。台北靈糧堂籌備團隊非常專業，我們事前花了很多時間練習。</p>
+      <p>才品是學員規模破千的大型營會，當時參與節目活動組的PPT小組，小組負責大活動背景音樂、敬拜PPT歌詞更新、排練確認整體詩歌順序與部分講員PPT播放。另外協助其他節目組活動，例如遊戲試玩、現場機動支援。台北靈糧堂籌備團隊非常專業，我們事前花了很多時間練習。</p>
       <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
         <img src="2016skill1.jpg" style="width:120px !important; height:auto;" />
         <img src="2016skill2.jpg" style="width:120px !important; height:auto;" />
@@ -202,7 +202,7 @@ awards:
         <img src="3box1.jpg" style="width:120px !important; height:auto;" />
       </div>
 
-  - title: '2015才藝品格營 輔導'
+  - title: '2015才藝品格營 隊輔'
     url: 
     date: '2015-07-15'
     awarder: 台北靈糧堂
@@ -226,14 +226,33 @@ awards:
         <img src="c2.jpg" style="width:120px !important; height:auto;" />
       </div>
 
+  - title: '台灣國際科展 三等獎'
+    url: 
+    date: '2015-02-10'
+    awarder: 教育部&科教館
+    summary: |
+      <p>TISF科學展覽，比賽準備花了很多時間。頒獎結束在科教館有個宴會，大家緊繃的心都放鬆下來，我和展覽認識的兩個台灣人，到處去找外國人搭訕。整個經歷很奇妙，能夠遇見我的老師並參加是上帝給我的恩典。馬英九先生則是2014全國科展結束時去總統府拍照的。</p>
+      <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
+        <img src="tisf1.jpg" style="width:120px !important; height:auto;" />
+        <img src="tisf2.jpg" style="width:120px !important; height:auto;" />
+        <img src="tisf3.jpg" style="width:120px !important; height:auto;" />
+        <img src="tisf4.jpg" style="width:120px !important; height:auto;" />
+      </div>
+
   - title: '東石靈糧福音中心 各種志工'
     url: https://www.facebook.com/ilinkDongshi/photos_albums?locale=zh_TW
     date: '2013-08-01'
     awarder: 東石靈糧福音中心
     summary: |
-      2013年從台北搬家到嘉義東石並轉學，加入東石靈糧福音中心。之後就是各式各樣的支援和協助，幫小朋友課輔班、帶活動、講故事、做小點心、洗碗、洗很多碗、搬物資、處理問題兒童、協助探訪、接待、文書作業、攝影、房屋修繕、水電、清潔、災後救助等等。大多是兒童事工，上帝也間接讓我發現我在服事兒童有恩賜。
+      <p>2013年從台北搬家到嘉義東石並轉學，加入東石靈糧福音中心，一直到現在都還有協助部分事工。各式各樣的支援和協助，幫小朋友課輔班、帶活動、講故事、做小點心、洗碗、洗很多碗、搬物資、處理問題兒童、腳踏車環島、各種活動隊輔、協助探訪、接待、文書作業、攝影、房屋修繕、水電、清潔、災後救助、災後水深丈量等等。大多是兒童事工，上帝也間接讓我發現我在服事兒童有恩賜。</p>
+      <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
+        <img src="love1.jpg" style="width:120px !important; height:auto;" />
+        <img src="love2.jpg" style="width:120px !important; height:auto;" />
+        <img src="love3.jpg" style="width:120px !important; height:auto;" />
+        <img src="love4.jpg" style="width:120px !important; height:auto;" />
+      </div>
 
-  - title: '2013才藝品格營 副輔導'
+  - title: '2013才藝品格營 副隊輔'
     url: 
     date: '2013-07-13'
     awarder: 台北靈糧堂
