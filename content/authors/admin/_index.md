@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 協會網頁與軟體志工
+role: 網頁志工
 
 user_groups:
   - 幕後支援
