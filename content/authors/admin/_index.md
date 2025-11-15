@@ -23,8 +23,8 @@ user_groups:
   - 幕後支援
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: 現職奇景韌體工程師
-    url: https://www.stanlincat.com/about/
+  - name: 新營浸信會
+    # url: https://www.stanlincat.com/about/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
