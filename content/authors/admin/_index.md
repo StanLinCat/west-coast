@@ -138,12 +138,6 @@ skills:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: IBM Data Warehouse Engineer認證
-    certificate_url: https://coursera.org/share/4f34cd01ae3e02f6aa0ea88dce97ebb0
-    date: '2023-01-01'
-    awarder: Coursera
-    summary: |
-      具備撰寫與操作 SQL 查詢以管理資料庫的能力，能部署、維護並優化 MySQL、PostgreSQL 與 DB2 等關聯式資料庫系統。能以 Python 和 Shell 建立簡單的資料處理流程。了解資料庫的基本管理方式，並能運用資料分析工具整理與呈現資料。
 
   - title: 斐陶斐台科大分會110年榮譽會員
     url: 
