@@ -33,25 +33,33 @@ sections:
   - block: logos
     content:
       title: 我們的夥伴及合作單位
-      subtitle: 與全台領先機構合作
-      text: 我們與頂尖社會服務單位和非營利組織合作
+      subtitle: 與全台各方面機構合作
+      text: 我們與頂尖專業單位、社會服務單位和非營利組織合作
       logos:
-        - name: 愛鄰
+        - name: 
           image: partners/love.jpg
           url: https://www.i-link.org.tw/service.htm
           description: 愛鄰協會
-        - name: 台北靈糧堂
+        - name: 
           image: partners/bread.jpg
           url: https://www.breadoflife.taipei/
           description: 台北靈糧堂
-        - name: 嘉義聖教會
+        - name: 
           image: partners/holy.jpg
           url: https://www.facebook.com/chc.ChiaYiHolinessChurch/?locale=zh_TW
           description: 嘉義聖教會
-        - name: 學友樂器音響
+        - name: 
           image: partners/showyou.png
           url: https://www.facebook.com/ShowyouSound/
-          description: 學友樂器音響公司
+          description: 學友樂器音響
+        - name: 
+          image: partners/dontstop.png
+          url: https://www.instagram.com/dsband_official/
+          description: 東石大樂團
+        - name: 
+          image: partners/dontstop.png
+          url: https://www.instagram.com/dsband_official/
+          description: 東石大樂團
     design:
       display_mode: grid
       css_class: "bg-gray-50 dark:bg-gray-900"
