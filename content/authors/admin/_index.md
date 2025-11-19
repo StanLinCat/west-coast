@@ -139,11 +139,6 @@ skills:
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
 
-  - title: 斐陶斐台科大分會110年榮譽會員
-    url: 
-    date: '2021-04-01'
-    awarder: 中華民國斐陶斐榮譽學會國立台灣科技大學分會
-
   - title: '萬望福音中心 英文小老師志工'
     url: https://share.google/4lYAlDi9r9vL6Ymqi
     date: '2020-09-30'
@@ -292,28 +287,30 @@ sections:
       title: "相關技能"
     design:
       spacing:
-        padding: ["1", "1", "1", "1"]
+        padding: ["1", "0", "0", "0"]
         columns: "2"
-  - block: resume-experience
-    content:
-      username: "admin"
-    design:
-      columns: "1"
-      spacing:
-        padding: ["0", "0", "0", "0"]
+
   - block: resume-awards
     content:
       username: "admin"
-      title: "其他資訊"
-      text: "社會服務、獎項、證書、證照、紀錄"
+      title: "相關資訊"
+      text: "社會服務、獎項、紀錄"
     design:
       background:
         color: ""
         # gradient_start: "#4f46e5"
         # gradient_end: "#7c3aed"
         # text_color_light: true
-      # spacing:
-      #   padding: ["6", "6", "6", "6"]
+      spacing:
+        padding: ["1", "0", "0", "0"]
       # columns: "1"
+
+  - block: resume-experience
+    content:
+      username: "admin"
+    design:
+      columns: "1"
+      spacing:
+        padding: ["1", "0", "0", "0"]
 ---
 
