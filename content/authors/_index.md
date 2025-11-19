@@ -57,9 +57,9 @@ sections:
           url: https://www.instagram.com/dsband_official/
           description: 東石大樂團
         - name: 
-          image: partners/dontstop.png
-          url: https://www.instagram.com/dsband_official/
-          description: 東石大樂團
+          image: partners/coffee.jpg
+          url: https://www.facebook.com/p/%E6%89%BF%E6%84%8F%E5%92%96%E5%95%A1-100086263986268/
+          description: 承意咖啡
     design:
       display_mode: grid
       css_class: "bg-gray-50 dark:bg-gray-900"
