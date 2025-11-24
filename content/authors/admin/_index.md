@@ -138,6 +138,18 @@ skills:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
+  - title: '新營浸信會 聖誕活動主持人'
+    url: https://www.youtube.com/@%E6%96%B0%E7%87%9F%E6%B5%B8%E4%BF%A1%E6%9C%83
+    date: '2024-12-21'
+    awarder: 新營浸信會
+    summary: |
+      <p>活動由郁如老師主導，我和藝儒些活動主持人。規劃有獎徵答題目，節目換場主持，頒獎等等環節。</p>
+      <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
+        <img src="2024host1.jpg" style="width:120px !important; height:auto;" />
+        <img src="2024host2.jpg" style="width:120px !important; height:auto;" />
+        <img src="2024host3.jpg" style="width:120px !important; height:auto;" />
+        <img src="2024host4.jpg" style="width:120px !important; height:auto;" />
+      </div>
 
   - title: '萬望福音中心 英文小老師志工'
     url: https://share.google/4lYAlDi9r9vL6Ymqi
@@ -163,6 +175,19 @@ awards:
         <img src="2019campus2.jpg" style="width:120px !important; height:auto;" />
         <img src="2019campus3.jpg" style="width:120px !important; height:auto;" />
         <img src="2019campus4.jpg" style="width:120px !important; height:auto;" />
+      </div>
+
+  - title: '2019全國技專專題競賽 機械群第二名'
+    url: 
+    date: '2019-05-23'
+    awarder: 教育部
+    summary: |
+      <p>手勢辨識穿戴裝置的專題研究，與兆偉、昭廣、孟昆教授以及coolso科技合作，後續有專利與期刊發表。</p>
+      <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
+        <img src="coolso1.jpg" style="width:120px !important; height:auto;" />
+        <img src="coolso2.jpg" style="width:120px !important; height:auto;" />
+        <img src="coolso3.jpg" style="width:120px !important; height:auto;" />
+        <img src="coolso4.jpg" style="width:120px !important; height:auto;" />
       </div>
 
   - title: '2016才藝品格營節目活動組 幕後PPT'
@@ -233,7 +258,7 @@ awards:
     date: '2013-08-01'
     awarder: 東石靈糧福音中心
     summary: |
-      <p>2013年從台北搬家到嘉義東石並轉學，加入東石靈糧福音中心，一直到現在都還有協助部分事工。各式各樣的支援和協助，幫小朋友課輔班、帶活動、講故事、做小點心、洗碗、洗很多碗、搬物資、處理問題兒童、腳踏車環島、各種活動隊輔、協助探訪、接待、文書作業、攝影、房屋修繕、水電、清潔、災後救助、災後水深丈量等等。大多是兒童事工，上帝也間接讓我發現我在服事兒童有恩賜。</p>
+      <p>2013年從台北搬家到嘉義東石並轉學，加入東石靈糧福音中心，一直到現在都還有協助部分事工。各式各樣的支援和協助，幫小朋友課輔班、帶活動、講故事、做小點心、洗碗、洗很多碗、搬物資、處理問題兒童、腳踏車環島、各種活動隊輔、協助探訪、接待、文書作業、攝影、房屋修繕、水電、清潔、災後救助、災後水深丈量、和牧者激烈溝通、翻譯等等。大多是兒童事工，上帝也間接讓我發現我在服事兒童有恩賜。</p>
       <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
         <img src="love1.jpg" style="width:120px !important; height:auto;" />
         <img src="love2.jpg" style="width:120px !important; height:auto;" />
