@@ -143,7 +143,7 @@ awards:
     date: '2024-12-21'
     awarder: 新營浸信會
     summary: |
-      <p>活動由郁如老師主導，我和藝儒些活動主持人。規劃有獎徵答題目，節目換場主持，頒獎等等環節。</p>
+      <p>活動由郁如老師主導，我和藝儒協助擔任活動主持人。規劃有獎徵答題目，節目換場主持，頒獎等等環節。</p>
       <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
         <img src="2024host1.jpg" style="width:120px !important; height:auto;" />
         <img src="2024host2.jpg" style="width:120px !important; height:auto;" />
@@ -177,12 +177,12 @@ awards:
         <img src="2019campus4.jpg" style="width:120px !important; height:auto;" />
       </div>
 
-  - title: '2019全國技專專題競賽 機械群第二名'
+  - title: '全國技專專題競賽 機械群第二名'
     url: 
     date: '2019-05-23'
     awarder: 教育部
     summary: |
-      <p>手勢辨識穿戴裝置的專題研究，與兆偉、昭廣、孟昆教授以及coolso科技合作，後續有專利與期刊發表。</p>
+      <p>手勢辨識穿戴裝置的專題研究，與活泉社團契好友兆偉、昭廣組隊，並與孟昆教授以及coolso科技合作。感謝神，後續有專利與期刊發表。</p>
       <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
         <img src="coolso1.jpg" style="width:120px !important; height:auto;" />
         <img src="coolso2.jpg" style="width:120px !important; height:auto;" />
@@ -258,7 +258,7 @@ awards:
     date: '2013-08-01'
     awarder: 東石靈糧福音中心
     summary: |
-      <p>2013年從台北搬家到嘉義東石並轉學，加入東石靈糧福音中心，一直到現在都還有協助部分事工。各式各樣的支援和協助，幫小朋友課輔班、帶活動、講故事、做小點心、洗碗、洗很多碗、搬物資、處理問題兒童、腳踏車環島、各種活動隊輔、協助探訪、接待、文書作業、攝影、房屋修繕、水電、清潔、災後救助、災後水深丈量、和牧者激烈溝通、翻譯等等。大多是兒童事工，上帝也間接讓我發現我在服事兒童有恩賜。</p>
+      <p>2013年從台北搬家到嘉義東石並轉學，加入東石靈糧福音中心，至今仍有協助部分事工。各式各樣的支援和協助，幫小朋友課輔班、帶活動、講故事、做小點心、洗碗、洗很多碗、搬物資、處理問題兒童、單車環島、各種活動隊輔、探訪、接待、文書作業、攝影、音控、剪片、司機、倉庫管理、修繕、水電、清潔、災後救助、災後水深丈量、和牧者激烈溝通、學習尊榮文化、翻譯等等。其中兒童事工居多，上帝也間接讓我發現我在服事兒童可能有恩賜。</p>
       <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
         <img src="love1.jpg" style="width:120px !important; height:auto;" />
         <img src="love2.jpg" style="width:120px !important; height:auto;" />
