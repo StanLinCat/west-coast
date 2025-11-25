@@ -42,9 +42,9 @@ profiles:
     url: https://www.youtube.com/@%E6%9E%97%E6%98%B1%E5%BB%B7-g9t
 
 interests:
-  - C語言應用
-  - 不辣的美食
-  - 和乖小孩玩
+  - 程式
+  - 數學
+  - 兒童
 
 education:
   - area: 機械與控制工程碩士
