@@ -190,6 +190,19 @@ awards:
         <img src="coolso4.jpg" style="width:120px !important; height:auto;" />
       </div>
 
+  - title: '週日青年崇拜 音控助手'
+    url: 
+    date: '2018-03-15'
+    awarder: 台北靈糧堂
+    summary: |
+      <p>在台北靈糧堂專業人員的指導下，每週日早上參與服事，持續大約兩年的時間。教會的音控設備很高級，可以更客製化的調整每個樂器EQ和效果器。</p>
+      <div class="not-prose flex flex-wrap gap-2 items-center mt-1">
+        <img src="pa1.jpg" style="width:120px !important; height:auto;" />
+        <img src="pa2.jpg" style="width:120px !important; height:auto;" />
+        <img src="pa3.jpg" style="width:120px !important; height:auto;" />
+        <img src="pa4.jpg" style="width:120px !important; height:auto;" />
+      </div>
+
   - title: '2016才藝品格營節目活動組 幕後PPT'
     url: 
     date: '2016-07-15'
