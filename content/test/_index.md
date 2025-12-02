@@ -19,6 +19,7 @@ sections:
       text: "{{< contact_form >}}" 
     design:
       columns: "1"
+      max_width: "100%"
       # 調整 design 參數，讓這個區塊的內容可以佔滿畫面，例如：
       # 調整為 max_width: "100%"
 ---
