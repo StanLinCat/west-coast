@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://hugoblox.com/schemas/blocks/markdown.json",
+  "title": "full_width_content Block Schema",
+  "description": "Schema for the Markdown block - displays markdown content with optional title",
+  "allOf": [
+    {
+      "$ref": "../shared/schemas/base-block.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "block": {
+          "const": "full_width_content"
+        },
+        "content": {
+          "type": "object",
+          "description": "Content configuration for the full_width_content block",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "Section title (supports full_width_content)"
+            },
+            "text": {
+              "type": "string",
+              "description": "full_width_content content (supports full full_width_content syntax)"
+            }
+          },
+          "required": ["text"]
+        }
+      }
+    }
+  ]
+}
