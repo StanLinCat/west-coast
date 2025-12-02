@@ -16,8 +16,13 @@
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    /* 這裡使用一個通用文字變數，讓它在 Light Mode 保持深色 */
     color: var(--text-color, #333333); 
+  }
+
+  /* 必填標記 */
+  .required-star:after {
+    content: " *";
+    color: red;
   }
   
   /* 輸入框 (Light Mode Default) */
@@ -26,7 +31,6 @@
     padding: 10px;
     border-radius: 4px;
     box-sizing: border-box;
-    /* 輸入框背景和文字使用標準變數，保持 Light Mode 正常 */
     background: var(--input-background-color, #FFFFFF);
     color: var(--text-color, #333333);
     border: 1px solid var(--border-color, #CCCCCC);
@@ -36,24 +40,17 @@
   /* ⬇️ 暗色模式覆寫 (Dark Mode Overrides) ⬇️ */
   /* ================================================= */
   .dark .custom-form {
-    /* 暗色模式下卡片背景 */
     background: var(--background-dark-card, #2b2b2b); 
-    /* 暗色模式下邊框 */
     border: 1px solid var(--border-color-dark, #505050); 
   }
 
-  /* 🎯 關鍵修正 1: 標籤文字 */
   .dark .form-group label {
     color: var(--color-white); 
   }
   
-  /* 🎯 關鍵修正 2: 輸入框文字與背景 */
   .dark .form-group input, .dark .form-group textarea {
-    /* 強制文字顏色為白色變數 */
     color: var(--color-white); 
-    /* 確保輸入框背景也變暗 */
     background: var(--background-dark-input, #3b3b3b); 
-    /* 確保邊框也變暗 */
     border: 1px solid var(--border-color-dark, #505050);
   }
 
@@ -67,6 +64,7 @@
     cursor: pointer;
     width: 100%;
     font-size: 16px;
+    margin-top: 10px; 
   }
   .submit-btn:hover {
     background-color: #45a049;
@@ -81,18 +79,48 @@
   <form name="google-sheet-form">
     
     <div class="form-group">
-      <label for="name">您的稱呼</label>
+      <label for="name" class="required-star">您的稱呼</label>
       <input type="text" id="name" name="name" placeholder="王小明" required>
     </div>
 
     <div class="form-group">
-      <label for="email">電子郵件</label>
+      <label for="email" class="required-star">電子郵件</label>
       <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
     </div>
 
     <div class="form-group">
-      <label for="message">留言內容</label>
-      <textarea id="message" name="message" rows="4" placeholder="請輸入您的訊息..." required></textarea>
+      <label for="transfer_date" class="required-star">匯款日期</label>
+      <input type="date" id="transfer_date" name="transfer_date" required>
+    </div>
+
+    <div class="form-group">
+      <label for="amount" class="required-star">匯款金額</label>
+      <input type="number" id="amount" name="amount" min="1" step="1" placeholder="必須是正整數" required>
+    </div>
+
+    <div class="form-group">
+      <label for="last_5_digits" class="required-star">匯款帳號後五碼</label>
+      <input type="text" id="last_5_digits" name="last_5_digits" pattern="[0-9]{5}" maxlength="5" placeholder="請輸入五個數字" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone" class="required-star">連絡電話</label>
+      <input type="tel" id="phone" name="phone" placeholder="09xxxxxxxx" required>
+    </div>
+
+    <div class="form-group">
+      <label for="receipt_title">收據抬頭(個人或公司全名)</label>
+      <input type="text" id="receipt_title" name="receipt_title" placeholder="選填">
+    </div>
+
+    <div class="form-group">
+      <label for="receipt_address">收據地址</label>
+      <input type="text" id="receipt_address" name="receipt_address" placeholder="選填">
+    </div>
+
+    <div class="form-group">
+      <label for="message">備註</label> 
+      <textarea id="message" name="message" rows="3" placeholder="ex：奉獻原因" ></textarea>
     </div>
 
     <button type="submit" class="submit-btn" id="submitBtn">送出資料</button>
@@ -100,23 +128,50 @@
 </div>
 
 <script>
-  // ★★★ 請將下面這行引號內的網址，換成你刚刚複製的 Web App URL ★★★
+  // ★★★ 請保持你的 Google Script 網址不變動 ★★★
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxDu0jey7rZXATcoOuQaos3VIBh5Xx1J0xKJwd9rgNl-a-x8ThMluVTmgvvrBWwQfzOlw/exec'; // 這是您實際的網址
-
   const form = document.forms['google-sheet-form'];
   const btn = document.getElementById('submitBtn');
+  const transferDateInput = document.getElementById('transfer_date');
+  
+  // 1. 設置匯款日期的預設值為今天 (YYYY-MM-DD 格式)
+  const today = new Date();
+  const year = today.getFullYear();
+  // 月份和日期必須是兩位數
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  transferDateInput.value = `${year}-${month}-${day}`;
 
+  
   form.addEventListener('submit', e => {
-    e.preventDefault(); // 阻止網頁原本的換頁行為
+    e.preventDefault(); 
     
-    // 按下後，按鈕變更狀態
+    // 前端自定義驗證：金額必須是正整數
+    const amountValue = parseInt(document.getElementById('amount').value);
+    if (isNaN(amountValue) || amountValue < 1 || !Number.isInteger(amountValue)) {
+      alert("錯誤：匯款金額必須是正整數 (大於 0)。");
+      document.getElementById('amount').focus();
+      return;
+    }
+
+    // 前端自定義驗證：帳號後五碼必須是五個數字
+    const last5Value = document.getElementById('last_5_digits').value;
+    if (!/^\d{5}$/.test(last5Value)) {
+      alert("錯誤：匯款帳號後五碼必須是五個數字。");
+      document.getElementById('last_5_digits').focus();
+      return;
+    }
+
+    // 禁用按鈕並顯示狀態
     btn.disabled = true;
     btn.innerText = "資料傳送中...";
 
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
-        alert("成功！您的資料已送出。");
-        form.reset(); // 清空表單
+        alert("您填寫的資料已送出！請確認email是否收到資料備份。");
+        form.reset(); 
+        // 重設日期為今天
+        document.getElementById('transfer_date').value = `${year}-${month}-${day}`;
         btn.disabled = false;
         btn.innerText = "送出資料";
       })
