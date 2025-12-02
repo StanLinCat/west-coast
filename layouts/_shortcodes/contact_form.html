@@ -1,0 +1,131 @@
+<style>
+  /* 這是 Light Mode 下的基礎樣式 */
+  .custom-form {
+    /* 修正背景：使用主題的容器背景色 (假設為 --background-card) */
+    background: var(--background-card, #FFFFFF); 
+    border: 1px solid var(--border-color, #CCCCCC); 
+   /* max-width: 500px;*/
+    width: 100%; 
+    max-width: 100% !important;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* 標籤文字 (Light Mode Default) */
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    /* 這裡使用一個通用文字變數，讓它在 Light Mode 保持深色 */
+    color: var(--text-color, #333333); 
+  }
+  
+  /* 輸入框 (Light Mode Default) */
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* 輸入框背景和文字使用標準變數，保持 Light Mode 正常 */
+    background: var(--input-background-color, #FFFFFF);
+    color: var(--text-color, #333333);
+    border: 1px solid var(--border-color, #CCCCCC);
+  }
+
+  /* ================================================= */
+  /* ⬇️ 暗色模式覆寫 (Dark Mode Overrides) ⬇️ */
+  /* ================================================= */
+  .dark .custom-form {
+    /* 暗色模式下卡片背景 */
+    background: var(--background-dark-card, #2b2b2b); 
+    /* 暗色模式下邊框 */
+    border: 1px solid var(--border-color-dark, #505050); 
+  }
+
+  /* 🎯 關鍵修正 1: 標籤文字 */
+  .dark .form-group label {
+    color: var(--color-white); 
+  }
+  
+  /* 🎯 關鍵修正 2: 輸入框文字與背景 */
+  .dark .form-group input, .dark .form-group textarea {
+    /* 強制文字顏色為白色變數 */
+    color: var(--color-white); 
+    /* 確保輸入框背景也變暗 */
+    background: var(--background-dark-input, #3b3b3b); 
+    /* 確保邊框也變暗 */
+    border: 1px solid var(--border-color-dark, #505050);
+  }
+
+  /* 按鈕樣式保持不變 */
+  .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+  .submit-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+</style>
+
+<div class="custom-form">
+  <form name="google-sheet-form">
+    
+    <div class="form-group">
+      <label for="name">您的稱呼</label>
+      <input type="text" id="name" name="name" placeholder="王小明" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">電子郵件</label>
+      <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">留言內容</label>
+      <textarea id="message" name="message" rows="4" placeholder="請輸入您的訊息..." required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn" id="submitBtn">送出資料</button>
+  </form>
+</div>
+
+<script>
+  // ★★★ 請將下面這行引號內的網址，換成你刚刚複製的 Web App URL ★★★
+  const scriptURL = '你的_GOOGLE_SCRIPT_網址_貼在這裡';
+
+  const form = document.forms['google-sheet-form'];
+  const btn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault(); // 阻止網頁原本的換頁行為
+    
+    // 按下後，按鈕變更狀態
+    btn.disabled = true;
+    btn.innerText = "資料傳送中...";
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        alert("成功！您的資料已送出。");
+        form.reset(); // 清空表單
+        btn.disabled = false;
+        btn.innerText = "送出資料";
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        alert("發生錯誤，請稍後再試。");
+        btn.disabled = false;
+        btn.innerText = "送出資料";
+      });
+  });
+</script>
