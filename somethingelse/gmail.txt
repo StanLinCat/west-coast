@@ -1,0 +1,40 @@
+Part 2: 關於回覆時的寄件人身份問題
+您發現用私人信箱回覆時，寄件人是您的私人 Email，而不是 twcgospel@googlegroups.com，這是因為 Gmail 的回覆預設行為 和 Google Groups 的設定 造成的。
+
+❌ 目前發生的情況：
+當您使用私人 Gmail 收到群組郵件並回覆時，Gmail 預設的回覆動作是：
+
+回覆到群組： 您的回覆會寄回 twcgospel@googlegroups.com。
+
+寄件人身份： 您的寄件人身份是您的 私人 Gmail 地址。
+
+🛠️ 解決方法：修改您的「個人 Gmail」設定
+要讓您在回覆時能以群組信箱的身份寄出，您需要手動告訴您的私人 Gmail 帳號：「我現在可以代表 twcgospel@googlegroups.com 寄信」。
+
+請在您每一個需要回覆信件的成員的 私人 Gmail 帳號中 進行以下設定：
+
+登入 您的私人 Gmail 帳號 (例如：memberA@gmail.com)。
+
+點擊右上角的 「設定 (Settings)」 齒輪圖示，選擇 「查看所有設定 (See all settings)」。
+
+點擊頂部的 「帳戶與匯入 (Accounts and Import)」 分頁。
+
+在 「選擇寄件地址 (Send mail as)」 區塊，點擊 「新增另一個電子郵件地址 (Add another email address)」。
+
+在彈出的視窗中：
+
+名稱： 輸入「西海岸發展協會」或您希望對外顯示的名稱。
+
+電子郵件地址： 輸入您的群組信箱地址：twcgospel@googlegroups.com。
+
+取消勾選 「視為別名 (Treat as an alias)」 (非常重要！)。
+
+點擊 「下一步 (Next Step)」，然後點擊 「透過 Gmail 傳送 (Send through Gmail)」。
+
+Google 會寄一封驗證信到 twcgospel@googlegroups.com。
+
+由於您是群組成員，這封信會轉寄到您的收件匣。
+
+在您的收件匣中找到這封驗證信，點擊裡面的驗證連結。
+
+完成後，當您在私人 Gmail 中點擊「回覆」群組信件時，您就可以在寄件人欄位（From:）中選擇 twcgospel@googlegroups.com 這個身份進行回覆了。
