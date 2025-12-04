@@ -18,7 +18,7 @@ sections:
         - "周一至周五 : 10:00 AM - 4:00 PM"
         - "兩個月一次西海岸嘉義禱告祭壇"
         - "每月一次布袋祭壇(嘉義福音隊支持)"
-      email: bacon4egg@gmail.com
+      email: twcgospel@gmail.com
       phone: "0966152104"
       social:
         - icon: brands/facebook
