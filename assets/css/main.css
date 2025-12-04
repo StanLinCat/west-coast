@@ -37,3 +37,5 @@
 
 /* Safelist for dynamic classes */
 @import "config/safelist.css";
+
+@import "custom.css";

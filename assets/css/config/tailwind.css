@@ -25,32 +25,3 @@
 
 
 
-/* 1. 覆蓋主要內容區的寬度限制 */
-/* max-w-6xl 大約是 72rem (1152px)。將其設為 100% 或更大的值。 */
-main.max-w-6xl {
-    /* 使用 100% 確保內容盡可能寬，但不要超過父級 */
-    max-width: 100% !important; 
-    /* 移除左右邊距（如果有的話，例如 px-6 md:px-12） */
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
-/* 2. 針對 Shortcode 容器進行調整 */
-.prose .full-width-gallery {
-    /* 關鍵：突破 prose 容器的限制 */
-    margin-left: auto;
-    margin-right: auto;
-    /* 這裡可以設置一個很大的最大寬度，例如 1600px */
-    max-width: 1600px;
-    /* 確保 Shortcode 內容有邊距，避免貼邊 */
-    padding-left: 20px; 
-    padding-right: 20px;
-}
-
-/* 3. 調整圖片數量：讓每張圖片的最小寬度更小，一行可以塞更多張 */
-.prose .full-width-gallery > div {
-    /* 將 Flex Basis 設為 180px 或 150px，讓一行可以容納更多圖片 */
-    flex: 1 1 180px !important; 
-    /* 確保圖片本身不會拉得太大 */
-    max-width: 250px; 
-}
