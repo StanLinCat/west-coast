@@ -1,0 +1,39 @@
+{{- $folder := .Get "folder" | default "" -}}
+{{- $page := .Page -}}
+
+{{- $images := slice -}}
+{{- $pattern := "" -}}
+
+{{- if $folder -}}
+    {{- $pattern = printf "%s/*{.jpg,.jpeg,.png,.gif}" $folder -}}
+    {{- $images = $page.Resources.Match $pattern -}}
+{{- else -}}
+    {{- $pattern = "*{.jpg,.jpeg,.png,.gif}" -}}
+    {{- $images = $page.Resources.Match $pattern -}}
+{{- end -}}
+
+{{- if not $images -}}
+<div class="alert alert-warning">
+    <strong>相簿警告：</strong> 
+    {{- if $folder -}}
+        在當前頁面子資料夾 <code>{{ $folder }}</code> 中找不到任何圖片 (模式: <code>{{ $pattern }}</code>)。
+    {{- else -}}
+        在當前頁面資料夾中找不到任何圖片 (模式: <code>{{ $pattern }}</code>)。
+    {{- end -}}
+</div>
+{{- else -}}
+
+<div class="full-width-gallery" style="display: flex; flex-wrap: wrap; gap: 10px;"> 
+    {{- range $images -}}
+        {{- $image := . -}}
+        {{- $title := or $image.Title $image.Name -}}
+
+        <div style="flex: 1 1 200px; overflow: hidden; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <a href="{{ $image.RelPermalink }}" target="_blank" title="{{ $title }}">
+                {{- $thumbnail := $image.Fill "250x250" -}}
+                <img src="{{ $thumbnail.RelPermalink }}" alt="{{ $title }}" style="width: 100%; height: 250px; display: block; object-fit: cover;">
+            </a>
+        </div>
+    {{- end -}}
+</div>
+{{- end -}}
