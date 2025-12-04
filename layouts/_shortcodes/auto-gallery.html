@@ -31,7 +31,7 @@
         <div style="flex: 1 1 200px; overflow: hidden; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
             <a href="{{ $image.RelPermalink }}" target="_blank" title="{{ $title }}">
                 {{- $thumbnail := $image.Fill "250x250" -}}
-                <img src="{{ $thumbnail.RelPermalink }}" alt="{{ $title }}" style="width: 100%; height: 250px; display: block; object-fit: cover;">
+                <img src="{{ $thumbnail.RelPermalink }}" alt="{{ $title }}" style="width: 100%; height: 150px; display: block; object-fit: cover;">
             </a>
         </div>
     {{- end -}}
