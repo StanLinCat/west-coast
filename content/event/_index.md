@@ -1,5 +1,5 @@
 ---
-title: 活動
+title: 活動及服務
 type: landing
 
 # Your landing page sections - add as many different content blocks as you like
