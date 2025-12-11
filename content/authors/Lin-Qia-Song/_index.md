@@ -46,6 +46,7 @@ profiles:
   #   url: https://orcid.org/0000-0002-1825-0097
 
 interests:
+  - 文學
   - 西海岸美食
   - 生態保育
 

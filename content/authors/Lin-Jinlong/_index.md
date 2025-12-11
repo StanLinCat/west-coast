@@ -31,7 +31,7 @@ organizations:
 profiles:
 
 interests:
-  - 海鮮研究
+  - 水產養殖
   - 親子教育
 
 type: landing
