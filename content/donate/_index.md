@@ -1,5 +1,5 @@
 ---
-title: 奉獻表單 google sheet
+title: 奉獻須知與表單
 type: landing
 
 sections:
