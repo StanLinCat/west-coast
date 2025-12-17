@@ -329,9 +329,10 @@ sections:
         columns: "2"
 
   - block: resume-awards
+    id: stan-volunteer
     content:
       username: "admin"
-      title: "相關資訊"
+      title: "昱廷相關經驗"
       text: "社會服務、獎項、紀錄"
     design:
       background:
