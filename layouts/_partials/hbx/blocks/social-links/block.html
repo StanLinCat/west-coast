@@ -1,0 +1,49 @@
+{{/* 西海岸：社群連結區塊（block: social-links）
+     用法（content/*.md 的 sections）：
+       - block: social-links
+         id: follow
+         content:
+           eyebrow: FOLLOW US          # 標題上方的小字（可省略）
+           title: 追蹤我們的社群
+           text: 一段說明文字           # 可省略
+           show_qr: true               # 電腦版是否顯示 LINE QR Code，預設顯示
+           items: [...]                # 可省略，預設讀 data/social_links.yaml
+*/}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $c := $block.content | default dict }}
+
+{{ $eyebrow := $c.eyebrow | default "FOLLOW US" }}
+{{ $title := $c.title | default "追蹤我們" | emojify | $page.RenderString }}
+{{ $text := "" }}
+{{ with $c.text }}{{ $text = . | emojify | $page.RenderString }}{{ end }}
+{{ $show_qr := true }}
+{{ if isset $c "show_qr" }}{{ $show_qr = $c.show_qr }}{{ end }}
+
+{{/* 手機／平板：標題 → 連結清單 → QR Code（QR 只在平板以上顯示）
+     電腦（lg 以上）：左欄標題＋QR Code，右欄連結清單 */}}
+<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+  <div class="grid gap-10 lg:grid-cols-12 lg:gap-x-16 lg:gap-y-8">
+
+    <div class="text-center lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:self-end lg:text-left">
+      {{ with $eyebrow }}
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">{{ . }}</p>
+      {{ end }}
+      <h2 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">{{ $title }}</h2>
+      {{ with $text }}
+      <p class="mx-auto mt-4 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg lg:mx-0 dark:text-gray-300">{{ . }}</p>
+      {{ end }}
+    </div>
+
+    <div class="mx-auto w-full max-w-2xl lg:col-span-7 lg:col-start-6 lg:row-span-2 lg:row-start-1 lg:max-w-none lg:self-center">
+      {{ partial "west-coast/social-list.html" (dict "items" $c.items "variant" "card") }}
+    </div>
+
+    {{ if $show_qr }}
+    <div class="mx-auto hidden w-full max-w-md md:block lg:col-span-5 lg:col-start-1 lg:row-start-2 lg:max-w-none lg:self-start">
+      {{ partial "west-coast/line-qr.html" (dict "variant" "row") }}
+    </div>
+    {{ end }}
+
+  </div>
+</div>

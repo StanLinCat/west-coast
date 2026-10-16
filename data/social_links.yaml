@@ -1,0 +1,45 @@
+# ============================================================================
+# 社群連結
+# 首頁「追蹤我們」區塊和「聯絡我們」頁的社群媒體區塊都讀這個檔案，
+# 要新增、刪除、改連結或調整順序，改這裡就好，兩個頁面會一起更新。
+#
+# 每一項的欄位：
+#   platform     決定圖示和顏色：line、instagram、facebook、youtube（其他值會用預設圖示）
+#   name         顯示名稱
+#   description  名稱下方的小字說明（可省略）
+#   url          點下去要開的連結
+#   action       右邊按鈕的文字
+#   highlight    true 的話按鈕會用品牌色強調（目前用在 LINE）
+#   icon         （可省略）想換圖示時填，例如把 SVG 放到 assets/media/icons/custom/line.svg 後填 custom/line
+# ============================================================================
+
+items:
+  - platform: line
+    name: LINE 官方帳號
+    description: 活動通知、直接與我們聯繫
+    url: https://lin.ee/pA8xABw
+    action: 加入好友
+    highlight: true
+
+  - platform: instagram
+    name: Instagram
+    description: "@ds__church｜活動照片與限動"
+    url: https://www.instagram.com/ds__church/
+    action: 追蹤
+
+  - platform: facebook
+    name: Facebook
+    description: 協會粉絲專頁
+    url: https://www.facebook.com/share/1FkEKDqX44/
+    action: 前往
+
+  - platform: youtube
+    name: YouTube
+    description: 活動影片與精彩回顧
+    url: https://youtube.com/channel/UCVxPi3yWUR-qmegqNtRfIug
+    action: 觀看
+
+# 官方 LINE 的 QR Code（電腦版會顯示，方便用手機掃描）
+line:
+  qr: line-qr.svg   # 圖檔放在 assets/media/
+  id: "@397kcgep"   # 顯示在 QR Code 旁邊，方便用 ID 搜尋

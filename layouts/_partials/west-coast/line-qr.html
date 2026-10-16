@@ -1,0 +1,30 @@
+{{/* 西海岸：官方 LINE QR Code 小卡（給電腦版訪客用手機掃描）
+     QR Code 圖檔與 LINE ID 設定在 data/social_links.yaml 的 line 區塊。
+
+     參數（dict）：
+       variant  "row"（預設，QR 在左、文字在右）或 "stacked"（QR 在上、文字置中，窄欄位用）
+*/}}
+{{- $variant := .variant | default "row" -}}
+{{- with site.Data.social_links.line -}}
+{{- $line := . -}}
+{{- with resources.Get (printf "media/%s" ($line.qr | default "line-qr.svg")) -}}
+<div class="wc-line-qr flex gap-4 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-gray-900/5 dark:bg-gray-800 dark:ring-white/10 {{ if eq $variant "stacked" }}flex-col items-center text-center{{ else }}items-center{{ end }}">
+  {{/* QR Code 底色固定白色，深色模式也掃得到 */}}
+  <img src="{{ .RelPermalink }}" width="120" height="120" loading="lazy"
+       alt="官方 LINE 加入好友 QR Code"
+       class="h-28 w-28 shrink-0 rounded-lg bg-white p-1 ring-1 ring-gray-200 dark:ring-0">
+  <div>
+    <p class="flex items-center gap-1.5 font-semibold text-gray-900 dark:text-white {{ if eq $variant "stacked" }}justify-center{{ end }}">
+      {{ partial "functions/get_icon" (dict "name" "hero/qr-code" "attributes" `class="h-5 w-5 text-[#06C755]" aria-hidden="true"`) }}
+      掃描加入官方 LINE
+    </p>
+    <p class="mt-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">用手機相機或 LINE 掃描，就能加入好友</p>
+    {{ with $line.id }}
+    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+      LINE ID：<span class="font-semibold text-gray-900 dark:text-white select-all">{{ . }}</span>
+    </p>
+    {{ end }}
+  </div>
+</div>
+{{- end -}}
+{{- end -}}

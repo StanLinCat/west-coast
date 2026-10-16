@@ -1,0 +1,64 @@
+{{/* 西海岸：社群連結清單（一列一個平台，整列都可以點）
+     首頁「追蹤我們」區塊與「聯絡我們」頁共用，連結資料在 data/social_links.yaml。
+
+     參數（dict）：
+       items    連結清單，省略時讀 data/social_links.yaml
+       variant  "card"（預設，獨立卡片）或 "bordered"（放在其他卡片裡時用細框）
+*/}}
+{{- $items := .items | default site.Data.social_links.items -}}
+{{- $variant := .variant | default "card" -}}
+
+{{/* 各平台的圖示底色、圖示、強調按鈕顏色（class 寫在這裡，Tailwind 才會編譯到） */}}
+{{- $brands := dict
+  "line" (dict
+    "tile" "bg-[#06C755]"
+    "icon" "hero/chat-bubble-oval-left-ellipsis-solid"
+    "accent" "bg-[#06C755] text-white group-hover:bg-[#05A847]")
+  "instagram" (dict
+    "tile" "bg-[linear-gradient(45deg,#F58529_0%,#DD2A7B_50%,#8134AF_100%)]"
+    "icon" "brands/instagram"
+    "accent" "bg-[#DD2A7B] text-white group-hover:bg-[#C21F6A]")
+  "facebook" (dict
+    "tile" "bg-[#0866FF]"
+    "icon" "brands/facebook"
+    "accent" "bg-[#0866FF] text-white group-hover:bg-[#0657D9]")
+  "youtube" (dict
+    "tile" "bg-[#FF0000]"
+    "icon" "brands/youtube"
+    "accent" "bg-[#FF0000] text-white group-hover:bg-[#D90000]")
+-}}
+{{- $fallback := dict "tile" "bg-primary-600" "icon" "hero/link" "accent" "bg-primary-600 text-white group-hover:bg-primary-700" -}}
+{{- $neutral := "bg-gray-100 text-gray-800 group-hover:bg-primary-600 group-hover:text-white dark:bg-white/10 dark:text-gray-100 dark:group-hover:bg-primary-500" -}}
+
+{{- $frame := "overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-gray-900/5 divide-y divide-gray-100 dark:bg-gray-800 dark:ring-white/10 dark:divide-white/10" -}}
+{{- if eq $variant "bordered" -}}
+  {{- $frame = "overflow-hidden rounded-xl border border-gray-200 divide-y divide-gray-200 dark:border-gray-700 dark:divide-gray-700" -}}
+{{- end -}}
+
+{{ with $items }}
+<ul role="list" class="wc-social-list {{ $frame }}">
+  {{ range . }}
+  {{- $brand := index $brands (lower (.platform | default "")) | default $fallback -}}
+  {{- $icon := .icon | default $brand.icon -}}
+  <li>
+    <a href="{{ .url }}" target="_blank" rel="noopener"
+       class="group flex items-center gap-3 px-3 py-3.5 sm:gap-4 sm:px-5 sm:py-4 transition-colors duration-150 hover:bg-gray-50 dark:hover:bg-white/5 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary-500">
+      <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white shadow-sm sm:h-11 sm:w-11 {{ $brand.tile }}">
+        {{ partial "functions/get_icon" (dict "name" $icon "attributes" `class="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true"`) }}
+      </span>
+      <span class="min-w-0 flex-1">
+        <span class="block text-base font-semibold leading-snug text-gray-900 dark:text-white">{{ .name }}</span>
+        {{ with .description }}
+        <span class="mt-0.5 block text-sm leading-snug text-gray-500 dark:text-gray-400">{{ . }}</span>
+        {{ end }}
+      </span>
+      <span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full px-3 py-1.5 text-sm font-semibold transition-colors duration-150 sm:px-3.5 {{ if .highlight }}{{ $brand.accent }}{{ else }}{{ $neutral }}{{ end }}">
+        {{ .action | default "前往" }}
+        {{ partial "functions/get_icon" (dict "name" "hero/arrow-up-right" "attributes" `class="hidden h-3.5 w-3.5 sm:block" aria-hidden="true"`) }}
+      </span>
+      <span class="sr-only">（另開新視窗）</span>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

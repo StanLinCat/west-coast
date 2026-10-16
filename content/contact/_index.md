@@ -20,13 +20,10 @@ sections:
         - "每月一次布袋祭壇(嘉義福音隊支持)"
       email: twcgospel@gmail.com
       phone: "0966152104"
-      social:
-        - icon: brands/facebook
-          url: https://www.facebook.com/ilinkDongshi?locale=zh_TW
-        - icon: brands/instagram
-          url: https://www.facebook.com/profile.php?id=100064601061643&locale=zh_TW
-        - icon: brands/youtube
-          url: https://youtube.com/channel/UCVxPi3yWUR-qmegqNtRfIug?si=RpraXCL4p5G1wvVz
+      # 社群媒體區塊（顯示在聯絡卡片下方），連結統一在 data/social_links.yaml 修改
+      social_links:
+        title: 社群媒體
+        text: 歡迎加入官方 LINE 直接與我們聯繫，或追蹤我們的社群，掌握最新活動與消息。
       prospective:
         title: 加入我們
         text: 有興趣一起服事西海岸嗎? 

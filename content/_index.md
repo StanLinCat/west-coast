@@ -43,6 +43,18 @@ sections:
           parallax: false
         text_color_light: false
 
+  # 社群連結（連結統一在 data/social_links.yaml 修改，聯絡我們頁也會一起更新）
+  - block: social-links
+    id: follow
+    content:
+      eyebrow: FOLLOW US
+      title: 追蹤我們的社群
+      text: 最新活動與服事消息，都會第一時間發布在社群上。選一個你常用的平台加入我們，也歡迎加入官方 LINE，直接與我們聯繫！
+    design:
+      css_class: hbx-bg-gradient
+      spacing:
+        padding: ["4rem", 0, "4rem", 0]
+
   - block: stats
     content:
       items:
