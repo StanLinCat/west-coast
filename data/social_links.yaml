@@ -35,7 +35,13 @@ items:
 
   - platform: youtube
     name: YouTube
-    description: 活動影片與精彩回顧
+    description: "@westcoastgospel"
+    url: https://www.youtube.com/@westcoastgospel
+    action: 觀看
+
+  - platform: youtube
+    name: YouTube
+    description: "@西海岸發展協會｜活動影片與精彩回顧"
     url: https://youtube.com/channel/UCVxPi3yWUR-qmegqNtRfIug
     action: 觀看
 
