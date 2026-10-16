@@ -75,3 +75,10 @@ Desktop.ini
 
 *.log
 npm-debug.log*
+
+# ============================================================================
+# 含帳號／私人資料，不要再加進 repo（已從 git 歷史清除）
+# ============================================================================
+somethingelse/Backup-codes-twcgospel.txt
+somethingelse/gmail.txt
+somethingelse/\[LINE\]西海岸網站小組.txt
