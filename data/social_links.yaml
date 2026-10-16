@@ -35,14 +35,8 @@ items:
 
   - platform: youtube
     name: YouTube
-    description: "@westcoastgospel"
+    description: "@westcoastgospel｜活動影片與精彩回顧"
     url: https://www.youtube.com/@westcoastgospel
-    action: 觀看
-
-  - platform: youtube
-    name: YouTube
-    description: "@西海岸發展協會｜活動影片與精彩回顧"
-    url: https://youtube.com/channel/UCVxPi3yWUR-qmegqNtRfIug
     action: 觀看
 
 # 官方 LINE 的 QR Code（電腦版會顯示，方便用手機掃描）
