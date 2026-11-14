@@ -162,6 +162,10 @@ sections:
           summary: "報導日期：2025/08/22"
           date: 2025-08-22
           external_link: https://cdn-news.org/news/N2508220010
+        - title: "基督教論壇報｜在風與海之間 聽見呼召 西海岸走禱 看見神的心意與土地的命定"
+          summary: "報導日期：2025/04/26"
+          date: 2025-04-26
+          external_link: https://ct.org.tw/html/news/3-3.php?cat=74&article=1401362
         - title: "首屆嘉義縣祈禱早餐會》上篇．活動篇"
           summary: "報導日期：2024/10/19"
           date: 2024-10-19
