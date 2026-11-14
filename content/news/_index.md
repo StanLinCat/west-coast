@@ -40,6 +40,10 @@ sections:
     content:
       title: YouTube影片
       items:
+        - title: "走完西海岸160公里徒步走禱 跨教會同行經歷合一"
+          summary: "GOOD TV NEWS"
+          date: 2026-11-11
+          external_link: https://youtu.be/k18yX9hNsEA
         - title: "縣長宣告守護家園不分藍綠 與嘉義眾教會祈禱領受上帝祝福"
           summary: "GOOD TV "
           date: 2025-08-23
