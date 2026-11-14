@@ -29,7 +29,16 @@
             {{ warnf "Logo `%s` not found in `assets/media/` folder" $logo_filename }}
           {{end}}
         {{ end }}
-        {{ with site.Params.header.navbar.logo.text }}{{.}}{{end}}
+        {{/* 西海岸客製：手機上名稱太長，會把右邊的搜尋／深色模式／選單擠到第二行。
+             手機版拆成兩行：「社團法人」小字在上、「台灣西海岸發展協會」在下；平板以上維持一行。 */}}
+        {{ with site.Params.header.navbar.logo.text }}
+          {{ if hasPrefix . "社團法人" }}
+          <span class="inline-flex align-middle max-sm:flex-col max-sm:leading-tight">
+            <span class="max-sm:text-[11px] max-sm:font-medium max-sm:tracking-widest max-sm:text-gray-500 max-sm:dark:text-gray-400">社團法人</span>
+            <span class="max-sm:text-base">{{ strings.TrimPrefix "社團法人" . }}</span>
+          </span>
+          {{ else }}{{ . }}{{ end }}
+        {{ end }}
       </a>
     </div>
     <!-- Mobile menu -->

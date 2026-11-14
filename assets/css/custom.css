@@ -32,3 +32,11 @@ main.max-w-6xl {
 html:not(.dark) .blox-cta-image-paragraph p.text-gray-500 {
     color: var(--color-gray-600, #4b5563);
 }
+
+/* 5. 西海岸：最窄的手機（< 360px，例如舊款 iPhone SE）頂部列再縮一點，讓 logo、名稱和三個按鈕留在同一行 */
+@media (max-width: 359px) {
+    #site-header .navbar { padding-left: 0.5rem; padding-right: 0.5rem; }
+    #site-header .navbar-brand img { height: 28px; width: auto; }
+    #site-header .navbar-brand .max-sm\:text-base { font-size: 0.9375rem; }
+    #site-header .theme-toggle { margin-left: -0.25rem; margin-right: -0.25rem; }
+}
