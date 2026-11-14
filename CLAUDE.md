@@ -66,6 +66,20 @@
 - 新貼文或明顯的版面改動：先推到 `draft/<名稱>` 分支，把預覽網址給使用者看，確認後再合併到 `master`。使用者說「直接 push」或只是加一筆連結這類小改動，可以直接推 `master`。
 - 推完到 GitHub commit 的 check「Cloudflare Pages: wcgospel」確認建置成功，再回報。
 
+### 站內搜尋索引（Pagefind）
+
+- Cloudflare 目前的建置指令只跑 Hugo，不會重建搜尋索引，所以網站用的是 repo 裡的 `static/pagefind/`。
+- **新增或修改貼文後要重建索引**，不然新內容搜不到：
+
+  ```bash
+  rm -rf /tmp/wc-public static/pagefind
+  hugo --minify --destination /tmp/wc-public
+  ./node_modules/.bin/pagefind --site /tmp/wc-public --output-path static/pagefind
+  ```
+
+  再把 `static/pagefind/` 一起 commit。
+- 根本解法：到 Cloudflare Pages 專案 `wcgospel` → Settings → Build 把建置指令改成 `pnpm run build`（`package.json` 的 build 已經包含 `pagefind --site public`）。改好以後就可以刪掉 `static/pagefind/` 和上面這段。
+
 ## 客製化的版型
 
 - `_vendor/` 是 Hugo Blox 主題原始碼，**不要直接改**。要客製某個 block，把它複製到 `layouts/_partials/hbx/blocks/<block 名稱>/block.html` 再改（`contact-info` 就是這樣做的）。
