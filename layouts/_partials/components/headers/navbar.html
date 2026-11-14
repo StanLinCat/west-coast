@@ -210,6 +210,19 @@
     </div>
   </nav>
 </header>
+{{/* 西海岸客製：手機版點選單裡的連結（尤其是同一頁的 #錨點）後自動收起選單，不用再手動按叉叉 */}}
+<script>
+  (function () {
+    var toggle = document.getElementById('nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    if (!toggle || !menu) return;
+    menu.addEventListener('click', function (e) {
+      var link = e.target.closest('a[href]');
+      if (link && link.getAttribute('href') !== '#') toggle.checked = false;
+    });
+    window.addEventListener('hashchange', function () { toggle.checked = false; });
+  })();
+</script>
 
 {{ if $show_search }}
   {{- partial "components/search-modal.html" . -}}
