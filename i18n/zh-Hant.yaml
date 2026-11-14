@@ -1,0 +1,20 @@
+# 西海岸：補齊或修正主題繁體中文翻譯（主題原檔在 _vendor/.../blox-tailwind/i18n/zh-Hant.yaml）
+# 這裡的項目會覆蓋主題的同名翻譯。
+
+- id: read_more
+  translation: 閱讀全文
+
+- id: on_this_page
+  translation: 本頁內容
+
+- id: minute_read
+  translation: 分鐘閱讀
+
+- id: search_results
+  translation: 搜尋結果
+
+- id: search_no_results
+  translation: 找不到結果
+
+- id: search_common_queries
+  translation: 常用搜尋

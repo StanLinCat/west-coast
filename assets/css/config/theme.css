@@ -320,7 +320,8 @@
   /* Note: Providing these palettes in @theme ensures theme-pack mappings like var(--color-rose-600) always resolve */
 
   /* Font family */
-  --font-family-sans: inter var, ui-sans-serif, system-ui, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji;
+  /* 西海岸客製：英數字用 Inter，中文明確指定各平台的繁體中文字型（蘋果、Android/Linux、Windows） */
+  --font-family-sans: inter var, "PingFang TC", "Noto Sans TC", "Noto Sans CJK TC", "Microsoft JhengHei", ui-sans-serif, system-ui, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji;
 
   /* Font sizes */
   --font-size-xs: 0.75rem;

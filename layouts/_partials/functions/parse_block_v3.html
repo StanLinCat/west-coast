@@ -16,6 +16,9 @@
 {{/* Check if this is a Preact-enabled block by looking for component file */}}
 {{ $component_path := printf "js/hbx/blocks/%s/component.jsx" $block_type }}
 {{ $is_preact := resources.Get $component_path }}
+{{/* 西海岸客製：hero 改用靜態 HTML（layouts/_partials/hbx/blocks/hero/block.html），
+     不再等 JavaScript 載入後才畫出來，避免首頁開場版面往下跳，也讓搜尋引擎讀得到標題。 */}}
+{{ if in (slice "hero") $block_type }}{{ $is_preact = false }}{{ end }}
 
 {{/* Apply styling wrapper for all blocks (both Preact and traditional) */}}
 {{ $bg := $block.design.background }}

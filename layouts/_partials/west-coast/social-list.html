@@ -8,24 +8,25 @@
 {{- $items := .items | default site.Data.social_links.items -}}
 {{- $variant := .variant | default "card" -}}
 
-{{/* 各平台的圖示底色、圖示、強調按鈕顏色（class 寫在這裡，Tailwind 才會編譯到） */}}
+{{/* 各平台的圖示底色、圖示、強調按鈕顏色（class 寫在這裡，Tailwind 才會編譯到）
+     圖示底色用品牌原色；按鈕上有白字，所以用加深的品牌色，讓白字對比達到 4.5:1 以上（WCAG AA）。 */}}
 {{- $brands := dict
   "line" (dict
     "tile" "bg-[#06C755]"
     "icon" "hero/chat-bubble-oval-left-ellipsis-solid"
-    "accent" "bg-[#06C755] text-white group-hover:bg-[#05A847]")
+    "accent" "bg-[#00843D] text-white group-hover:bg-[#007236]")
   "instagram" (dict
     "tile" "bg-[linear-gradient(45deg,#F58529_0%,#DD2A7B_50%,#8134AF_100%)]"
     "icon" "brands/instagram"
-    "accent" "bg-[#DD2A7B] text-white group-hover:bg-[#C21F6A]")
+    "accent" "bg-[#C21F6A] text-white group-hover:bg-[#A31A59]")
   "facebook" (dict
     "tile" "bg-[#0866FF]"
     "icon" "brands/facebook"
-    "accent" "bg-[#0866FF] text-white group-hover:bg-[#0657D9]")
+    "accent" "bg-[#0657D9] text-white group-hover:bg-[#0549B5]")
   "youtube" (dict
     "tile" "bg-[#FF0000]"
     "icon" "brands/youtube"
-    "accent" "bg-[#FF0000] text-white group-hover:bg-[#D90000]")
+    "accent" "bg-[#CC0000] text-white group-hover:bg-[#A80000]")
 -}}
 {{- $fallback := dict "tile" "bg-primary-600" "icon" "hero/link" "accent" "bg-primary-600 text-white group-hover:bg-primary-700" -}}
 {{- $neutral := "bg-gray-100 text-gray-800 group-hover:bg-primary-600 group-hover:text-white dark:bg-white/10 dark:text-gray-100 dark:group-hover:bg-primary-500" -}}

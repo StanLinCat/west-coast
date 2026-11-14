@@ -99,7 +99,7 @@
           {{- end -}}
         {{ end }}
 
-        {{ if ne .Params.reading_time false }}
+        {{ if and (ne .Params.reading_time false) (site.Params.locale.show_reading_time | default false) }}
         <span class="mx-1">·</span>
         <span class="mx-1">
           {{ .ReadingTime }} {{ i18n "minute_read" }}

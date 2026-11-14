@@ -11,7 +11,7 @@
 {{ $anchor := $item.Params.image.focal_point | default "Center" }}
 {{ $fill_image := .config.fill_image | default true }}
 {{ $showDate := .config.show_date | default true }}
-{{ $showReadTime := .config.show_read_time | default true }}
+{{ $showReadTime := and (.config.show_read_time | default true) (site.Params.locale.show_reading_time | default false) }}
 {{ $showReadMore := .config.show_read_more | default true }}
 {{ $hasMeta := or $showDate $showReadTime $showReadMore }}
 {{ $index := .index }}
@@ -174,8 +174,8 @@
         
         <!-- Read More with arrow - always visible for accessibility -->
         {{ if $showReadMore }}
-          <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium text-sm opacity-70 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all duration-300 self-start sm:self-auto sm:ml-0">
-            <span>{{ i18n "read_more" }}</span>
+          <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="flex items-center gap-2 text-blue-700 dark:text-blue-300 font-medium text-sm transform group-hover:translate-x-1 transition-all duration-300 self-start sm:self-auto sm:ml-0">
+            <span>{{ i18n "read_more" }}<span class="sr-only">：{{ $item.Title }}</span></span>
             <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>

@@ -97,7 +97,8 @@
       
       {{/* Check if this is a Preact-enabled block that needs hydration */}}
       {{ $component_path := printf "js/hbx/blocks/%s/client.jsx" $block_type }}
-      {{ if resources.Get $component_path }}
+      {{/* 西海岸客製：hero 已改成靜態 HTML（見 functions/parse_block_v3.html），不用載入它的 Preact 腳本 */}}
+      {{ if and (resources.Get $component_path) (not (in (slice "hero") $block_type)) }}
         {{ $page.Store.Set "needs_preact" true }}
         {{/* Store which Preact blocks are used on this page */}}
         {{ $preact_blocks := $page.Store.Get "preact_blocks" | default slice }}

@@ -55,6 +55,8 @@ footer:
 
 # Localization
 locale:
-  date_format: 'Jan 2, 2006'
-  time_format: '3:04 PM'
+  date_format: '2006年1月2日'
+  time_format: '15:04'
+  # 西海岸客製：中文字數算不準（都顯示 1 分鐘），所以不顯示閱讀時間（views/card.html、single.html 會讀這個設定）
+  show_reading_time: false
 

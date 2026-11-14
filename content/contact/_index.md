@@ -32,7 +32,7 @@ sections:
           url: https://youtu.be/RGsr_ZHAMaY?si=B78n8gTQG4-NvvV7
       map_url: https://maps.app.goo.gl/h74pSk2bmBA1CHGs8
       map_embed: |
-        <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1jghkY9N1BpYT_khk6ByX-LtZt3EjlMQ&ehbc=2E312F&noprof=1" width="1200" height="480"></iframe>
+        <iframe title="西海岸發展協會位置地圖" src="https://www.google.com/maps/d/u/1/embed?mid=1jghkY9N1BpYT_khk6ByX-LtZt3EjlMQ&ehbc=2E312F&noprof=1" width="1200" height="480" loading="lazy"></iframe>
       # show_form: true
       # form_action: "https://formspree.io/f/xovpgngz"
     design:

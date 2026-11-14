@@ -23,7 +23,7 @@ sections:
       announcement:
         text: "相關報導"
         link:
-          text: "Read more"
+          text: "看報導"
           url: "news/"
     design:
       spacing:
@@ -47,7 +47,7 @@ sections:
   - block: social-links
     id: follow
     content:
-      eyebrow: FOLLOW US
+      eyebrow: 社群媒體
       title: 追蹤我們的社群
       text: 最新活動與服事消息，都會第一時間發布在社群上。選一個你常用的平台加入我們，也歡迎加入官方 LINE，直接與我們聯繫！
     design:

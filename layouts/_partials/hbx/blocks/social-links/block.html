@@ -3,7 +3,7 @@
        - block: social-links
          id: follow
          content:
-           eyebrow: FOLLOW US          # 標題上方的小字（可省略）
+           eyebrow: 社群媒體            # 標題上方的小字（可省略）
            title: 追蹤我們的社群
            text: 一段說明文字           # 可省略
            show_qr: true               # 電腦版是否顯示 LINE QR Code，預設顯示
@@ -13,7 +13,7 @@
 {{ $block := .wcBlock }}
 {{ $c := $block.content | default dict }}
 
-{{ $eyebrow := $c.eyebrow | default "FOLLOW US" }}
+{{ $eyebrow := $c.eyebrow | default "社群媒體" }}
 {{ $title := $c.title | default "追蹤我們" | emojify | $page.RenderString }}
 {{ $text := "" }}
 {{ with $c.text }}{{ $text = . | emojify | $page.RenderString }}{{ end }}

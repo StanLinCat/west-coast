@@ -11,7 +11,10 @@
             {{ if eq $logoExt `.svg` }}
               {{- $logo.Content | safeHTML -}}
             {{else}}
+              {{/* 西海岸客製：輸出 2 倍、3 倍解析度，手機和高解析螢幕上 logo 才不會糊 */}}
               {{ $logo_img := ($logo.Process "Resize x36 webp") }}
+              {{ $logo_2x := ($logo.Process "Resize x72 webp") }}
+              {{ $logo_3x := ($logo.Process "Resize x108 webp") }}
               <img
                 fetchpriority="high"
                 decoding="async"
@@ -19,6 +22,7 @@
                 width="{{ $logo_img.Width }}"
                 height="{{ $logo_img.Height }}"
                 src="{{ $logo_img.RelPermalink }}"
+                srcset="{{ $logo_img.RelPermalink }} 1x, {{ $logo_2x.RelPermalink }} 2x, {{ $logo_3x.RelPermalink }} 3x"
                 alt="{{ site.Title }}" />
             {{end}}
           {{ else }}
