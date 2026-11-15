@@ -1,4 +1,4 @@
-{{/* 西海岸客製：頁尾外框。footer.block 是 west-coast 時改成整片淺灰底（滿版），
+{{/* 西海岸客製：頁尾外框。footer.block 是 west-coast 時改成整片淺灰底（滿版；深色模式是比頁面更暗的底色），
      內容版型在 components/footers/west-coast.html；其他頁尾樣式維持主題原本的外框。
      （原本主題的「Made with Hugo Blox」宣傳字樣，之前就已經從這個檔案拿掉了。）
      data-pagefind-ignore：站內搜尋不索引頁尾，不然每一頁都會因為頁尾的文字被搜到。 */}}
@@ -10,7 +10,7 @@
 {{ end }}
 
 {{ if eq $footer_section_name "west-coast" }}
-<footer data-pagefind-ignore class="mt-16 border-t border-gray-200 bg-gray-50 text-sm leading-6 text-gray-600 sm:mt-24 dark:border-gray-800 dark:bg-gray-900/60 dark:text-gray-400">
+<footer data-pagefind-ignore class="mt-16 border-t border-gray-200 bg-gray-50 text-[13px] leading-6 text-gray-500 sm:mt-24 dark:border-white/10 dark:bg-black/40 dark:text-gray-400">
   {{ partial "functions/get_hook" (dict "hook" "footer-start" "context" .) }}
   {{ partial $footer_section_path . }}
 </footer>
