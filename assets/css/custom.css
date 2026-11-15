@@ -8,25 +8,119 @@ main.max-w-6xl {
     padding-right: 1rem !important;
 }
 
-/* 2. 針對 Shortcode 容器進行調整 */
-.prose .full-width-gallery {
-    /* 關鍵：突破 prose 容器的限制 */
-    margin-left: auto;
-    margin-right: auto;
-    /* 這裡可以設置一個很大的最大寬度，例如 1600px */
+/* 2–3. 西海岸相簿（layouts/_shortcodes/auto-gallery.html）：方形縮圖格，手機 3 欄、平板 5 欄、大螢幕 6 欄 */
+.wc-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
     max-width: 1600px;
-    /* 確保 Shortcode 內容有邊距，避免貼邊 */
-    padding-left: 20px; 
-    padding-right: 20px;
+    margin: 1.5rem auto;
 }
+@media (min-width: 768px) {
+    .wc-gallery { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+}
+@media (min-width: 1280px) {
+    .wc-gallery { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+.wc-gallery__item {
+    position: relative;
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #e5e7eb;
+}
+.dark .wc-gallery__item { background: #1f2937; }
+.wc-gallery__item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    transition: transform .3s ease;
+}
+.wc-gallery__item:hover img { transform: scale(1.04); }
+.wc-gallery__item:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 
-/* 3. 調整圖片數量：讓每張圖片的最小寬度更小，一行可以塞更多張 */
-.prose .full-width-gallery > div {
-    /* 將 Flex Basis 設為 180px 或 150px，讓一行可以容納更多圖片 */
-    flex: 1 1 150px !important; 
-    /* 確保圖片本身不會拉得太大 */
-    max-width: 250px; 
+/* 燈箱：深色底、白色細線按鈕，不加其他顏色 */
+.wc-lightbox {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    background: #0b0b0b;
+    color: #fff;
 }
+.wc-lightbox[open] { display: flex; align-items: center; justify-content: center; }
+.wc-lightbox::backdrop { background: rgba(0, 0, 0, .6); }
+.wc-lightbox__figure {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 52px 8px 72px;
+}
+@media (min-width: 768px) {
+    .wc-lightbox__figure { padding: 56px 76px; }
+}
+.wc-lightbox__img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    object-fit: contain;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity .2s ease;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.wc-lightbox__img.is-loaded { opacity: 1; }
+.wc-lightbox__count {
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1;
+    color: rgba(255, 255, 255, .7);
+    font-variant-numeric: tabular-nums;
+}
+.wc-lightbox__btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color .15s ease;
+}
+.wc-lightbox__btn:hover { background: rgba(255, 255, 255, .18); }
+.wc-lightbox__btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.wc-lightbox__close { top: 4px; right: 6px; }
+.wc-lightbox__prev, .wc-lightbox__next { top: 50%; transform: translateY(-50%); }
+.wc-lightbox__prev { left: 14px; }
+.wc-lightbox__next { right: 14px; }
+@media (max-width: 767px) {
+    /* 手機：上一張／下一張放在下方中間，拇指比較好按（也可以直接左右滑） */
+    .wc-lightbox__prev, .wc-lightbox__next { top: auto; bottom: 14px; transform: none; }
+    .wc-lightbox__prev { left: calc(50% - 56px); }
+    .wc-lightbox__next { right: calc(50% - 56px); }
+}
+html.wc-lock { overflow: hidden; }
 
 /* 4. 西海岸：首頁「生活 生產 生態 生命」等圖文區塊的灰色說明文字，在漸層背景上對比不足，淺色模式加深一階 */
 html:not(.dark) .blox-cta-image-paragraph p.text-gray-500 {
@@ -38,5 +132,4 @@ html:not(.dark) .blox-cta-image-paragraph p.text-gray-500 {
     #site-header .navbar { padding-left: 0.5rem; padding-right: 0.5rem; }
     #site-header .navbar-brand img { height: 28px; width: auto; }
     #site-header .navbar-brand .max-sm\:text-base { font-size: 0.9375rem; }
-    #site-header .theme-toggle { margin-left: -0.25rem; margin-right: -0.25rem; }
 }

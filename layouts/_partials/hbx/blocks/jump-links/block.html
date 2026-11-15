@@ -1,0 +1,37 @@
+{{/* 西海岸：頁內快速跳轉按鈕（「相關媒體」頁最上面的 YouTube／新聞報導／其他媒體）。
+     取代原本三張大圖卡片，手機上一眼就看得到三個選項，不用先滑過三張大圖。
+
+     用法（content/<頁面>/_index.md）：
+       - block: jump-links
+         content:
+           title: 新聞與媒體
+           text: （可省略）標題下的說明
+           items:
+             - name: YouTube 影片
+               url: '#youtube'
+               icon: brands/youtube   # 可省略
+*/}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $title := $block.content.title | emojify | $page.RenderString }}
+
+<div class="mx-auto max-w-3xl px-6 text-center">
+  {{ with $title }}
+  <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ . }}</h2>
+  {{ end }}
+  {{ with $block.content.text }}
+  <p class="mt-3 text-gray-600 dark:text-gray-400">{{ . | emojify | $page.RenderString }}</p>
+  {{ end }}
+  {{ with $block.content.items }}
+  {{/* 手機：等寬三格排成一列；平板以上：置中並排 */}}
+  <nav class="mt-6 grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:justify-center sm:gap-3" aria-label="{{ $block.content.title | default "本頁內容" | plainify }}">
+    {{ range . }}
+    <a href="{{ .url }}"
+       class="inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-gray-300 bg-white px-2 py-2 text-sm font-medium sm:px-4 text-gray-700 shadow-sm transition-colors hover:border-gray-400 hover:bg-gray-50 hover:text-gray-900 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-500 dark:hover:bg-gray-700">
+      {{ with .icon }}{{ partial "functions/get_icon" (dict "name" . "attributes" `class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true"`) }}{{ end }}
+      {{ .name }}
+    </a>
+    {{ end }}
+  </nav>
+  {{ end }}
+</div>

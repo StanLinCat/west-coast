@@ -1,0 +1,57 @@
+{{/* Hugo Blox: Testimonials */}}
+{{/* Documentation: https://hugoblox.com/blocks/ */}}
+{{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
+{{/* 西海岸客製：複製自 blox-tailwind v0.9.0 的 testimonials。
+     手機上見證文字原本是 24px 置中，一則就佔滿整個螢幕、每行只有十來個字，很難讀；
+     改成手機 17px 靠左、平板以上才置中放大。名字和職稱靠左對齊在頭像旁邊。 */}}
+
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $title := $block.content.title | emojify | $page.RenderString }}
+{{ $text := $block.content.text | emojify | $page.RenderString }}
+
+<section>
+  <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+
+    {{ with $title }}
+    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+      <div class="max-w-screen-md mb-8 lg:mb-16 flex flex-col justify-center mx-auto">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white text-center">{{.}}</h2>
+        {{ with $text }}
+        <p class="text-gray-500 sm:text-xl dark:text-gray-400 text-center">{{.}}</p>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    {{ range $idx, $item := $block.content.items }}
+    <figure class="max-w-screen-md mx-auto {{if ne (math.Add $idx 1) (len $block.content.items) }}mb-12 sm:mb-16{{end}}">
+      <svg class="h-10 sm:h-14 mx-auto mb-3 text-gray-300 dark:text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z"/>
+      </svg>
+      <blockquote>
+        <p class="text-[17px] leading-[1.8] text-left font-normal text-gray-800 dark:text-gray-100 sm:text-center sm:text-xl sm:leading-relaxed sm:font-medium sm:text-gray-900 lg:text-2xl lg:leading-relaxed">"{{.text | $page.RenderString}}"</p>
+      </blockquote>
+      <figcaption class="flex items-center justify-center mt-6 gap-3">
+        {{ $image := resources.GetMatch (path.Join "media" .image) }}
+        {{ with $image }}
+          {{/* Serve a single 2x retina source for a 48px display */}}
+          {{ $avatar_96 := $image.Process "Fill 96x96 Center webp" }}
+          <img class="w-12 h-12 rounded-full"
+               src="{{$avatar_96.RelPermalink}}"
+               width="48"
+               height="48"
+               alt=""
+               loading="lazy">
+        {{ end }}
+        <div class="text-left leading-snug">
+          <div class="font-medium text-gray-900 dark:text-white">{{.name}}</div>
+          <div class="text-sm text-gray-500 dark:text-gray-400">{{.role}}</div>
+        </div>
+      </figcaption>
+    </figure>
+    {{ end }}
+
+  </div>
+</section>

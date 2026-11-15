@@ -1,24 +1,33 @@
 {{- define "main" -}}
-<div class="flex flex-col justify-center">
-  <article class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert">
-    <h1 class="lg:text-6xl">{{ i18n "page_not_found" }}</h1>
+{{/* 西海岸客製：友善的 404 頁。原本主題會列出「最近發布」的十個頁面（含成員頁等），看起來很雜；
+     改成簡短說明＋三個常用按鈕，再附上最近三則活動。 */}}
+<div class="mx-auto max-w-2xl px-6 py-16 text-center sm:py-24">
+  <p class="text-sm font-semibold tracking-[0.3em] text-gray-500 dark:text-gray-400">404</p>
+  <h1 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">找不到這個頁面</h1>
+  <p class="mt-4 text-base leading-7 text-gray-600 dark:text-gray-400">
+    網址可能打錯了，或這篇內容已經搬家了。<br class="hidden sm:inline">可以從下面的連結繼續逛，或按右上角的放大鏡搜尋。
+  </p>
+  <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+    <a href="{{ site.Home.RelPermalink }}" class="rounded-full bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gray-700 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200">回首頁</a>
+    <a href="{{ "event/" | relLangURL }}" class="rounded-full border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 shadow-sm transition-colors hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700">活動</a>
+    <a href="{{ "contact/" | relLangURL }}" class="rounded-full border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 shadow-sm transition-colors hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700">聯絡我們</a>
+  </div>
 
-    {{/* Suggest recently published pages to the user. */}}
-
-    <p>{{ i18n "404_recommendations" }}</p>
-
-    {{ $query := where (where (where (where site.Pages.ByDate.Reverse "Title" "!=" "") "Kind" "in" (slice "page" "section")) "Params.private" "!=" true) "Permalink" "!=" "" }}
-    {{ $count := len $query }}
-    {{ if gt $count 0 }}
-    <h2>{{ i18n "user_profile_latest" }}</h2>
-    <ul>
-      {{ range first 10 $query }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ $recent := where site.RegularPages "Section" "in" (slice "newest" "event") }}
+  {{ with first 3 $recent.ByDate.Reverse }}
+  <div class="mx-auto mt-14 max-w-md text-left">
+    <h2 class="text-sm font-semibold text-gray-900 dark:text-white">最近的活動</h2>
+    <ul role="list" class="mt-3 divide-y divide-gray-100 border-y border-gray-100 dark:divide-gray-800 dark:border-gray-800">
+      {{ range . }}
+      <li>
+        <a href="{{ .RelPermalink }}" class="flex items-baseline justify-between gap-4 py-3 text-gray-700 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+          <span class="min-w-0 truncate font-medium">{{ .Title }}</span>
+          <time class="shrink-0 text-xs text-gray-500 dark:text-gray-400" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format (site.Params.locale.date_format | default ":date_long") }}</time>
+        </a>
+      </li>
       {{ end }}
     </ul>
-    {{ end }}
-
-  </article>
+  </div>
+  {{ end }}
 </div>
-
 {{- end -}}

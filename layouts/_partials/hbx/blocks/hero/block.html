@@ -2,7 +2,8 @@
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
 {{/* 西海岸客製：複製自 blox-tailwind v0.9.0 的 hero/block.html，改成伺服器端輸出（見 functions/parse_block_v3.html），
-     外觀比照原本的 Preact 版本（公告連結左邊留 pl-2）。 */}}
+     外觀比照原本的 Preact 版本（公告連結左邊留 pl-2）。
+     手機上標題字級跟著螢幕寬度縮放（clamp），「台灣西海岸發展協會🦪」才不會把 🦪 擠到第二行。 */}}
 
 {{/* Initialise */}}
 {{ $page := .wcPage }}
@@ -38,7 +39,7 @@
     {{end}}
 
     <div class="text-center">
-      {{ with $block.content.title }}<h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">{{ . | markdownify }}</h1>{{end}}
+      {{ with $block.content.title }}<h1 class="text-[clamp(1.5rem,7.5vw,2.25rem)] font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">{{ . | markdownify }}</h1>{{end}}
       {{ with $block.content.text }}<p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">{{ . | $page.RenderString | emojify }}</p>{{end}}
 
       {{ if $block.content.primary_action.url }}

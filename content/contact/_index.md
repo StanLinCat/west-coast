@@ -15,7 +15,7 @@ sections:
           - No. 6, Haixing St, Budai Township, Chiayi County, 625
           
       office_hours:
-        - "周一至周五 : 10:00 AM - 4:00 PM"
+        - "週一至週五 10:00–16:00"
         - "兩個月一次西海岸嘉義禱告祭壇"
         - "每月一次布袋祭壇(嘉義福音隊支持)"
       email: twcgospel@gmail.com

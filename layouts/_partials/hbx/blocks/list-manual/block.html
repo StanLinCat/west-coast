@@ -1,0 +1,86 @@
+{{/* 西海岸客製：手動清單（「相關媒體」頁的 YouTube 影片、新聞報導、其他社群媒體）。
+     複製自 _vendor 裡的 list-manual 後修改：
+     - 依日期由新到舊自動排序（就算 content/news/_index.md 裡順序放錯也沒關係；design.sort: false 可關閉）
+     - YouTube 連結自動顯示影片縮圖（i.ytimg.com，滑到才載入）
+     - 整列都可以點，拿掉每一則下面重複的「閱讀全文」
+     - 摘要只是日期（例如「報導日期：YYYY/MM/DD」「2022/7/16」）的不再重複顯示（上面已經有日期），長摘要最多顯示 3 行
+     - 項目標題改成 h3（區塊標題是 h2），標題層級才正確 */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{ $items := $block.content.items | default slice }}
+{{ $sort := true }}
+{{ with $block.design }}{{ if isset . "sort" }}{{ $sort = .sort }}{{ end }}{{ end }}
+{{ if $sort }}{{ $items = sort $items "date" "desc" }}{{ end }}
+{{ $date_format := site.Params.locale.date_format | default ":date_long" }}
+
+{{ if $block.content.title }}
+<div class="mx-auto max-w-3xl px-6">
+  <div class="mb-4 text-center">
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
+      {{ $block.content.title | emojify | $page.RenderString }}
+    </h2>
+  </div>
+  {{ with $block.content.text }}
+  <p class="text-center text-gray-600 dark:text-gray-400">
+    {{ . | emojify | $page.RenderString }}
+  </p>
+  {{ end }}
+</div>
+{{ end }}
+
+<div class="mx-auto max-w-3xl px-4 sm:px-6">
+  <ul role="list" class="divide-y divide-zinc-100 dark:divide-zinc-800">
+    {{ range $items }}
+      {{ $title := .title }}
+      {{ $summary_raw := .summary | default "" | strings.TrimSpace }}
+      {{ $summary := "" }}
+      {{ if and $summary_raw (not (findRE `^(報導日期[:：]\s*)?\d{4}/\d{1,2}/\d{1,2}(\s*發佈)?$` $summary_raw)) }}
+        {{ $summary = $summary_raw | page.RenderString }}
+      {{ end }}
+      {{ $date := .date }}
+      {{ $external_link := .external_link | default "" }}
+      {{ $link := cond (ne $external_link "") $external_link "#" }}
+
+      {{/* YouTube 影片 ID：youtu.be/<id>、youtube.com/watch?v=<id>、/shorts/<id>、/live/<id> */}}
+      {{ $yt := "" }}
+      {{ with $external_link }}
+        {{ $u := urls.Parse . }}
+        {{ $host := lower $u.Host }}
+        {{ $parts := split (strings.TrimPrefix "/" $u.Path) "/" }}
+        {{ if eq $host "youtu.be" }}
+          {{ $yt = index $parts 0 }}
+        {{ else if in (slice "youtube.com" "www.youtube.com" "m.youtube.com") $host }}
+          {{ $yt = $u.Query.Get "v" }}
+          {{ if and (not $yt) (ge (len $parts) 2) (in (slice "shorts" "live" "embed") (index $parts 0)) }}
+            {{ $yt = index $parts 1 }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+      <li class="group relative flex items-start gap-3 py-4 sm:gap-4 sm:py-5">
+        <div class="pointer-events-none absolute -inset-x-3 inset-y-1 rounded-xl bg-zinc-50 opacity-0 transition-opacity group-hover:opacity-100 dark:bg-zinc-800/50"></div>
+        {{ with $yt }}
+        <img src="https://i.ytimg.com/vi/{{ . }}/mqdefault.jpg" alt="" width="320" height="180" loading="lazy" decoding="async"
+             class="relative aspect-video w-28 shrink-0 rounded-lg bg-zinc-100 object-cover sm:w-40 dark:bg-zinc-800">
+        {{ end }}
+        <div class="relative min-w-0 flex-1">
+          {{ with $date }}
+          <time class="block text-xs text-zinc-500 dark:text-zinc-400" datetime="{{ time.Format "2006-01-02" . }}">
+            {{ time.Format $date_format . }}
+          </time>
+          {{ end }}
+          <h3 class="mt-1 text-[15px] font-semibold leading-snug text-zinc-800 sm:text-base dark:text-zinc-100">
+            <a href="{{ $link }}" {{ if $external_link }}target="_blank" rel="noopener"{{ end }}
+               class="after:absolute after:-inset-x-3 after:inset-y-1 after:rounded-xl focus:outline-none focus-visible:after:ring-2 focus-visible:after:ring-primary-500">
+              {{ $title }}{{ if $external_link }}<span class="sr-only">（另開新視窗）</span>{{ end }}
+            </a>
+          </h3>
+          {{ with $summary }}
+          <p class="mt-1 text-sm leading-snug text-zinc-500 line-clamp-3 dark:text-zinc-400">{{ . }}</p>
+          {{ end }}
+        </div>
+      </li>
+    {{ end }}
+  </ul>
+</div>

@@ -1,0 +1,109 @@
+{{/* 西海岸頁尾：低調的灰階版本（淺灰底、灰字、單色圖示），四欄：協會簡介／聯絡資訊／快速連結／追蹤我們。
+     手機：簡介、聯絡資訊各佔一整列，快速連結和追蹤我們並排。
+     內容在 data/footer.yaml，社群連結在 data/social_links.yaml（和首頁、聯絡我們頁共用）。
+     在 config/_default/params.yaml 用 footer.block: west-coast 啟用。 */}}
+{{- $f := site.Data.footer | default dict -}}
+{{- $social := site.Data.social_links.items | default slice -}}
+{{- $social_icons := dict
+  "line" "hero/chat-bubble-oval-left-ellipsis-solid"
+  "instagram" "brands/instagram"
+  "facebook" "brands/facebook"
+  "youtube" "brands/youtube"
+-}}
+{{- $link_class := "hover:text-gray-900 hover:underline underline-offset-4 dark:hover:text-white" -}}
+{{- $heading_class := "text-sm font-semibold text-gray-900 dark:text-gray-100" -}}
+{{- $icon_class := `class="mt-0.5 h-4 w-4 shrink-0 text-gray-400 dark:text-gray-500" aria-hidden="true"` -}}
+
+<div class="mx-auto max-w-6xl px-6 pt-10 pb-8 sm:pt-12">
+  <div class="grid grid-cols-2 gap-x-6 gap-y-8 lg:grid-cols-12 lg:gap-x-10">
+
+    {{/* 協會簡介 */}}
+    <div class="col-span-2 lg:col-span-4">
+      <a href="{{ site.Home.RelPermalink }}" class="text-base font-semibold text-gray-900 dark:text-white {{ $link_class }}">{{ $f.name | default site.Title }}</a>
+      {{ with $f.description }}
+      <p class="mt-2 max-w-sm">{{ . }}</p>
+      {{ end }}
+    </div>
+
+    {{/* 聯絡資訊 */}}
+    {{ with $f.contact }}
+    <div class="col-span-2 lg:col-span-4">
+      <h2 class="{{ $heading_class }}">聯絡資訊</h2>
+      <ul role="list" class="mt-3 space-y-2">
+        {{ with .address }}
+        <li class="flex gap-2">
+          {{ partial "functions/get_icon" (dict "name" "hero/map-pin" "attributes" $icon_class) }}
+          {{ if $f.contact.map_url }}<a href="{{ $f.contact.map_url }}" target="_blank" rel="noopener" class="{{ $link_class }}">{{ . }}<span class="sr-only">（在地圖上查看，另開新視窗）</span></a>{{ else }}<span>{{ . }}</span>{{ end }}
+        </li>
+        {{ end }}
+        {{ with .phone }}
+        <li class="flex gap-2">
+          {{ partial "functions/get_icon" (dict "name" "hero/phone" "attributes" $icon_class) }}
+          <a href="tel:{{ replace . "-" "" | replaceRE `\s` "" }}" class="{{ $link_class }}">{{ . }}</a>
+        </li>
+        {{ end }}
+        {{ with .email }}
+        <li class="flex gap-2">
+          {{ partial "functions/get_icon" (dict "name" "hero/envelope" "attributes" $icon_class) }}
+          <a href="mailto:{{ . }}" class="break-all {{ $link_class }}">{{ . }}</a>
+        </li>
+        {{ end }}
+        {{ with .hours }}
+        <li class="flex gap-2">
+          {{ partial "functions/get_icon" (dict "name" "hero/clock" "attributes" $icon_class) }}
+          <span>{{ . }}</span>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{/* 快速連結 */}}
+    {{ with $f.links }}
+    <nav class="lg:col-span-2" aria-label="頁尾快速連結">
+      <h2 class="{{ $heading_class }}">快速連結</h2>
+      <ul role="list" class="mt-3 space-y-2">
+        {{ range . }}
+        <li><a href="{{ .url | relLangURL }}" class="{{ $link_class }}">{{ .name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+    {{ end }}
+
+    {{/* 追蹤我們（單色圖示，不用品牌色） */}}
+    {{ with $social }}
+    <div class="lg:col-span-2">
+      <h2 class="{{ $heading_class }}">追蹤我們</h2>
+      <ul role="list" class="mt-3 space-y-2">
+        {{ range . }}
+        {{ $icon := .icon | default (index $social_icons (lower (.platform | default ""))) | default "hero/link" }}
+        <li>
+          <a href="{{ .url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 {{ $link_class }}">
+            {{ partial "functions/get_icon" (dict "name" $icon "attributes" `class="h-4 w-4 shrink-0 text-gray-400 dark:text-gray-500" aria-hidden="true"`) }}
+            {{- .name -}}
+            <span class="sr-only">（另開新視窗）</span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+
+  {{/* 最下面一行：版權、統一編號、隱私政策／服務條款 */}}
+  <div class="mt-10 flex flex-col gap-2 border-t border-gray-200 pt-6 text-xs text-gray-500 sm:flex-row sm:items-center sm:justify-between dark:border-gray-800 dark:text-gray-400">
+    <p>
+      {{- $notice := site.Params.footer.copyright.notice | default (printf "© {year} %s" site.Title) -}}
+      {{- replace $notice "{year}" (now.Format "2006") -}}
+      {{- with $f.tax_id }}<span class="mx-1.5" aria-hidden="true">·</span>統一編號 {{ . }}{{ end -}}
+    </p>
+    {{ with $f.legal }}
+    <p>
+      {{- range $i, $l := . -}}
+        {{- if $i }}<span class="mx-1.5" aria-hidden="true">·</span>{{ end -}}
+        <a href="{{ $l.url | relLangURL }}" class="{{ $link_class }}">{{ $l.name }}</a>
+      {{- end -}}
+    </p>
+    {{ end }}
+  </div>
+</div>

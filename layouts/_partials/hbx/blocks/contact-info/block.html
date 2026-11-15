@@ -54,7 +54,7 @@
         
         {{ with $block.content.office_hours }}
         <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
-          <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Office Hours</h4>
+          <h4 class="font-semibold text-gray-900 dark:text-white mb-2">辦公時間</h4>
           <div class="text-gray-600 dark:text-gray-300 space-y-1">
             {{ range . }}
             <p>{{ . }}</p>
@@ -67,7 +67,7 @@
         <a href="{{ . }}" target="_blank" rel="noopener" 
            class="inline-flex items-center mt-4 px-4 py-2 bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors">
           {{ partial "functions/get_icon" (dict "name" "hero/map" "attributes" "class=\"w-5 h-5 mr-2\"") }}
-          View on Map
+          在地圖上查看
         </a>
         {{ end }}
       </div>

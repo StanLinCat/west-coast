@@ -7,32 +7,25 @@ type: landing
 # Your landing page sections - add as many different content blocks as you like
 sections:
 
-  - block: research-areas
+  # 最上面的快速跳轉按鈕（版型在 layouts/_partials/hbx/blocks/jump-links/block.html）
+  # 下面三個清單會自動依日期由新到舊排序
+  - block: jump-links
     id: newstop
     content:
       title: 新聞與媒體
       items:
-        - name: Youtube影片列表
-          image: news/YouTube-Logosu.png
-          cta:
-            text: 前往 youtube影片
-            url: /news/#youtube
-
-        - name: 新聞報導列表
-          image: news/newspaper.jpg
-          cta:
-            text: 前往 新聞報導
-            url: /news/#news
-
-        - name: 其他媒體整理
-          image: news/FBIG.jpg
-          cta:
-            text: 前往 其他媒體
-            url: /news/#others
+        - name: YouTube
+          url: '#youtube'
+          icon: brands/youtube
+        - name: 新聞報導
+          url: '#news'
+          icon: hero/newspaper
+        - name: 其他媒體
+          url: '#others'
+          icon: hero/chat-bubble-left-right
     design:
-      layout: cards
       spacing:
-        padding: ["0rem", 0, "0rem", 0]
+        padding: ["3rem", 0, "0.5rem", 0]
 
 
   - block: list-manual

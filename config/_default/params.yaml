@@ -42,7 +42,7 @@ header:
 
 # Site footer
 footer:
-  block: minimal
+  block: west-coast   # 版型在 layouts/_partials/components/footers/west-coast.html，內容在 data/footer.yaml
   copyright:
     notice: '© {year} 社團法人台灣西海岸發展協會'
     license:

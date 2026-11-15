@@ -1,4 +1,12 @@
+{{/* 西海岸客製：複製自 blox-tailwind 的 views/card.html。
+     - 整張卡片都可以點（標題連結延伸到整張卡片）
+     - 手機也顯示日期；沒有作者時不再留下一個孤單的「•」
+     - 圖片改用 object-cover，並輸出較高解析度（高解析螢幕不糊）
+     - compact_mobile（「過去活動」的 article-grid 會傳入）：手機上改成左圖右文的橫式小卡，
+       隱藏標籤和摘要，讓列表短很多；平板以上維持直式卡片（電腦 3 欄）。
+       小卡不顯示「閱讀全文」（3 欄時會擠成兩行，而且整張卡片本來就能點）。 */}}
 {{ $item := .item }}
+{{ $compact := .compact_mobile | default false }}
 
 {{ $link := $item.RelPermalink }}
 {{ $target := "" }}
@@ -15,10 +23,13 @@
 {{ $showReadMore := .config.show_read_more | default true }}
 {{ $hasMeta := or $showDate $showReadTime $showReadMore }}
 {{ $index := .index }}
+{{ $author := index ($item.GetTerms "authors") 0 }}
 
-<div class="group bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-2xl ring-1 ring-zinc-900/5 dark:ring-white/10 shadow-lg overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-2 focus-within:ring-2 focus-within:ring-blue-500/50" role="article" aria-labelledby="card-title-{{ $item.File.UniqueID }}">
+<div class="group relative bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-2xl ring-1 ring-zinc-900/5 dark:ring-white/10 overflow-hidden transition-all duration-300 ease-out focus-within:ring-2 focus-within:ring-blue-500/50
+  {{- if $compact }} flex max-sm:flex-row flex-col shadow-sm sm:shadow-lg hover:shadow-md sm:hover:shadow-xl sm:hover:-translate-y-1{{ else }} shadow-lg hover:shadow-xl hover:-translate-y-1{{ end }}" role="article" aria-labelledby="card-title-{{ $item.File.UniqueID }}">
     <!-- Image Section -->
-    <div class="relative overflow-hidden aspect-[16/9] bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-900">
+    <div class="relative overflow-hidden aspect-[16/9] bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-900
+      {{- if $compact }} max-sm:aspect-auto max-sm:w-28 max-sm:min-h-24 max-sm:shrink-0{{ end }}">
       {{ with $item.Params.content_meta }}
         {{ if .trending }}
           <div class="absolute top-3 right-3 z-10 inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-black/55 backdrop-blur-sm text-white shadow-sm">
@@ -29,63 +40,61 @@
       {{ end }}
       {{ with $resource }}
         {{ if ne .MediaType.SubType "gif" }}
+          {{/* 1200px 寬（原圖較小就用原圖寬度），高解析螢幕上才清楚 */}}
+          {{ $w := cond (lt .Width 1200) .Width 1200 }}
+          {{ $h := div (mul $w 9) 16 }}
           {{ $original_image := "" }}
           {{ if $fill_image }}
-            {{ $original_image = .Fill (printf "800x450 %s" $anchor) }}
+            {{ $original_image = .Fill (printf "%dx%d %s" $w $h $anchor) }}
           {{ else }}
-            {{ $original_image = .Fit (printf "800x450 %s" $anchor) }}
+            {{ $original_image = .Fit (printf "%dx%d %s" $w $h $anchor) }}
           {{ end }}
-          {{ $responsive := partial "functions/process_responsive_image.html" (dict 
-              "image" $original_image 
+          {{ $responsive := partial "functions/process_responsive_image.html" (dict
+              "image" $original_image
               "mode" "responsive"
-              "sizes" (slice 400 600 800)
-              "formats" (slice "avif" "webp" "jpg")
+              "sizes" (cond $compact (slice 240 400 600 800) (slice 400 600 800))
           ) }}
-          <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="block">
-            <img class="w-full h-full transition-transform duration-500 ease-out group-hover:scale-105 {{ if $fill_image }}object-fill{{ else }}object-contain{{ end }}" 
+          {{/* 圖片不另外包連結：整張卡片已經可以點 */}}
+            <img class="w-full h-full transition-transform duration-500 ease-out group-hover:scale-105 {{ if $fill_image }}object-cover{{ else }}object-contain{{ end }}"
                  srcset="{{ $responsive.srcset }}"
-                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                 src="{{ $responsive.fallback.RelPermalink }}" 
-                 width="{{ $original_image.Width }}" 
+                 sizes="{{ if $compact }}(max-width: 639px) 112px, (max-width: 1023px) 45vw, 340px{{ else }}(max-width: 700px) calc(100vw - 5rem), 620px{{ end }}"
+                 src="{{ $responsive.fallback.RelPermalink }}"
+                 width="{{ $original_image.Width }}"
                  height="{{ $original_image.Height }}"
-                 loading="lazy" 
+                 loading="lazy"
                  decoding="async"
                  {{ if eq $index 0 }}fetchpriority="high"{{ end }}
                  style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                 alt="{{ $item.Title | plainify }} featured image">
-          </a>
+                 alt="">
         {{ else }}
-          <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="block">
-            <img class="w-full h-full transition-transform duration-500 ease-out group-hover:scale-105 {{ if $fill_image }}object-fill{{ else }}object-contain{{ end }}"
+          {{/* 圖片不另外包連結：整張卡片已經可以點 */}}
+            <img class="w-full h-full transition-transform duration-500 ease-out group-hover:scale-105 {{ if $fill_image }}object-cover{{ else }}object-contain{{ end }}"
                  src="{{ .RelPermalink }}"
                  width="{{ .Width }}"
                  height="{{ .Height }}"
                  loading="lazy"
                  decoding="async"
                  style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-                 alt="{{ $item.Title | plainify }} featured image">
-          </a>
+                 alt="">
         {{ end }}
       {{ else }}
-        <!-- Fallback gradient with subtle pattern -->
-        <div class="w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
-          <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-            <svg class="w-8 h-8 text-white/60" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
-            </svg>
-          </div>
+        <!-- Fallback: plain neutral placeholder -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <svg class="w-8 h-8 text-zinc-400/70 dark:text-zinc-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+          </svg>
         </div>
       {{end}}
-      
+
       <!-- Subtle overlay for better text contrast (allow clicks to pass through) -->
       <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     </div>
 
     <!-- Content Section -->
-    <div class="p-8 space-y-4">
+    <div class="{{ if $compact }}flex flex-1 min-w-0 flex-col gap-2 sm:gap-3 p-3.5 sm:p-6{{ else }}p-6 sm:p-8 space-y-4{{ end }}">
       {{ with $item.Params.content_meta }}
         {{ if or .content_type .difficulty }}
-        <div class="flex items-center gap-x-4">
+        <div class="flex items-center gap-x-4 {{ if $compact }}max-sm:hidden{{ end }}">
           {{ with .content_type }}
           <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
             {{ . }}
@@ -99,9 +108,9 @@
       {{ end }}
 
       {{ if and $item.Params.tags (gt (len $item.Params.tags) 0) }}
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2 {{ if $compact }}max-sm:hidden{{ end }}">
         {{ with index ($item.GetTerms "tags") 0 }}
-        <a href="{{ .RelPermalink }}">
+        <a href="{{ .RelPermalink }}" class="relative z-10">
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-900/40 dark:text-primary-300">
             {{ .Page.LinkTitle }}
           </span>
@@ -110,16 +119,17 @@
       </div>
       {{ end }}
 
-      <h3 id="card-title-{{ $item.File.UniqueID }}" class="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 leading-tight">
-        <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="hover:underline">
+      <h3 id="card-title-{{ $item.File.UniqueID }}" class="{{ if $compact }}text-base sm:text-lg leading-snug{{ else }}text-xl leading-tight{{ end }} font-bold tracking-tight text-zinc-900 dark:text-zinc-100 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-200">
+        {{/* after: 的透明層蓋滿整張卡片，點卡片任何地方都會進入文章 */}}
+        <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="after:absolute after:inset-0 after:z-0 focus:outline-none">
           {{ $item.Title }}
           {{ if $item.Params.external_link }}
             {{ partial "functions/get_icon" (dict "name" "arrow-top-right-on-square" "attributes" "style=\"height: 1em;\" class=\"inline-flex h-4 w-4 ml-1 align-text-top\"") }}
           {{ end }}
         </a>
       </h3>
-      
-      <p class="text-zinc-600 dark:text-zinc-400 text-base leading-relaxed line-clamp-3">
+
+      <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-3 {{ if $compact }}max-sm:hidden text-sm{{ else }}text-base{{ end }}">
         {{ ($item.Params.summary | default $item.Summary) | plainify | htmlUnescape | truncate 180 }}
       </p>
 
@@ -138,30 +148,30 @@
       {{ end }}
 
       <!-- Metadata section -->
-      <div class="flex flex-col gap-2 sm:flex-row sm:items-center justify-between pt-3 {{ if $hasMeta }}border-t border-zinc-100 dark:border-zinc-800{{ end }}">
-        <div class="flex items-center gap-3 text-xs text-zinc-500 dark:text-zinc-500 flex-wrap">
-          {{ if $item.Params.authors }}
+      <div class="flex flex-col gap-2 sm:flex-row sm:items-center justify-between {{ if $compact }}mt-auto sm:pt-3 {{ if $hasMeta }}sm:border-t sm:border-zinc-100 sm:dark:border-zinc-800{{ end }}{{ else }}pt-3 {{ if $hasMeta }}border-t border-zinc-100 dark:border-zinc-800{{ end }}{{ end }}">
+        <div class="flex items-center gap-x-2.5 gap-y-1 text-xs text-zinc-600 dark:text-zinc-400 flex-wrap">
+          {{ with $author }}
           <div class="flex items-center gap-2 min-w-0">
-            {{ with index ($item.GetTerms "authors") 0 }}
             <div class="relative h-6 w-6 flex-shrink-0">
               {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
               {{ if $avatar }}
                 {{ $avatar_48 := $avatar.Process "Fill 48x48 Center webp" }}
-                <img alt="avatar" class="rounded-full object-cover" src="{{$avatar_48.RelPermalink}}" width="24" height="24" loading="lazy" decoding="async" />
+                <img alt="" class="rounded-full object-cover" src="{{$avatar_48.RelPermalink}}" width="24" height="24" loading="lazy" decoding="async" />
               {{ end }}
             </div>
             <span class="truncate max-w-[9rem] text-sm">{{ .Page.LinkTitle }}</span>
-            {{ end }}
           </div>
-          <span class="opacity-40">•</span>
+          {{ end }}
+          {{ if and $author $showDate }}
+          <span class="opacity-40" aria-hidden="true">•</span>
           {{ end }}
           {{ if $showDate }}
-            <time class="hidden sm:inline whitespace-nowrap" datetime="{{ $item.Date.Format "2006-01-02" }}">
+            <time class="whitespace-nowrap" datetime="{{ $item.Date.Format "2006-01-02" }}">
               {{ $item.Date | time.Format (site.Params.locale.date_format | default "Jan 2, 2006") }}
             </time>
           {{ end }}
           {{ if and $showDate $showReadTime }}
-            <span class="hidden sm:inline opacity-40">•</span>
+            <span class="hidden sm:inline opacity-40" aria-hidden="true">•</span>
           {{ end }}
           {{ if $showReadTime }}
             {{ $content := $item.Content | plainify }}
@@ -171,18 +181,18 @@
             <span class="hidden sm:inline whitespace-nowrap">{{ $readTime }} {{ i18n "minute_read" }}</span>
           {{ end }}
         </div>
-        
-        <!-- Read More with arrow - always visible for accessibility -->
-        {{ if $showReadMore }}
-          <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="flex items-center gap-2 text-blue-700 dark:text-blue-300 font-medium text-sm transform group-hover:translate-x-1 transition-all duration-300 self-start sm:self-auto sm:ml-0">
-            <span>{{ i18n "read_more" }}<span class="sr-only">：{{ $item.Title }}</span></span>
+
+        <!-- Read More with arrow（橫式小卡／三欄小卡不顯示，整張卡片本來就能點） -->
+        {{ if and $showReadMore (not $compact) }}
+          <span class="flex items-center gap-2 text-blue-700 dark:text-blue-300 font-medium text-sm transform group-hover:translate-x-1 transition-all duration-300 self-start sm:self-auto" aria-hidden="true">
+            <span>{{ i18n "read_more" }}</span>
             <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>
-          </a>
+          </span>
         {{ end }}
       </div>
-      
+
       <!-- Optional AI metadata -->
       {{ if $item.Params.ai_insights }}
         <div class="flex items-center gap-2 pt-2 text-xs text-blue-500 bg-blue-50 dark:bg-blue-950/30 rounded-lg px-3 py-2">

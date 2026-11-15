@@ -1,1 +1,2 @@
-{{- partial "views/card.html" . -}}
+{{/* 西海岸客製：「過去活動」用的格狀列表，手機上改用橫式小卡（見 views/card.html 的 compact_mobile） */}}
+{{- partial "views/card.html" (merge . (dict "compact_mobile" true)) -}}

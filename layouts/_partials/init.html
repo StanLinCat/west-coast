@@ -107,7 +107,13 @@
           {{ $page.Store.Set "preact_blocks" $preact_blocks }}
         {{ end }}
       {{ end }}
-      
+
+      {{/* 西海岸客製：FAQ 的收合靠 Alpine.js，主題原本只在有 author notes 時才載入 Alpine，
+           導致首頁 FAQ 答案全部展開、點了也沒反應。用到這些 block 的頁面一律載入 Alpine。 */}}
+      {{ if in (slice "faq") $block_type }}
+        {{ $page.Store.Set "has_alpine" true }}
+      {{ end }}
+
       {{ $widget_config_file := printf "blox/%s/config.html" $block_type }}
       {{ if templates.Exists (printf "_partials/%s" $widget_config_file) }}
         {{ $hash_id := $block.id | default (printf "section-%s" (replace $block_type "." "-")) }}

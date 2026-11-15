@@ -1,0 +1,41 @@
+# ============================================================================
+# 頁尾（每一頁最下面）的內容
+# 版型在 layouts/_partials/components/footers/west-coast.html，
+# 「追蹤我們」的社群連結不在這裡，統一讀 data/social_links.yaml。
+# 年份會自動更新；版權文字在 config/_default/params.yaml 的 footer.copyright.notice。
+# ============================================================================
+
+name: 社團法人台灣西海岸發展協會
+description: 非以營利為目的之公益性社會團體，結合各方資源，促進西海岸在地居民生活、生產、生態、生命的豐沛與飽滿。
+
+contact:
+  address: 625 嘉義縣布袋鎮海興街6號（承意咖啡）
+  map_url: https://maps.app.goo.gl/h74pSk2bmBA1CHGs8
+  phone: 0966-152104            # 顯示用，撥號時會自動拿掉「-」
+  email: twcgospel@gmail.com
+  hours: 週一至週五 10:00–16:00
+
+# 「快速連結」欄，依序顯示
+links:
+  - name: 最新消息
+    url: /#newest
+  - name: 活動
+    url: /event/
+  - name: 成員
+    url: /authors/
+  - name: 相關媒體
+    url: /news/
+  - name: 人才招募
+    url: /opportunities/
+  - name: 奉獻支持
+    url: /donate/
+  - name: 聯絡我們
+    url: /contact/
+
+# 最下面一行
+tax_id: "88912761"   # 統一編號
+legal:
+  - name: 隱私政策聲明
+    url: /privacy/
+  - name: 服務條款
+    url: /terms/

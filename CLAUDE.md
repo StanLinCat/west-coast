@@ -42,10 +42,12 @@
 | 首頁各區塊 | `content/_index.md` |
 | 最新消息&活動（首頁 `#newest`、活動頁上方） | `content/newest/<slug>/index.md` + `featured.jpg` |
 | 過去活動（活動頁下方） | `content/event/<slug>/index.md` |
-| 相關媒體：YouTube 影片（`id: youtube`）、新聞報導（`id: news`） | `content/news/_index.md`，**新的放最上面**，依日期由新到舊 |
-| 社群連結（首頁「追蹤我們的社群」＋聯絡我們頁） | `data/social_links.yaml`，兩個頁面共用 |
+| 相關媒體：YouTube 影片（`id: youtube`）、新聞報導（`id: news`）、其他（`id: others`） | `content/news/_index.md`，新的放最上面。網頁上會自動依 `date` 由新到舊排序，YouTube 連結自動顯示影片縮圖，所以每一筆一定要填 `date` |
+| 社群連結（首頁「追蹤我們的社群」＋聯絡我們頁＋頁尾「追蹤我們」） | `data/social_links.yaml`，三個地方共用 |
+| 頁尾（每一頁最下面：簡介、聯絡資訊、快速連結、統一編號） | `data/footer.yaml`，版型在 `layouts/_partials/components/footers/west-coast.html` |
 | 官方 LINE QR Code | `assets/media/line-qr.svg`（連到 `https://line.me/R/ti/p/@397kcgep`） |
-| 作者 | `content/authors/<id>/_index.md`，`title` 是顯示名稱 |
+| 作者／成員 | `content/authors/<id>/_index.md`，`title` 是顯示名稱 |
+| 成員大頭照 | `content/authors/<id>/avatar.jpg`：**正方形、人臉置中**，不要有相框或白邊（成員頁會裁成圓形）。換照片前先裁好 |
 
 常用作者 ID：`billbright` 林碧亮、`LKH` 柳克翰、`admin` 林昱廷、`Ji-Zhihuang` 紀志煌、`CBK` 陳博凱。其他的到 `content/authors/` 查 `title`。
 
@@ -57,6 +59,7 @@
 - 直式海報在首頁卡片只會裁出中段，重要的字要在中間才看得到。
 - 內文精簡：一兩句開場、時間地點、流程、方案或費用、報名方式。表格在手機上容易擠，欄位多的內容改用條列。
 - 報名一律導向官方 LINE。
+- 相簿：照片放在貼文資料夾的 `album/` 裡，內文寫 `{{< auto-gallery folder="album" >}}`。會排成方形縮圖格，點縮圖在本頁開燈箱（左右滑換張）。長邊超過 1600px 的照片會自動縮小給燈箱用，原圖不用先縮。
 
 ## 建置、預覽與部署
 
@@ -83,7 +86,10 @@
 ## 客製化的版型
 
 - `_vendor/` 是 Hugo Blox 主題原始碼，**不要直接改**。要客製某個 block，把它複製到 `layouts/_partials/hbx/blocks/<block 名稱>/block.html` 再改（`contact-info` 就是這樣做的）。
-- 自己寫的元件放在 `layouts/_partials/west-coast/`（社群連結清單、LINE QR Code 小卡），`social-links` block 在 `layouts/_partials/hbx/blocks/social-links/`。
+- 已經客製過的 block（`layouts/_partials/hbx/blocks/`）：`contact-info`、`faq`（收合要 Alpine.js，`layouts/_partials/init.html` 會幫有 FAQ 的頁面載入）、`hero`（改成靜態 HTML，不用 Preact）、`list-manual`（相關媒體清單）、`stats`、`team-showcase`（成員列表：手機 2 欄、電腦 5 欄、圓形頭像）、`testimonials`。每個檔案開頭都有註解寫改了什麼。
+- 自己寫的 block／元件：`jump-links`（頁內快速跳轉按鈕，用在相關媒體頁最上面）、`social-links`；`layouts/_partials/west-coast/` 放社群連結清單和 LINE QR Code 小卡。
+- 活動卡片在 `layouts/_partials/views/card.html`：「最新活動」是大卡片；「過去活動」用 `article-grid`，手機上會變成左圖右文的橫式小卡、電腦 3 欄（`content/event/_index.md` 的 `columns: '3'`）。
+- 自訂 CSS 在 `assets/css/custom.css`（相簿縮圖格和燈箱也在這裡）。Tailwind 的 class 要寫在 HTML 模板裡才會被編譯；只在 JavaScript 裡用到的樣式寫進 `custom.css`。
 
 ## 絕對不要
 
