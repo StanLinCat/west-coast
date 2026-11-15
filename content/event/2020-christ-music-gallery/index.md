@@ -5,7 +5,7 @@ date: 2020-12-20
 image:
   caption: ''
 authors:
-  - 
+  - LKH
 tags:
   - 西海岸聖誕文化節
   - 相片
