@@ -1,6 +1,11 @@
 ---
 title: 人才招募
 type: landing
+# 目前暫停招募：頁面不產生、不出現在列表和搜尋。之後要重新開放，把下面 build 這三行刪掉，
+# 並在 data/footer.yaml 的快速連結加回「人才招募」。
+build:
+  render: never
+  list: never
 
 sections:
 

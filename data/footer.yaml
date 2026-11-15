@@ -25,8 +25,9 @@ links:
     url: /authors/
   - name: 相關媒體
     url: /news/
-  - name: 人才招募
-    url: /opportunities/
+  # 人才招募暫停中（content/opportunities/ 已隱藏），重新開放時再加回來：
+  # - name: 人才招募
+  #   url: /opportunities/
   - name: 奉獻支持
     url: /donate/
   - name: 聯絡我們
